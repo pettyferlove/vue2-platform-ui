@@ -98,17 +98,17 @@ html,body{
   }
   .main{
     display: flex;
-    // background: #324057;
     position: absolute;
     top: 60px;
     bottom: 0px;
     .sidebar{
-      flex: 0 0 60px;
-      width: 60px;
+      flex: 0 0 210px;
+      width: 210px;
       position: relative;
       height: calc(~"100vh - "@nav-height );
       top: 0;
       background-color: rgb(50, 65, 87);
+      overflow: auto;
       li{
         text-align: left;
         a{
@@ -125,7 +125,6 @@ html,body{
     .main-content{
       position: relative;
       padding: 0px;
-      margin-top: 60px;
       height: calc(~"100vh - "@nav-height );
       overflow: auto;
     }

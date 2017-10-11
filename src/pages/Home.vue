@@ -7,26 +7,8 @@
       </div>
     </el-row>
     <el-row class="main">
-      <el-row type="flex">
-        <el-menu default-active="1" class="sidebar" theme="dark" collapse="true">
-          <!--<el-submenu index="1">
-            <template slot="title">
-              <i class="fa fa-dashboard"></i>
-              <span slot="title">仪表盘</span>
-            </template>
-            <el-menu-item-group>
-              <span slot="title">分组一</span>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="分组2">
-              <el-menu-item index="1-3">选项3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="1-4">
-              <span slot="title">选项4</span>
-              <el-menu-item index="1-4-1">选项1</el-menu-item>
-            </el-submenu>
-          </el-submenu>-->
+      <aside class="sidebar" >
+        <el-menu default-active="1" theme="dark">
           <el-menu-item index="1">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
@@ -90,7 +72,10 @@
             </el-menu-item>
           </el-submenu>
         </el-menu>
-      </el-row>
+      </aside>
+      <section class="main-content">
+        main
+      </section>
     </el-row>
   </div>
 </template>
