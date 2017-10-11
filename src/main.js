@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import '../theme/index.css'
+import './my-theme/petty.less'
 
 Vue.use(ElementUI)
 
