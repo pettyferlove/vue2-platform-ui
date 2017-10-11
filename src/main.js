@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
+import 'font-awesome/css/font-awesome.css'
 import '../theme/index.css'
 import './my-theme/petty.less'
 
