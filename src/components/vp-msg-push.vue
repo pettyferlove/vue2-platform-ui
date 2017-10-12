@@ -5,7 +5,7 @@
     </el-badge>
     <el-dropdown-menu slot="dropdown" class="vp-msg-push">
       <el-dropdown-item>You have {{ data.length }} message!</el-dropdown-item>
-      <el-dropdown-item divided v-for="item in data" :key="item.id">
+      <el-dropdown-item divided v-for="item in data" :key="item.id" class="push-msg-item">
         <img :src="item.image" height="40" alt="">
         <div class="subject">
               <span class="title">
