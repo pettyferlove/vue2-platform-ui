@@ -57,13 +57,22 @@
   cursor: pointer;
 }
 
+.el-dropdown-menu__item--divided:before {
+  content: '';
+  height: 0px;
+  display: block;
+  margin: 0 -10px;
+  background-color: #fff;
+}
+
 .vp-msg-push{
   border-radius: 4px;
   padding: 0px 0;
   li{
+    margin: 0px;
     &:first-child{
       color: white;
-      font-size: 16px;
+      font-size: 12px !important;
       font-weight: bold;
       background: @primary-color;
       border-radius: 4px 4px 0 0;
@@ -78,8 +87,8 @@
       width: 200px;
       display: inline-block;
       .title{
-        line-height: 18px;
-        font-size: 16px;
+        line-height: 36px;
+        font-size: 14px;
         font-weight: bold;
         .time{
           float: right;
@@ -89,9 +98,14 @@
       }
       .message{
         margin-top: 6px;
-        overflow: hidden;
-        text-overflow:ellipsis;
+
       }
+
+    }
+    &:last-child{
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 0px 0px 4px 4px;
     }
   }
 }
