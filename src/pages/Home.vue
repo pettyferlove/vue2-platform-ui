@@ -5,6 +5,7 @@
         <img src="../assets/logo.png" height="30" alt="">
         <span>VUE</span>PettyDev
       </div>
+      <vp-msg-push style="margin-left:20px" :data="msgPushData" trigger="click"></vp-msg-push>
       <span style="margin-left: 20px" @click="toggleClick">
         <i class="fa fa-bars"></i>
       </span>
@@ -91,9 +92,12 @@
 
 <script>
   import ElRow from 'element-ui/packages/row/src/row'
+  import VpMsgPush from '../components/vp-msg-push.vue'
   /* eslint-disable no-useless-computed-key */
   export default {
-    components: {ElRow},
+    components: {
+      VpMsgPush,
+      ElRow},
     name: 'home',
     methods: {
       toggleClick () {
@@ -103,7 +107,39 @@
     },
     data () {
       return {
-        collapsed: false
+        collapsed: false,
+        msgPushData: [
+          {
+            image: require('@/assets/img/user-petty.jpg'),
+            from: 'JesseLuo',
+            time: '2017-1-8',
+            message: 'I like your website very much!'
+          },
+          {
+            image: require('@/assets/img/user-petty.jpg'),
+            from: 'JesseLuo',
+            time: '2017-1-8',
+            message: 'I like your website very much!'
+          },
+          {
+            image: require('@/assets/img/user-petty.jpg'),
+            from: 'JesseLuo',
+            time: '2017-1-8',
+            message: 'I like your website very much!'
+          },
+          {
+            image: require('@/assets/img/user-petty.jpg'),
+            from: 'JesseLuo',
+            time: '2017-1-8',
+            message: 'I like your website very much!'
+          },
+          {
+            image: require('@/assets/img/user-petty.jpg'),
+            from: 'JesseLuo',
+            time: '2017-1-8',
+            message: 'I like your website very much!'
+          }
+        ]
       }
     },
     computed: {
