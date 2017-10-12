@@ -13,7 +13,7 @@
     </el-row>
     <el-row class="main">
       <aside :class="[classes]">
-        <el-menu default-active="1" theme="dark" :collapse="collapsed">
+        <el-menu default-active="3" theme="dark" :collapse="collapsed">
           <el-menu-item index="1">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
@@ -22,7 +22,7 @@
             <i class="fa fa-cogs"></i>
             <span slot="title">小组件</span>
           </el-menu-item>
-          <el-menu-item index="3">
+          <el-menu-item index="3" @click="$router.push('/')">
             <i class="fa fa-database"></i>
             <span slot="title">面板</span>
           </el-menu-item>
@@ -79,7 +79,16 @@
         </el-menu>
       </aside>
       <section class="main-content">
-        mainadajdkajdkajsdkljakldjakldj
+        <router-view></router-view>
+        <footer class="main-footer">
+          <strong>Copyright &copy; 2016-2017 Pettyfer.</strong> All rights
+          reserved.
+          <div>
+            <b><a href="https://github.com/pettyferlove/vue2-platform-ui.git" target="_blank"><i class="fa fa-github"></i></a></b>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <b>Version</b> 1.0.0
+          </div>
+        </footer>
       </section>
     </el-row>
   </div>
