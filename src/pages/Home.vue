@@ -109,9 +109,7 @@
     computed: {
       classes () {
         return {
-          ['sidebar']: true,
-          ['menu-collapsed']: this.collapsed,
-          ['menu-expanded']: !this.collapsed
+          ['sidebar']: true
         }
       }
     }
