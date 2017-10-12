@@ -9,6 +9,7 @@
       <span style="margin-left: 20px" @click="toggleClick">
         <i class="fa fa-bars"></i>
       </span>
+      <vp-user-panel></vp-user-panel>
     </el-row>
     <el-row class="main">
       <aside :class="[classes]">
@@ -93,9 +94,11 @@
 <script>
   import ElRow from 'element-ui/packages/row/src/row'
   import VpMsgPush from '../components/vp-msg-push.vue'
+  import VpUserPanel from '../components/vp-user-panel.vue'
   /* eslint-disable no-useless-computed-key */
   export default {
     components: {
+      VpUserPanel,
       VpMsgPush,
       ElRow},
     name: 'home',
