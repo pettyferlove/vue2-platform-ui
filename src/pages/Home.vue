@@ -5,10 +5,13 @@
         <img src="../assets/logo.png" height="30" alt="">
         <span>VUE</span>PettyDev
       </div>
+      <span style="margin-left: 20px" @click="toggleClick">
+        <i class="fa fa-bars"></i>
+      </span>
     </el-row>
     <el-row class="main">
-      <aside class="sidebar menu-collapsed" >
-        <el-menu default-active="1" theme="dark" :collapse="true">
+      <aside :class="[classes]">
+        <el-menu default-active="1" theme="dark" :collapse="collapsed">
           <el-menu-item index="1">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
@@ -88,9 +91,29 @@
 
 <script>
   import ElRow from 'element-ui/packages/row/src/row'
-
+  /* eslint-disable no-useless-computed-key */
   export default {
     components: {ElRow},
-    name: 'home'
+    name: 'home',
+    methods: {
+      toggleClick () {
+        const isCollapsed = this.collapsed
+        this.collapsed = !isCollapsed
+      }
+    },
+    data () {
+      return {
+        collapsed: false
+      }
+    },
+    computed: {
+      classes () {
+        return {
+          ['sidebar']: true,
+          ['menu-collapsed']: this.collapsed,
+          ['menu-expanded']: !this.collapsed
+        }
+      }
+    }
   }
 </script>

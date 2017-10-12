@@ -58,6 +58,7 @@ html,body{
 }
 
 #app{
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -107,6 +108,7 @@ html,body{
     bottom: 0px;
     overflow: hidden;
     .sidebar{
+      transition: width .2s ease-in-out;
       flex: 0 0 64px;
       width: 64px;
       height: 100%;
@@ -128,7 +130,7 @@ html,body{
 
       }
       li{
-        text-align: center;
+        text-align: left;
         a{
           color: inherit;
           display: inline-block;
