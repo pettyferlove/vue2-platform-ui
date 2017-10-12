@@ -105,16 +105,30 @@ html,body{
     position: absolute;
     top: 60px;
     bottom: 0px;
+    overflow: hidden;
     .sidebar{
-      flex: 0 0 210px;
-      width: 210px;
-      position: relative;
-      height: calc(~"100vh - "@nav-height );
+      flex: 0 0 60px;
+      width: 60px;
+      height: 100%;
       top: 0;
       background-color: rgb(50, 65, 87);
-      overflow: auto;
+      .collapsed{
+        width:60px;
+        .item{
+          position: relative;
+        }
+        .submenu{
+          position:absolute;
+          top:0px;
+          left:60px;
+          z-index:99999;
+          height:auto;
+          display:none;
+        }
+
+      }
       li{
-        text-align: left;
+        text-align: center;
         a{
           color: inherit;
           display: inline-block;
@@ -126,6 +140,16 @@ html,body{
         }
       }
     }
+
+    .menu-collapsed{
+      flex:0 0 60px;
+      width: 60px;
+    }
+    .menu-expanded{
+      flex:0 0 230px;
+      width: 230px;
+    }
+
     .main-content{
       position: relative;
       padding: 0px;

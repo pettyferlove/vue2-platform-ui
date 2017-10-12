@@ -7,8 +7,8 @@
       </div>
     </el-row>
     <el-row class="main">
-      <aside class="sidebar" >
-        <el-menu default-active="1" theme="dark">
+      <aside class="sidebar menu-collapsed" >
+        <el-menu default-active="1" theme="dark" :collapse="true">
           <el-menu-item index="1">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
@@ -74,7 +74,7 @@
         </el-menu>
       </aside>
       <section class="main-content">
-        main
+        mainadajdkajdkajsdkljakldjakldj
       </section>
     </el-row>
   </div>
