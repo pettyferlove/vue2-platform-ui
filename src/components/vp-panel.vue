@@ -1,5 +1,5 @@
 <template>
-  <el-card :body-style="{ padding: '0px' }">
+  <el-card :padding="0">
     <div class="vp-panel" :style="{ backgroundColor: bgColor }" :class="{ bgStyle: bgColor }">
       <div v-if="title" class="panel-heading" :style="{ backgroundColor: hdColor }" :class="{ bgStyle: hdColor }">
         {{ title }}
