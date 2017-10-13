@@ -29,6 +29,7 @@ html,body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  line-height: 1.5;
 }
 
 a{
@@ -129,4 +130,14 @@ a{
   }
 }
 
+.vp-content{
+  padding: 5px 15px 15px 15px;
+}
 
+.dashboard, .widget, .charts, .panels{
+  &>.el-row{
+    &>.el-col{
+      margin-top: 15px;
+    }
+  }
+}
