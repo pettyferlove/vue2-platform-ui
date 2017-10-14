@@ -13,7 +13,7 @@
     </el-row>
     <el-row class="main">
       <aside :class="[classes]">
-        <el-menu default-active="3" theme="dark" :collapse="collapsed">
+        <el-menu default-active="3" theme="dark" :collapse="collapsed" unique-opened>
           <el-menu-item index="1">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
