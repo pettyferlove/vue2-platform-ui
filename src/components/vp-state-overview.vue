@@ -6,7 +6,7 @@
       </el-col>
       <el-col :span="14" class="value">
       <h1 class="count">{{ count }}</h1>
-      <p>{{ title }}</p>
+      <p class="title">{{ title }}</p>
       </el-col>
     </el-row>
   </el-card>
