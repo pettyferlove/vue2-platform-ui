@@ -79,7 +79,9 @@
         </el-menu>
       </aside>
       <section class="main-content">
-        <router-view></router-view>
+        <transition name="fade">
+          <router-view></router-view>
+        </transition>
         <footer class="main-footer">
           <strong>Copyright &copy; 2016-2017 Pettyfer.</strong> All rights
           reserved.
@@ -94,9 +96,12 @@
   </div>
 </template>
 
-<style scoped>
-  .main-footer{
-    margin-bottom: 5px;
+<style>
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+    opacity: 0
   }
 </style>
 
