@@ -28,6 +28,41 @@
       <el-col :lg="16">
       <vp-timeline title="时间轴" :data="dataTimeline"></vp-timeline>
       </el-col>
+
+      <el-col :lg="8">
+        <vp-tabs icon="fa fa-user" title="Briefs" content-height="200px">
+          <vp-tabs-item label="Social" name="01">
+            <div class="demo-news">
+              <h2>" Lorem ipsum dolor sit amet, consectetur adipiscing. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Business" name="02">
+            <div class="demo-news">
+              <h2>" Phasellus massa urna, vehicula bibendum. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Entertainment" name="03">
+            <div class="demo-news">
+              <h2>" Duis vitae dictum erat. In ut lorem turpis. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Sport" name="04">
+            <div class="demo-news">
+              <h2>" Etiam sit amet urna feugiat, laoreet urna quis. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Health" name="05">
+            <div class="demo-news">
+              <h2>" Fusce nec eleifend ligula. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Education" name="06">
+            <div class="demo-news">
+              <h2>" Fusce commodo nunc justo, id mattis. "</h2>
+            </div>
+          </vp-tabs-item>
+        </vp-tabs>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -37,10 +72,14 @@
   import VpUserPreview from '../components/vp-user-preview.vue'
   import VpProgress from '../components/vp-progress.vue'
   import VpTimeline from '../components/vp-timeline.vue'
+  import VpTabs from '../components/vp-tabs.vue'
+  import VpTabsItem from '../components/vp-tabs-item.vue'
 
   export default {
     name: 'Dashboard',
     components: {
+      VpTabsItem,
+      VpTabs,
       VpTimeline,
       VpUserPreview,
       VpProgress,
