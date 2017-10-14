@@ -4,7 +4,7 @@
       <i class="fa fa-bell"></i>
     </el-badge>
     <el-dropdown-menu slot="dropdown" class="vp-msg-push">
-      <el-dropdown-item>You have {{ data.length }} message!</el-dropdown-item>
+      <el-dropdown-item>你有 {{ data.length }} 条消息未读!</el-dropdown-item>
       <el-dropdown-item divided v-for="item in data" :key="item.id" class="push-msg-item">
         <img :src="item.image" height="40" alt="">
         <div class="subject">
@@ -15,7 +15,7 @@
           <p class="message">{{ item.message }}</p>
         </div>
       </el-dropdown-item>
-      <el-dropdown-item divided>view more message</el-dropdown-item>
+      <el-dropdown-item divided>查看更多...</el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
 </template>

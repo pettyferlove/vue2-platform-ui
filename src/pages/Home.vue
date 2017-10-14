@@ -119,31 +119,31 @@
         msgPushData: [
           {
             image: require('@/assets/img/user-petty.jpg'),
-            from: 'JesseLuo',
+            from: 'Pettyfer',
             time: '2017-1-8',
             message: 'I like your website very much!'
           },
           {
             image: require('@/assets/img/user-petty.jpg'),
-            from: 'JesseLuo',
+            from: 'Pettyfer',
             time: '2017-1-8',
             message: 'I like your website very much!'
           },
           {
             image: require('@/assets/img/user-petty.jpg'),
-            from: 'JesseLuo',
+            from: 'Pettyfer',
             time: '2017-1-8',
             message: 'I like your website very much!'
           },
           {
             image: require('@/assets/img/user-petty.jpg'),
-            from: 'JesseLuo',
+            from: 'Pettyfer',
             time: '2017-1-8',
             message: 'I like your website very much!'
           },
           {
             image: require('@/assets/img/user-petty.jpg'),
-            from: 'JesseLuo',
+            from: 'Pettyfer',
             time: '2017-1-8',
             message: 'I like your website very much!'
           }

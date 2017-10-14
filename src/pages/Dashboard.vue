@@ -2,16 +2,16 @@
   <div class="dashboard vp-content">
     <el-row :gutter="15">
       <el-col :lg="6" :md="12">
-      <vp-state-over-view color="#41b883" icon="fa fa-user" title="New Users" count="996"></vp-state-over-view>
+      <vp-state-over-view color="#41b883" icon="fa fa-user" title="新增用户" count="996"></vp-state-over-view>
       </el-col>
       <el-col :lg="6" :md="12">
-      <vp-state-over-view color="#1d8ce0" icon="fa fa-eye" title="Page Views" count="109009"></vp-state-over-view>
+      <vp-state-over-view color="#1d8ce0" icon="fa fa-eye" title="访问量" count="109009"></vp-state-over-view>
       </el-col>
       <el-col :lg="6" :md="12">
-      <vp-state-over-view color="#ffa000" icon="fa fa-pencil" title="Comments" count="1010"></vp-state-over-view>
+      <vp-state-over-view color="#ffa000" icon="fa fa-pencil" title="意见" count="1010"></vp-state-over-view>
       </el-col>
       <el-col :lg="6" :md="12">
-      <vp-state-over-view color="#f60000" icon="fa fa-download" title="Downloads" count="9960"></vp-state-over-view>
+      <vp-state-over-view color="#f60000" icon="fa fa-download" title="下载量" count="9960"></vp-state-over-view>
       </el-col>
     </el-row>
 
@@ -20,7 +20,13 @@
         <vp-user-preview :brief="dataUserPreview.brief" :property="dataUserPreview.property"></vp-user-preview>
       </el-col>
       <el-col :lg="18">
-        <vp-progress title="Working Progress" :data="dataProgress"></vp-progress>
+        <vp-progress title="工作进度" :data="dataProgress"></vp-progress>
+      </el-col>
+    </el-row>
+
+    <el-row :gutter="16">
+      <el-col :lg="16">
+      <vp-timeline title="时间轴" :data="dataTimeline"></vp-timeline>
       </el-col>
     </el-row>
   </div>
@@ -30,10 +36,12 @@
   import VpStateOverView from '../components/vp-state-overview.vue'
   import VpUserPreview from '../components/vp-user-preview.vue'
   import VpProgress from '../components/vp-progress.vue'
+  import VpTimeline from '../components/vp-timeline.vue'
 
   export default {
     name: 'Dashboard',
     components: {
+      VpTimeline,
       VpUserPreview,
       VpProgress,
       VpStateOverView

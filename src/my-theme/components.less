@@ -261,7 +261,11 @@
     font-size: 16px;
   }
   ul.panel-body{
+    h4{
+      margin-top: 2px;
+    }
     li{
+      list-style: none;
       .left, .right{
         flex-grow: 1;
         width: calc(50% - 1px);
@@ -278,6 +282,10 @@
       .content{
         background-color: @vp-grey-light;
         border-radius: @border-radius-small;
+        h3,p{
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
       }
       .split{
         width: 2px;
