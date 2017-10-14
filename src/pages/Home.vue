@@ -79,7 +79,7 @@
         </el-menu>
       </aside>
       <section class="main-content">
-        <transition name="fade">
+        <transition name="fade" mode="out-in">
           <router-view></router-view>
         </transition>
         <footer class="main-footer">
