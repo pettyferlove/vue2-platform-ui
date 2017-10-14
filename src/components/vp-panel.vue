@@ -12,7 +12,7 @@
 </template>
 <script>
   export default {
-    name: 'VpCard',
+    name: 'VpPanel',
     props: {
       title: {
         type: String,

@@ -13,8 +13,8 @@
     </el-row>
     <el-row class="main">
       <aside :class="[classes]">
-        <el-menu default-active="3" theme="dark" :collapse="collapsed" unique-opened>
-          <el-menu-item index="1">
+        <el-menu default-active="1" theme="dark" :collapse="collapsed" unique-opened>
+          <el-menu-item index="1" @click="$router.push('/')">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
           </el-menu-item>
@@ -22,7 +22,7 @@
             <i class="fa fa-cogs"></i>
             <span slot="title">小组件</span>
           </el-menu-item>
-          <el-menu-item index="3" @click="$router.push('/')">
+          <el-menu-item index="3" @click="$router.push('panels')">
             <i class="fa fa-database"></i>
             <span slot="title">面板</span>
           </el-menu-item>
