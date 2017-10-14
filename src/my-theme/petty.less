@@ -92,14 +92,11 @@ a{
   }
   .main{
     display: flex;
-    position: absolute;
     top: 60px;
     bottom: 0px;
     overflow: hidden;
     .sidebar{
-      height: 100%;
       top: 0;
-      background-color: #1c2438;
       li{
         text-align: left;
         a{
@@ -112,9 +109,11 @@ a{
           }
         }
       }
+
     }
 
     .el-menu {
+      height: 100%;
       width: 210px;
     }
     .el-menu--collapse {
@@ -126,6 +125,7 @@ a{
       padding: 0px;
       height: calc(~"100vh - "@nav-height );
       overflow: auto;
+      flex: 1;
     }
   }
 }
