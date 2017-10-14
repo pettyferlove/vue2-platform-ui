@@ -19,7 +19,9 @@
       <el-col :lg="6">
         <vp-user-preview :brief="dataUserPreview.brief" :property="dataUserPreview.property"></vp-user-preview>
       </el-col>
-
+      <el-col :lg="18">
+        <vp-progress title="Working Progress" :data="dataProgress"></vp-progress>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -27,11 +29,13 @@
 <script>
   import VpStateOverView from '../components/vp-state-overview.vue'
   import VpUserPreview from '../components/vp-user-preview.vue'
+  import VpProgress from '../components/vp-progress.vue'
 
   export default {
     name: 'Dashboard',
     components: {
       VpUserPreview,
+      VpProgress,
       VpStateOverView
     },
     data () {
