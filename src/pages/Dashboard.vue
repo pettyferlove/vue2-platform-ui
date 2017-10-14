@@ -43,7 +43,7 @@
         dataUserPreview: {
           brief: {
             photo: require('@/assets/img/user-petty.jpg'),
-            name: 'Angla Cool',
+            name: 'Pettyfer Alex',
             role: 'Administrator'
           },
           property: [
