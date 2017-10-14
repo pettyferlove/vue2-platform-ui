@@ -6,9 +6,9 @@
         <span>VUE</span>PettyDev
       </div>
       <vp-msg-push style="margin-left:20px" :data="msgPushData" trigger="click"></vp-msg-push>
-      <span style="margin-left: 20px" @click="toggleClick">
-        <i class="fa fa-bars"></i>
-      </span>
+        <span style="margin-left: 20px" @click="toggleClick">
+          <i class="fa fa-bars"></i>
+        </span>
       <vp-user-panel></vp-user-panel>
     </el-row>
     <el-row class="main">
