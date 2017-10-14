@@ -14,15 +14,24 @@
       <vp-state-over-view color="#f60000" icon="fa fa-download" title="Downloads" count="9960"></vp-state-over-view>
       </el-col>
     </el-row>
+
+    <el-row :gutter="16">
+      <el-col :lg="6">
+        <vp-user-preview :brief="dataUserPreview.brief" :property="dataUserPreview.property"></vp-user-preview>
+      </el-col>
+
+    </el-row>
   </div>
 </template>
 
 <script>
   import VpStateOverView from '../components/vp-state-overview.vue'
+  import VpUserPreview from '../components/vp-user-preview.vue'
 
   export default {
     name: 'Dashboard',
     components: {
+      VpUserPreview,
       VpStateOverView
     },
     data () {
