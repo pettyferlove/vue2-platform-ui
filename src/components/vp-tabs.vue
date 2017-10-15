@@ -53,7 +53,6 @@
       }
     },
     mounted: function () {
-      console.log(this.$children[0])
       this.activeName = this.$children[0].name
       this.updateNavList()
     }
