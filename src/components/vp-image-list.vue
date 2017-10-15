@@ -66,7 +66,6 @@
     },
     methods: {
       updateDataShow: function () {
-        console.log(this.showNum)
         let startPage = (this.currentPage - 1) * this.showNum
         let endPage = startPage + this.showNum
         this.dataShow = this.data.slice(startPage, endPage)
