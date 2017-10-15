@@ -66,11 +66,13 @@
     },
     methods: {
       updateDataShow: function () {
+        this.showNum = parseInt(this.showNum)
         let startPage = (this.currentPage - 1) * this.showNum
         let endPage = startPage + this.showNum
         this.dataShow = this.data.slice(startPage, endPage)
       },
       pageChange: function (page) {
+        this.showNum = parseInt(this.showNum)
         this.currentPage = page
         this.updateDataShow()
       },
