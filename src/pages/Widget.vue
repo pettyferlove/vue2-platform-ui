@@ -16,10 +16,12 @@
     </el-row>
     <el-row :gutter="16">
       <el-col :lg="12">
-
+        <vp-mesage-carousel :data="dataMessageCarouse1">
+        </vp-mesage-carousel>
       </el-col>
       <el-col :lg="12">
-
+        <vp-mesage-carousel :data="dataMessageCarouse1" :autoplay="false">
+        </vp-mesage-carousel>
       </el-col>
     </el-row>
     <el-row :gutter="16">
@@ -38,10 +40,12 @@
 <script>
   import VpStateGroup from '../components/vp-state-group.vue'
   import VpCircle from '../components/vp-circle.vue'
+  import VpMesageCarousel from '../components/vp-message-carousel.vue'
 
   export default {
     name: 'Widget',
     components: {
+      VpMesageCarousel,
       VpCircle,
       VpStateGroup
     },
