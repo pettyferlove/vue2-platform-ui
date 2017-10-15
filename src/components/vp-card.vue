@@ -9,9 +9,9 @@
             <i class="fa fa-pencil"></i>
           </a>
         </span>
-          <span class="delete">
-          <i class="fa fa-trash" @click="modalDelete=true"></i>
-        </span>
+          <span class="delete" @click="dialogVisible=true">
+            <i class="fa fa-trash"></i>
+          </span>
         </div>
       </div>
       <div class="card-desc panel-body">
@@ -21,13 +21,15 @@
           more >
         </a>
       </div>
+
       <el-dialog
-        v-model="modalDelete"
-        title="Delete"
-        ok-text="OK"
-        cancel-text="Cancel"
-        v-on:on-ok="deleteOk">
+        :visible.sync="dialogVisible"
+        title="Delete">
         Are you sure to delete this data?
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="dialogVisible = false">取 消</el-button>
+          <el-button type="primary" @click="deleteOk">确 定</el-button>
+        </span>
       </el-dialog>
     </div>
   </el-card>
@@ -67,7 +69,7 @@
     },
     data: function () {
       return {
-        modalDelete: false
+        dialogVisible: false
       }
     },
     methods: {
