@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/pages/Home'
 import Panels from '@/pages/Panels'
 import Dashboard from '@/pages/Dashboard'
+import Widget from '@/pages/Widget'
 
 Vue.use(Router)
 
@@ -21,6 +22,11 @@ export default new Router({
           path: '/panels',
           name: 'Panels',
           component: Panels
+        },
+        {
+          path: '/widget',
+          name: 'Widget',
+          component: Widget
         }
       ]
     }

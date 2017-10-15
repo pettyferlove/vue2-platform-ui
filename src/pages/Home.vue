@@ -18,7 +18,7 @@
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
           </el-menu-item>
-          <el-menu-item index="2">
+          <el-menu-item index="2" @click="$router.push('widget')">
             <i class="fa fa-cogs"></i>
             <span slot="title">小组件</span>
           </el-menu-item>
