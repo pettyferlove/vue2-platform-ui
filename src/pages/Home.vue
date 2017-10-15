@@ -30,7 +30,7 @@
             <i class="fa fa-pencil"></i>
             <span slot="title">编辑器</span>
           </el-menu-item>
-          <el-menu-item index="5">
+          <el-menu-item index="5" @click="$router.push('imageList')">
             <i class="fa fa-photo"></i>
             <span slot="title">图片列表</span>
           </el-menu-item>
