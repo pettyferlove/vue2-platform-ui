@@ -1,7 +1,8 @@
 <template>
   <div class="widget vp-content">
     <el-row class="vp-margin">
-
+      <vp-state-group :data="dataStateGroup">
+      </vp-state-group>
     </el-row>
     <el-row :gutter="16">
       <el-col :lg="12">
@@ -33,9 +34,12 @@
 </template>
 
 <script>
+  import VpStateGroup from '../components/vp-state-group.vue'
+
   export default {
     name: 'Widget',
     components: {
+      VpStateGroup
     },
     data: function () {
       return {
