@@ -37,6 +37,10 @@ module.exports = {
           formatter: require('eslint-friendly-formatter')
         }
       },
+      // IView 加载进度条编译
+      {
+        test: /iview.src.*?js$/,
+        loader: 'babel-loader' },
       {
         test: /\.vue$/,
         loader: 'vue-loader',

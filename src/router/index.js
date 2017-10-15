@@ -1,4 +1,8 @@
 import Vue from 'vue'
+// 引入IView加载进度条
+import LoadingBar from 'iview/src/components/loading-bar'
+import 'iview/dist/styles/iview.css'
+
 import Router from 'vue-router'
 import Home from '@/pages/Home'
 import Panels from '@/pages/Panels'
@@ -6,8 +10,9 @@ import Dashboard from '@/pages/Dashboard'
 import Widget from '@/pages/Widget'
 
 Vue.use(Router)
+Vue.use(LoadingBar)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -32,3 +37,19 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  LoadingBar.config({
+    color: '#2d8cf0',
+    failedColor: '#ed3f14',
+    height: 2
+  })
+  LoadingBar.start()
+  next()
+})
+
+router.afterEach((to, from, next) => {
+  LoadingBar.finish()
+})
+
+export default router
