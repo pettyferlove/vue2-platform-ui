@@ -62,6 +62,8 @@
             </div>
           </vp-tabs-item>
         </vp-tabs>
+        <vp-weather class="vp-margin" :data="dataWeather">
+        </vp-weather>
       </el-col>
     </el-row>
   </div>
@@ -74,10 +76,12 @@
   import VpTimeline from '../components/vp-timeline.vue'
   import VpTabs from '../components/vp-tabs.vue'
   import VpTabsItem from '../components/vp-tabs-item.vue'
+  import VpWeather from '../components/vp-weather.vue'
 
   export default {
     name: 'Dashboard',
     components: {
+      VpWeather,
       VpTabsItem,
       VpTabs,
       VpTimeline,
