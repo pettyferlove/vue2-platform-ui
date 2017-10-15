@@ -37,7 +37,7 @@
       }
     },
     mounted: function () {
-      console.log(1 / this.data.length * 100 + '%')
+      // console.log(1 / this.data.length * 100 + '%')
     }
   }
 </script>

@@ -6,10 +6,12 @@
     </el-row>
     <el-row :gutter="16">
       <el-col :lg="12">
-
+        <vp-circle class="demo-circle" title="Oil capacity (L)" usedName="Consumed" :usedValue="70" restName="Rest" :restValue="20">
+        </vp-circle>
       </el-col>
       <el-col :lg="12">
-
+        <vp-circle class="demo-circle" title="Oil capacity (L)" usedName="Consumed" :usedValue="70" restName="Rest" :restValue="0">
+        </vp-circle>
       </el-col>
     </el-row>
     <el-row :gutter="16">
@@ -35,10 +37,12 @@
 
 <script>
   import VpStateGroup from '../components/vp-state-group.vue'
+  import VpCircle from '../components/vp-circle.vue'
 
   export default {
     name: 'Widget',
     components: {
+      VpCircle,
       VpStateGroup
     },
     data: function () {
