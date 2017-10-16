@@ -82,8 +82,6 @@
         } else if (this.order === '-1') {
           this.sortData(this.rebuildData, -1)
         }
-        console.log(this.data[0].value)
-        console.log(this.rebuildData[0].value)
       }
     },
     created () {
