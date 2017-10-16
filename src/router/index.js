@@ -10,6 +10,7 @@ import Dashboard from '@/pages/Dashboard'
 import Widget from '@/pages/Widget'
 import ImageList from '@/pages/ImageList'
 import Icons from '@/pages/Icons'
+import Login from '@/pages/Login'
 
 Vue.use(Router)
 Vue.use(LoadingBar)
@@ -46,6 +47,13 @@ const router = new Router({
           component: Icons
         }
       ]
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      components: {
+        other: Login
+      }
     }
   ]
 })
