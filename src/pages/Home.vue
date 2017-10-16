@@ -38,10 +38,16 @@
             <i class="fa fa-bar-chart"></i>
             <span slot="title">图表</span>
           </el-menu-item>
-          <el-menu-item index="7">
-            <i class="fa fa-anchor"></i>
-            <span slot="title">UI元素</span>
-          </el-menu-item>
+          <el-submenu index="7">
+            <template slot="title">
+              <i class="fa fa-anchor"></i>
+              <span slot="title">UI元素</span>
+            </template>
+            <el-menu-item index="7-1" @click="$router.push('icons')">
+              <i class="fa fa-font"></i>
+              <span slot="title">字体图标</span>
+            </el-menu-item>
+          </el-submenu>
 
           <el-submenu index="8">
             <template slot="title">

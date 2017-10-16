@@ -9,6 +9,7 @@ import Panels from '@/pages/Panels'
 import Dashboard from '@/pages/Dashboard'
 import Widget from '@/pages/Widget'
 import ImageList from '@/pages/ImageList'
+import Icons from '@/pages/Icons'
 
 Vue.use(Router)
 Vue.use(LoadingBar)
@@ -38,6 +39,11 @@ const router = new Router({
           path: '/imageList',
           name: 'ImageList',
           component: ImageList
+        },
+        {
+          path: '/icons',
+          name: 'Icons',
+          component: Icons
         }
       ]
     }
