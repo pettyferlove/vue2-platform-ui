@@ -69,7 +69,7 @@
               <i class="fa fa-file"></i>
               <span slot="title">页面</span>
             </template>
-            <el-menu-item index="9-1">
+            <el-menu-item index="9-1" @click="$router.push('login')">
               <i class="fa fa-mouse-pointer"></i>
               <span slot="title">登录页</span>
             </el-menu-item>
