@@ -54,7 +54,7 @@
               <i class="fa fa-database"></i>
               <span slot="title">数据表格</span>
             </template>
-            <el-menu-item index="8-1">
+            <el-menu-item index="8-1" @click="$router.push('basicTable')">
               <i class="fa fa-hdd-o"></i>
               <span slot="title">基础表格</span>
             </el-menu-item>

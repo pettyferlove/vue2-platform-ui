@@ -12,6 +12,7 @@ import ImageList from '@/pages/ImageList'
 import Icons from '@/pages/Icons'
 import Login from '@/pages/Login'
 import Charts from '@/pages/Charts'
+import BasicTable from '@/pages/BasicTable'
 
 Vue.use(Router)
 Vue.use(LoadingBar)
@@ -51,6 +52,11 @@ const router = new Router({
           path: '/charts',
           name: 'Charts',
           component: Charts
+        },
+        {
+          path: '/basicTable',
+          name: 'BasicTable',
+          component: BasicTable
         }
       ]
     },
