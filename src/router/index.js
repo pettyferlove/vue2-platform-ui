@@ -11,6 +11,7 @@ import Widget from '@/pages/Widget'
 import ImageList from '@/pages/ImageList'
 import Icons from '@/pages/Icons'
 import Login from '@/pages/Login'
+import Charts from '@/pages/Charts'
 
 Vue.use(Router)
 Vue.use(LoadingBar)
@@ -45,6 +46,11 @@ const router = new Router({
           path: '/icons',
           name: 'Icons',
           component: Icons
+        },
+        {
+          path: '/charts',
+          name: 'Charts',
+          component: Charts
         }
       ]
     },

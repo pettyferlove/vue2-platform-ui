@@ -34,7 +34,7 @@
             <i class="fa fa-photo"></i>
             <span slot="title">图片列表</span>
           </el-menu-item>
-          <el-menu-item index="6">
+          <el-menu-item index="6" @click="$router.push('charts')">
             <i class="fa fa-bar-chart"></i>
             <span slot="title">图表</span>
           </el-menu-item>
