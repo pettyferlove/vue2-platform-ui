@@ -9,12 +9,6 @@
           <div class="table-style">
             <h3>Stripe</h3>
             <el-switch v-model="showStripe" style="margin: 0 30px 0 10px"></el-switch>
-            <h3>Size</h3>
-            <el-radio-group v-model="tableSize" size="small" style="margin-left: 10px">
-              <el-radio-button  label="large">Large</el-radio-button>
-              <el-radio-button  label="default">Default</el-radio-button>
-              <el-radio-button  label="small">Small</el-radio-button>
-            </el-radio-group>
           </div>
           <div class="search-bar">
             <el-input placeholder="Please enter ..." v-model="keyword" style="width: 300px"></el-input>
@@ -26,6 +20,7 @@
           <el-button  :disabled="deleteDisabled" @click="modalDelete = true"><i class="fa fa-trash"></i> Delete</el-button>
         </div>
         <el-table :stripe="showStripe" :size="tableSize" :data="dataShow" @on-selection-change="selectChange">
+          <el-table-column type="selection" width="55"></el-table-column>
           <el-table-column prop="id" label="编号" sortable></el-table-column>
           <el-table-column prop="name" label="姓名" sortable></el-table-column>
           <el-table-column prop="age" label="年龄" sortable></el-table-column>
@@ -33,11 +28,11 @@
         </el-table>
         <el-row type="flex" justify="space-between" class="footer">
           <div class="info-bar">
-            Show<el-input-number size="small" class="input-number" v-model="showNum" :max="data.length" :min="1" @on-change=" updateDataShow ">{{ showNum }}</el-input-number>/ Page
+            Show<el-input-number size="small" class="input-number" v-model="showNum" :max="data.length" :min="1" @change="updateDataShow">{{ showNum }}</el-input-number>/ Page
           </div>
           <div class="page">
             <span class="total">Total {{ data.length }}</span>
-            <el-pagination :total="data.length" :current="currentPage" :page-size="showNum" @on-change="pageChange"></el-pagination>
+            <el-pagination :total="data.length" :current-page="currentPage" :page-size="showNum" @current-change="pageChange"></el-pagination>
           </div>
         </el-row>
       </div>
@@ -118,9 +113,10 @@
       },
       pageChange: function (page) {
         this.currentPage = page
-        this.updateDataShow()
+        this.updateDataShow(this.showNum)
       },
-      updateDataShow: function () {
+      updateDataShow: function (num) {
+        this.showNum = num
         let startPage = (this.currentPage - 1) * this.showNum
         let endPage = startPage + this.showNum
         this.dataShow = this.data.slice(startPage, endPage)
