@@ -2,7 +2,6 @@ import Vue from 'vue'
 // 引入IView加载进度条
 import LoadingBar from 'iview/src/components/loading-bar'
 import 'iview/dist/styles/iview.css'
-
 import Router from 'vue-router'
 import Home from '@/pages/Home'
 import Panels from '@/pages/Panels'
@@ -16,6 +15,7 @@ import BasicTable from '@/pages/BasicTable'
 
 Vue.use(Router)
 Vue.use(LoadingBar)
+Vue.prototype.$LoadingBar = LoadingBar
 
 const router = new Router({
   routes: [
