@@ -3,15 +3,6 @@ import Vue from 'vue'
 import LoadingBar from 'iview/src/components/loading-bar'
 import 'iview/dist/styles/iview.css'
 import Router from 'vue-router'
-import Home from '@/pages/Home'
-import Panels from '@/pages/Panels'
-import Dashboard from '@/pages/Dashboard'
-import Widget from '@/pages/Widget'
-import ImageList from '@/pages/ImageList'
-import Icons from '@/pages/Icons'
-import Login from '@/pages/Login'
-import Charts from '@/pages/Charts'
-import BasicTable from '@/pages/BasicTable'
 
 Vue.use(Router)
 Vue.use(LoadingBar)
@@ -21,42 +12,42 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: Home,
+      component: resolve => require(['@/pages/Home'], resolve),
       children: [
         {
           path: '/',
           name: 'Dashboard',
-          component: Dashboard
+          component: resolve => require(['@/pages/Dashboard'], resolve)
         },
         {
           path: '/panels',
           name: 'Panels',
-          component: Panels
+          component: resolve => require(['@/pages/Panels'], resolve)
         },
         {
           path: '/widget',
           name: 'Widget',
-          component: Widget
+          component: resolve => require(['@/pages/Widget'], resolve)
         },
         {
           path: '/imageList',
           name: 'ImageList',
-          component: ImageList
+          component: resolve => require(['@/pages/ImageList'], resolve)
         },
         {
           path: '/icons',
           name: 'Icons',
-          component: Icons
+          component: resolve => require(['@/pages/Icons'], resolve)
         },
         {
           path: '/charts',
           name: 'Charts',
-          component: Charts
+          component: resolve => require(['@/pages/Charts'], resolve)
         },
         {
           path: '/basicTable',
           name: 'BasicTable',
-          component: BasicTable
+          component: resolve => require(['@/pages/BasicTable'], resolve)
         }
       ]
     },
@@ -64,7 +55,7 @@ const router = new Router({
       path: '/login',
       name: 'Login',
       components: {
-        other: Login
+        other: resolve => require(['@/pages/Login'], resolve)
       }
     }
   ]
