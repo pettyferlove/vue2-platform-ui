@@ -2,6 +2,11 @@
 
 > A Vue.js project
 
+[![](https://img.shields.io/travis/iview/iview-admin.svg?style=flat-square)](https://travis-ci.org/iview/iview-admin)
+[![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com)
+[![vue](https://img.shields.io/badge/vue-2.5.2-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
+[![iview](https://img.shields.io/badge/iview-2.4.0-brightgreen.svg?style=flat-square)](https://github.com/iview/iview)
+
 ## Build Setup
 
 ``` bash

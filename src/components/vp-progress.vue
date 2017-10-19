@@ -3,7 +3,7 @@
     <el-row class="vp-progress vp-panel">
       <el-row type="flex"  align="middle" justify="space-between" class="panel-heading">
         {{ title }}
-        <el-radio-group v-model="order" type="button" size="large" @change="handleSortData">
+        <el-radio-group v-model="order" size="large" @change="handleSortData">
           <el-radio-button label="0"><i class="fa fa-bars"></i></el-radio-button>
           <el-radio-button label="1"><i class="fa fa-sort-amount-asc"></i></el-radio-button>
           <el-radio-button label="-1"><i class="fa fa-sort-amount-desc"></i></el-radio-button>
