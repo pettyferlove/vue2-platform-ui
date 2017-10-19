@@ -6,8 +6,8 @@
   </div>
 </template>
 <script>
-  import VpLogin from '../components/vp-login'
-  import VpBgCanvas from '../components/vp-bg-canvas'
+  import VpLogin from '../components/common/vp-login'
+  import VpBgCanvas from '../components/canvas/vp-bg-canvas'
   export default {
     name: 'Login',
     components: {

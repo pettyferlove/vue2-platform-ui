@@ -70,13 +70,13 @@
 </template>
 
 <script>
-  import VpStateOverView from '../components/vp-state-overview.vue'
+  import VpStateOverView from '../components/state/vp-state-overview.vue'
   import VpUserPreview from '../components/user/vp-user-preview.vue'
-  import VpProgress from '../components/vp-progress.vue'
-  import VpTimeline from '../components/vp-timeline.vue'
-  import VpTabs from '../components/vp-tabs.vue'
-  import VpTabsItem from '../components/vp-tabs-item.vue'
-  import VpWeather from '../components/vp-weather.vue'
+  import VpProgress from '../components/progress/vp-progress.vue'
+  import VpTimeline from '../components/timeline/vp-timeline.vue'
+  import VpTabs from '../components/tabs/vp-tabs.vue'
+  import VpTabsItem from '../components/tabs/vp-tabs-item.vue'
+  import VpWeather from '../components/weather/vp-weather.vue'
 
   export default {
     name: 'Dashboard',

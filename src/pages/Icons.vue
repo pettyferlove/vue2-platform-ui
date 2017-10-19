@@ -1183,7 +1183,7 @@
 </style>
 
 <script>
-  import VpPanel from '@/components/vp-panel'
+  import VpPanel from '@/components/common/vp-panel'
 
   export default {
     name: 'Icons',

@@ -3,7 +3,7 @@
     <el-row class="vp-login vp-panel">
       <el-col :span="10" class="login-form">
       <div class="login-header">
-        <img src="../assets/img/logo.png" height="80" alt="">
+        <img src="../../assets/img/logo.png" height="80" alt="">
         <p><span>VUE</span>PettyDev</p>
       </div>
       <div class="login-form">

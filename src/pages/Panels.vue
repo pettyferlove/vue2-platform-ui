@@ -68,7 +68,7 @@
 </template>
 
 <script>
-  import VpPanel from '../components/vp-panel.vue'
+  import VpPanel from '../components/common/vp-panel.vue'
   export default {
     name: 'BasicTable',
     components: {

@@ -9,7 +9,7 @@
         <span style="margin-left: 20px" @click="toggleClick">
           <i class="fa fa-bars"></i>
         </span>
-      <vp-user-panel :adminInfo="actionInfo"></vp-user-panel>
+      <vp-user-panel :adminInfo="adminInfo"></vp-user-panel>
     </el-row>
     <el-row class="main">
       <aside :class="[classes]">
@@ -107,7 +107,7 @@
 </template>
 
 <script>
-  import VpMsgPush from '../components/vp-msg-push.vue'
+  import VpMsgPush from '../components/message/vp-message-push.vue'
   import VpUserPanel from '../components/user/vp-user-panel.vue'
   /* eslint-disable no-useless-computed-key */
   export default {

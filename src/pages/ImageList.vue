@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import VpImageList from '../components/vp-image-list.vue'
+  import VpImageList from '../components/list/vp-image-list.vue'
   export default {
     name: 'ImageList',
     components: {

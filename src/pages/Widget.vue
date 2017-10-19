@@ -38,10 +38,10 @@
 </template>
 
 <script>
-  import VpStateGroup from '../components/vp-state-group.vue'
-  import VpCircle from '../components/vp-circle.vue'
-  import VpMesageCarousel from '../components/vp-message-carousel.vue'
-  import VpCard from '../components/vp-card.vue'
+  import VpStateGroup from '../components/state/vp-state-group.vue'
+  import VpCircle from '../components/progress/vp-circle.vue'
+  import VpMesageCarousel from '../components/message/vp-message-carousel.vue'
+  import VpCard from '../components/common/vp-card.vue'
 
   export default {
     name: 'Widget',

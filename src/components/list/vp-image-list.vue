@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import VpCard from '../components/vp-card.vue'
+  import VpCard from '../common/vp-card.vue'
   export default {
     name: 'VpImageList',
     components: {

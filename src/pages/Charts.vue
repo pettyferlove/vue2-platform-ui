@@ -34,9 +34,9 @@
 </template>
 
 <script>
-  import VpChartBarLine from '../components/vp-chart-bar-line'
-  import VpChartPie from '../components/vp-chart-pie'
-  import VpChartRadar from '../components/vp-chart-radar'
+  import VpChartBarLine from '../components/chart/vp-chart-bar-line'
+  import VpChartPie from '../components/chart/vp-chart-pie'
+  import VpChartRadar from '../components/chart/vp-chart-radar'
   export default {
     name: 'Charts',
     components: {

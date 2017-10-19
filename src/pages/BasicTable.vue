@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import VpTable from '../components/vp-table'
+  import VpTable from '../components/table/vp-table'
   export default {
     name: 'BasicTable',
     components: {
