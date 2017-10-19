@@ -13,16 +13,16 @@
     </el-row>
     <el-row class="main">
       <aside :class="[classes]">
-        <el-menu default-active="1" theme="dark" :collapse="collapsed" unique-opened>
-          <el-menu-item index="1" @click="$router.push('/')">
+        <el-menu :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
+          <el-menu-item index="/">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
           </el-menu-item>
-          <el-menu-item index="2" @click="$router.push('widget')">
+          <el-menu-item index="/widget">
             <i class="fa fa-cogs"></i>
             <span slot="title">小组件</span>
           </el-menu-item>
-          <el-menu-item index="3" @click="$router.push('panels')">
+          <el-menu-item index="/panels">
             <i class="fa fa-database"></i>
             <span slot="title">面板</span>
           </el-menu-item>
@@ -30,11 +30,11 @@
             <i class="fa fa-pencil"></i>
             <span slot="title">编辑器</span>
           </el-menu-item>
-          <el-menu-item index="5" @click="$router.push('imageList')">
+          <el-menu-item index="/imageList">
             <i class="fa fa-photo"></i>
             <span slot="title">图片列表</span>
           </el-menu-item>
-          <el-menu-item index="6" @click="$router.push('charts')">
+          <el-menu-item index="/charts">
             <i class="fa fa-bar-chart"></i>
             <span slot="title">图表</span>
           </el-menu-item>
@@ -43,11 +43,11 @@
               <i class="fa fa-anchor"></i>
               <span slot="title">UI元素</span>
             </template>
-            <el-menu-item index="7-1" @click="$router.push('icons')">
+            <el-menu-item index="/icons">
               <i class="fa fa-font"></i>
               <span slot="title">字体图标</span>
             </el-menu-item>
-            <el-menu-item index="7-2" @click="$router.push('icons')">
+            <el-menu-item index="/icons">
               <i class="fa fa-font"></i>
               <span slot="title">字体图标</span>
             </el-menu-item>
@@ -58,7 +58,7 @@
               <i class="fa fa-database"></i>
               <span slot="title">数据表格</span>
             </template>
-            <el-menu-item index="8-1" @click="$router.push('basicTable')">
+            <el-menu-item index="/basicTable">
               <i class="fa fa-hdd-o"></i>
               <span slot="title">基础表格</span>
             </el-menu-item>
@@ -73,7 +73,7 @@
               <i class="fa fa-file"></i>
               <span slot="title">页面</span>
             </template>
-            <el-menu-item index="9-1" @click="$router.push('login')">
+            <el-menu-item index="/login">
               <i class="fa fa-mouse-pointer"></i>
               <span slot="title">登录页</span>
             </el-menu-item>
