@@ -71,7 +71,7 @@
 
 <script>
   import VpStateOverView from '../components/vp-state-overview.vue'
-  import VpUserPreview from '../components/vp-user-preview.vue'
+  import VpUserPreview from '../components/user/vp-user-preview.vue'
   import VpProgress from '../components/vp-progress.vue'
   import VpTimeline from '../components/vp-timeline.vue'
   import VpTabs from '../components/vp-tabs.vue'

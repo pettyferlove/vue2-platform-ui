@@ -9,7 +9,7 @@
         <span style="margin-left: 20px" @click="toggleClick">
           <i class="fa fa-bars"></i>
         </span>
-      <vp-user-panel></vp-user-panel>
+      <vp-user-panel :adminInfo="actionInfo"></vp-user-panel>
     </el-row>
     <el-row class="main">
       <aside :class="[classes]">
@@ -107,15 +107,13 @@
 </template>
 
 <script>
-  import ElRow from 'element-ui/packages/row/src/row'
   import VpMsgPush from '../components/vp-msg-push.vue'
-  import VpUserPanel from '../components/vp-user-panel.vue'
+  import VpUserPanel from '../components/user/vp-user-panel.vue'
   /* eslint-disable no-useless-computed-key */
   export default {
     components: {
       VpUserPanel,
-      VpMsgPush,
-      ElRow},
+      VpMsgPush},
     name: 'home',
     methods: {
       toggleClick () {
@@ -126,6 +124,10 @@
     data () {
       return {
         collapsed: false,
+        adminInfo: {
+          image: require('@/assets/img/user-petty.jpg'),
+          name: 'Pettyfer'
+        },
         msgPushData: [
           {
             image: require('@/assets/img/user-petty.jpg'),
