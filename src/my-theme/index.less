@@ -37,11 +37,22 @@
   border-right-color: @primary-color ;
 }
 
-
 .el-menu--dark .el-submenu .el-menu .el-menu-item:hover {
   color: @primary-color;
   background: #171e2e;
   border-right-color: @primary-color ;
+}
+
+.el-menu--dark .el-submenu .el-menu {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.el-menu--dark .el-submenu .el-menu .el-menu-item:first-child {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.el-menu--dark .el-submenu .el-menu .el-menu-item:last-child {
+  border-radius: 0px 0px 5px 5px;
 }
 
 .el-menu-item, .el-submenu__title {

@@ -47,6 +47,10 @@
               <i class="fa fa-font"></i>
               <span slot="title">字体图标</span>
             </el-menu-item>
+            <el-menu-item index="7-2" @click="$router.push('icons')">
+              <i class="fa fa-font"></i>
+              <span slot="title">字体图标</span>
+            </el-menu-item>
           </el-submenu>
 
           <el-submenu index="8">
