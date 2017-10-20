@@ -32,7 +32,7 @@
     },
     computed: {
       itemWidth: function () {
-        let p = 1 / this.data.length * 100 + '%'
+        let p = 'calc( ' + 1 / this.data.length * 100 + '% - 1px )'
         return p
       }
     },
