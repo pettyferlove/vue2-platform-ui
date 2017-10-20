@@ -7,7 +7,7 @@ import Vue from 'vue'
 
 let vpLoadingBarInstance
 let timer
-let color = '#000'
+let color = '#1d8ce0'
 let errorColor = '#ed3f14'
 let height = 2
 /**

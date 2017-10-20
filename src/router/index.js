@@ -61,7 +61,7 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   LoadingBar.config({
-    color: '#2d8cf0',
+    color: '#1d8ce0',
     failedColor: '#ed3f14',
     height: 2
   })
