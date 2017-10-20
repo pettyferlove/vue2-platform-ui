@@ -1,3 +1,7 @@
+/**
+ * @author Pettyfer
+ * @see Vue 页面加载进度条组件
+ */
 import VpLoadingBar from './vp-loading-bar.vue'
 import Vue from 'vue'
 
@@ -6,7 +10,11 @@ let timer
 let color = '#000'
 let errorColor = '#ed3f14'
 let height = 2
-
+/**
+ * 创建组件实例
+ * @param props 初始化参数
+ * @return {*}
+ */
 VpLoadingBar.createInstance = props => {
   const _props = props || {}
 
@@ -82,9 +90,7 @@ function clearTimer () {
 export default {
   start () {
     if (timer) return
-
     let percent = 0
-
     update({
       percentWidth: percent,
       status: true,
