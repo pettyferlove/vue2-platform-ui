@@ -1,7 +1,5 @@
 import Vue from 'vue'
-// 引入IView加载进度条
 import LoadingBar from '../components/progress/vp-loading-bar'
-import 'iview/dist/styles/iview.css'
 import Router from 'vue-router'
 
 Vue.use(Router)
