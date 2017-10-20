@@ -6,18 +6,8 @@
   </transition>
 </template>
 
-<style lang="less">
-  .vp-loading-bar{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000;
-    .vp-loading-bar-inner {
-      transition: width .2s linear;
-    }
-  }
+<style>
+
 </style>
 
 <script>
