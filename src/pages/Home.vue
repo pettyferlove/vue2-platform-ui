@@ -89,7 +89,7 @@
     <el-row class="main" :style="{paddingLeft: collapsed?'64px':'210px'}">
       <el-row class="header" type="flex" align="middle">
         <span style="margin-left: 20px" @click="toggleClick">
-          <i class="fa fa-bars"></i>
+          <i :class="toggleButton"></i>
         </span>
         <div class="avator-con">
           <vp-msg-push class="message-push" :data="msgPushData" trigger="click"></vp-msg-push>
@@ -166,6 +166,14 @@
         return {
           ['sidebar']: true
         }
+      },
+      toggleButton () {
+        return [
+          'fa',
+          'fa-bars',
+          'toggle-button',
+          this.collapsed ? '' : 'toggle-button--collapse'
+        ]
       }
     }
   }
