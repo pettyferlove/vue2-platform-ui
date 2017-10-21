@@ -5,8 +5,10 @@
         <img src="../assets/logo.png" height="30" alt="">
         <span>VUE</span>PettyDev
       </div>
-      <vp-msg-push style="margin-left:20px" :data="msgPushData" trigger="click"></vp-msg-push>
-      <vp-user-panel :adminInfo="adminInfo"></vp-user-panel>
+      <div class="avator-con">
+        <vp-msg-push class="message-push" :data="msgPushData" trigger="click"></vp-msg-push>
+        <vp-user-panel class="user-avator" :adminInfo="adminInfo"></vp-user-panel>
+      </div>
     </el-row>
     <el-row class="main">
       <aside :class="[classes]">
