@@ -1,6 +1,16 @@
 <template>
   <div class="home">
     <aside :class="[classes]">
+      <div class="menu-header">
+        <div class="logo" :style="{width: collapsed?'64px':'210px'}">
+          <div class="logo-group">
+            <img src="../assets/logo.png" height="30" alt="">
+            <span v-show="!collapsed">
+              <span class="logo-title-light">VUE</span>PettyDev
+            </span>
+          </div>
+        </div>
+      </div>
       <el-menu :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
         <el-menu-item index="/">
           <i class="fa fa-dashboard"></i>
@@ -78,12 +88,6 @@
     </aside>
     <el-row class="main" :style="{paddingLeft: collapsed?'64px':'210px'}">
       <el-row class="header" type="flex" align="middle">
-        <div class="logo">
-          <div class="logo-group">
-            <img src="../assets/logo.png" height="30" alt="">
-            <span>VUE</span>PettyDev
-          </div>
-        </div>
         <span style="margin-left: 20px" @click="toggleClick">
           <i class="fa fa-bars"></i>
         </span>

@@ -76,6 +76,37 @@ a{
     height: 100%;
     z-index: 1010;
     top: 0;
+    .menu-header{
+      .logo{
+        transition: transform .3s ease-in-out, .3s ease-in-out;
+        padding: 0px;
+        background-color: #1F2D3D;
+        height: @nav-height;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        overflow: hidden;
+        .logo-group{
+          line-height: @nav-height;
+          span{
+            .logo-title-light{
+              color: @primary-color
+            }
+          }
+          img{
+            vertical-align: middle;
+          }
+        }
+      }
+      .menu-user{
+        transition: transform .3s ease-in-out, .3s ease-in-out;
+        padding: 0px;
+        background-color: #1F2D3D;
+        font-size: 20px;
+        font-weight: bold;
+        overflow: hidden;
+      }
+    }
     .toggleItem{
       font-size: 14px;
       background-color: #1F2D3D;
@@ -141,22 +172,6 @@ a{
           padding: 12px 0;
           text-align: center;
           cursor: pointer;
-        }
-      }
-      .logo{
-        height: @nav-height;
-        color: @link-color;
-        font-size: 20px;
-        font-weight: bold;
-        .logo-group{
-          padding-left: 10px;
-          line-height: @nav-height;
-          span{
-            color: @primary-color
-          }
-          img{
-            vertical-align: middle;
-          }
         }
       }
     }

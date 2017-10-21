@@ -26,7 +26,7 @@
     props: {
       align: {
         type: String,
-        default: 'start'
+        default: 'end'
       },
       trigger: {
         type: String,
