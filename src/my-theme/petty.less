@@ -71,90 +71,94 @@ a{
 }
 
 #app{
-  .header{
-    z-index: 999;
-    width: 100%;
-    height: @nav-height;
-    top: 0;
+  .sidebar{
     position: fixed;
-    box-shadow: 0 1px 8px rgba(0,0,0,.3);
-    background: white;
-    .avator-con{
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: @nav-height;
-      width: 300px;
-      .message-push{
-        margin-right: 20px;
+    height: 100%;
+    z-index: 1010;
+    top: 0;
+    .toggleItem{
+      font-size: 14px;
+      background-color: #1F2D3D;
+      color: #bfcbd9;
+      line-height: 30px;
+      height: 30px;
+    }
+    li{
+      text-align: left;
+      a{
+        color: inherit;
         display: inline-block;
-        width: 30px;
-        padding: 18px 0;
-        text-align: center;
-        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        i{
+          margin-right: 10px;
+        }
       }
-      .user-avator{
+    }
+
+  }
+  .el-menu {
+    height: 100%;
+    width: 210px;
+  }
+  .el-menu--collapse {
+    width: 64px;
+  }
+  .main{
+    transition: transform .3s ease-in-out,padding .3s ease-in-out;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    padding-left: 210px;
+    width: 100%;
+    .header{
+      position: relative;
+      z-index: 999;
+      width: 100%;
+      height: @nav-height;
+      top: 0;
+      box-shadow: 0 1px 8px rgba(0,0,0,.3);
+      background: white;
+      .avator-con{
         position: absolute;
         right: 0;
         top: 0;
-        width: 150px;
-        padding: 12px 0;
-        text-align: center;
-        cursor: pointer;
-      }
-    }
-    .logo{
-      height: @nav-height;
-      color: @link-color;
-      font-size: 20px;
-      font-weight: bold;
-      .logo-group{
-        padding-left: 10px;
-        line-height: @nav-height;
-        span{
-          color: @primary-color
-        }
-        img{
-          vertical-align: middle;
-        }
-      }
-    }
-  }
-  .main{
-    display: flex;
-    top: 60px;
-    bottom: 0px;
-    overflow: hidden;
-    .sidebar{
-      top: 0;
-      .toggleItem{
-        font-size: 14px;
-        background-color: #1F2D3D;
-        color: #bfcbd9;
-        line-height: 30px;
-        height: 30px;
-      }
-      li{
-        text-align: left;
-        a{
-          color: inherit;
+        height: @nav-height;
+        width: 300px;
+        .message-push{
+          margin-right: 20px;
           display: inline-block;
-          width: 100%;
-          height: 100%;
-          i{
-            margin-right: 10px;
+          width: 30px;
+          padding: 18px 0;
+          text-align: center;
+          cursor: pointer;
+        }
+        .user-avator{
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 150px;
+          padding: 12px 0;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+      .logo{
+        height: @nav-height;
+        color: @link-color;
+        font-size: 20px;
+        font-weight: bold;
+        .logo-group{
+          padding-left: 10px;
+          line-height: @nav-height;
+          span{
+            color: @primary-color
+          }
+          img{
+            vertical-align: middle;
           }
         }
       }
-
-    }
-
-    .el-menu {
-      height: 100%;
-      width: 210px;
-    }
-    .el-menu--collapse {
-      width: 64px;
     }
 
     .main-content{
@@ -162,7 +166,6 @@ a{
       padding: 0px;
       height: calc(~"100vh - "@nav-height );
       overflow: auto;
-      flex: 1;
     }
   }
 }
