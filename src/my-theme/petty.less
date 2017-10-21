@@ -76,6 +76,7 @@ a{
     height: 100%;
     z-index: 1010;
     top: 0;
+    overflow: auto;
     .menu-header{
       .logo{
         transition: transform .3s ease-in-out, .3s ease-in-out;
@@ -111,7 +112,9 @@ a{
         }
       }
     }
-
+    .menu-content{
+      height: calc(~"100vh - "@nav-height );
+    }
   }
   .el-menu {
     height: 100%;

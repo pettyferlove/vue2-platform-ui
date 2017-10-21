@@ -11,7 +11,7 @@
           </div>
         </div>
       </div>
-      <el-menu :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
+      <el-menu class="menu-content" :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
         <el-menu-item index="/">
           <i class="fa fa-dashboard"></i>
           <span slot="title">仪表盘</span>
