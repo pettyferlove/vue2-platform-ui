@@ -6,14 +6,12 @@
         <span>VUE</span>PettyDev
       </div>
       <vp-msg-push style="margin-left:20px" :data="msgPushData" trigger="click"></vp-msg-push>
-        <span style="margin-left: 20px" @click="toggleClick">
-          <i class="fa fa-bars"></i>
-        </span>
       <vp-user-panel :adminInfo="adminInfo"></vp-user-panel>
     </el-row>
     <el-row class="main">
       <aside :class="[classes]">
         <el-menu :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
+          <div class="toggleItem" @click="toggleClick"><i :class="[toggleIcon]"></i></div>
           <el-menu-item index="/">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
@@ -92,15 +90,6 @@
         <transition name="fade" mode="out-in">
           <router-view></router-view>
         </transition>
-        <footer class="main-footer">
-          <strong>Copyright &copy; 2016-2017 Pettyfer.</strong> All rights
-          reserved.
-          <div>
-            <b><a href="https://github.com/pettyferlove/vue2-platform-ui.git" target="_blank"><i class="fa fa-github"></i></a></b>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <b>Version</b> 1.0.0
-          </div>
-        </footer>
       </section>
     </el-row>
   </div>
@@ -123,7 +112,7 @@
     },
     data () {
       return {
-        collapsed: false,
+        collapsed: true,
         adminInfo: {
           image: require('@/assets/img/user-petty.jpg'),
           name: 'Pettyfer'
@@ -167,6 +156,12 @@
         return {
           ['sidebar']: true
         }
+      },
+      toggleIcon () {
+        return [
+          'fa',
+          this.collapsed ? 'fa-bars' : 'fa-ellipsis-v'
+        ]
       }
     }
   }
