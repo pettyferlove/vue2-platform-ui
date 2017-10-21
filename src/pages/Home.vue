@@ -1,17 +1,17 @@
 <template>
   <div class="home">
     <aside :class="[classes]">
-      <div class="menu-header">
-        <div class="logo" :style="{width: collapsed?'64px':'210px'}">
-          <div class="logo-group">
-            <img src="../assets/logo.png" height="30" alt="">
-            <span v-show="!collapsed">
+      <el-menu :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
+        <div class="menu-header">
+          <div class="logo" :style="{width: collapsed?'64px':'210px'}">
+            <div class="logo-group">
+              <img src="../assets/logo.png" height="30" alt="">
+              <span v-show="!collapsed">
               <span class="logo-title-light">VUE</span>PettyDev
             </span>
+            </div>
           </div>
         </div>
-      </div>
-      <el-menu class="menu-content" :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
         <el-menu-item index="/">
           <i class="fa fa-dashboard"></i>
           <span slot="title">仪表盘</span>
