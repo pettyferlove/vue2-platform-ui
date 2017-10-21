@@ -2,9 +2,14 @@
   <div class="home">
     <el-row class="header" type="flex" align="middle">
       <div class="logo">
-        <img src="../assets/logo.png" height="30" alt="">
-        <span>VUE</span>PettyDev
+        <div class="logo-group">
+          <img src="../assets/logo.png" height="30" alt="">
+          <span>VUE</span>PettyDev
+        </div>
       </div>
+      <span style="margin-left: 20px" @click="toggleClick">
+          <i class="fa fa-bars"></i>
+        </span>
       <div class="avator-con">
         <vp-msg-push class="message-push" :data="msgPushData" trigger="click"></vp-msg-push>
         <vp-user-panel class="user-avator" :adminInfo="adminInfo"></vp-user-panel>
@@ -13,9 +18,6 @@
     <el-row class="main">
       <aside :class="[classes]">
         <el-menu :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
-          <el-tooltip class="item" effect="dark" content="收起/展开菜单" placement="right">
-            <div class="toggleItem" @click="toggleClick"><i :class="[toggleIcon]"></i></div>
-          </el-tooltip>
           <el-menu-item index="/">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
@@ -160,12 +162,6 @@
         return {
           ['sidebar']: true
         }
-      },
-      toggleIcon () {
-        return [
-          'fa',
-          this.collapsed ? 'fa-bars' : 'fa-ellipsis-v'
-        ]
       }
     }
   }

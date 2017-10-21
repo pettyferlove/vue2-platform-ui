@@ -77,7 +77,6 @@ a{
     height: @nav-height;
     top: 0;
     position: fixed;
-    padding: 10px;
     box-shadow: 0 1px 8px rgba(0,0,0,.3);
     background: white;
     .avator-con{
@@ -105,14 +104,19 @@ a{
       }
     }
     .logo{
+      height: @nav-height;
       color: @link-color;
       font-size: 20px;
       font-weight: bold;
-      span{
-        color: @primary-color
-      }
-      img{
-        vertical-align: middle;
+      .logo-group{
+        padding-left: 10px;
+        line-height: @nav-height;
+        span{
+          color: @primary-color
+        }
+        img{
+          vertical-align: middle;
+        }
       }
     }
   }
