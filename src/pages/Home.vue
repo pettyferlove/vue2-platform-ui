@@ -11,7 +11,9 @@
     <el-row class="main">
       <aside :class="[classes]">
         <el-menu :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
-          <div class="toggleItem" @click="toggleClick"><i :class="[toggleIcon]"></i></div>
+          <el-tooltip class="item" effect="dark" content="收起/展开菜单" placement="right">
+            <div class="toggleItem" @click="toggleClick"><i :class="[toggleIcon]"></i></div>
+          </el-tooltip>
           <el-menu-item index="/">
             <i class="fa fa-dashboard"></i>
             <span slot="title">仪表盘</span>
