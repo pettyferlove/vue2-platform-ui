@@ -5,7 +5,7 @@
         <i :class="icon"></i>
       </el-col>
       <el-col :span="14" class="value">
-        <vp-count-up :endNum="count" class="count" :style="{ color: color }"></vp-count-up>
+        <vp-count-up :idName="idName" :endVal="count" class="count" :style="{ color: color }"></vp-count-up>
         <p class="title">{{ title }}</p>
       </el-col>
     </el-row>
@@ -18,6 +18,27 @@
   export default {
     components: {VpCountUp},
     name: 'StateOverView',
-    props: ['color', 'icon', 'title', 'count']
+    props: {
+      idName: {
+        type: String,
+        required: true
+      },
+      color: {
+        type: String,
+        required: true
+      },
+      icon: {
+        type: String,
+        required: true
+      },
+      title: {
+        type: String,
+        required: true
+      },
+      count: {
+        type: Number,
+        required: true
+      }
+    }
   }
 </script>
