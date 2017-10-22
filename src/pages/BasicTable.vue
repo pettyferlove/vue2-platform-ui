@@ -1,6 +1,6 @@
 <template>
   <div class="basic-table vp-margin vp-content">
-    <vp-table title="基础表格" :data="dataTable"></vp-table>
+    <vp-table title="基础表格" :columns="dataColumns" :data="dataTable"></vp-table>
   </div>
 </template>
 
@@ -13,6 +13,32 @@
     },
     data () {
       return {
+        dataColumns: [
+          {
+            id: '20156541',
+            title: '编号',
+            key: 'id',
+            sort: true
+          },
+          {
+            id: '20156542',
+            title: '姓名',
+            key: 'name',
+            sort: true
+          },
+          {
+            id: '20156543',
+            title: '年龄',
+            key: 'age',
+            sort: true
+          },
+          {
+            id: '20156544',
+            title: '地址',
+            key: 'address',
+            sort: true
+          }
+        ],
         dataTable: [
           {
             id: '65416843154',

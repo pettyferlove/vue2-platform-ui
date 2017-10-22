@@ -48,22 +48,26 @@
           {
             id: '20156541',
             title: '编号',
-            key: 'id'
+            key: 'id',
+            sort: true
           },
           {
             id: '20156542',
             title: '姓名',
-            key: 'name'
+            key: 'name',
+            sort: true
           },
           {
             id: '20156543',
             title: '年龄',
-            key: 'age'
+            key: 'age',
+            sort: true
           },
           {
             id: '20156544',
             title: '地址',
-            key: 'address'
+            key: 'address',
+            sort: true
           }
         ],
         dataTable: [
