@@ -19,7 +19,7 @@
           <el-button @click="addDialogVisible = true" ><i class="fa fa-plus"></i> 新增</el-button>
           <el-button  :disabled="deleteDisabled" @click="deleteDialogVisible = true"><i class="fa fa-trash"></i> 删除</el-button>
         </div>
-        <el-table :stripe="showStripe" :size="tableSize" :data="dataShow" @selection-change="selectChange">
+        <el-table :stripe="showStripe" :size="tableSize" :data="dataShow" @selection-change="selectChange" highlight-current-row @current-change="handleCurrentChange">
           <el-table-column type="selection" width="55" v-if="type === 'edit'"></el-table-column>
           <el-table-column v-for="item in columns" :label="item.title" :prop="item.key" :key="item.id" :sortable="item.sort"></el-table-column>
           <el-table-column label="操作">
@@ -99,6 +99,7 @@
     },
     data () {
       return {
+        currentRow: null,
         addDialogVisible: false,
         editDialogVisible: false,
         deleteDialogVisible: false,
@@ -119,6 +120,9 @@
       }
     },
     methods: {
+      handleCurrentChange (row) {
+        this.currentRow = row
+      },
       handleDelete: function (index, row) {
         this.dataDelete.push(row)
         this.deleteDialogVisible = true
