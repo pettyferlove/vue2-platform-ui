@@ -1,4 +1,4 @@
-# Petty-Platform-UI
+# Vue2-Platform-UI
 
 > A Vue.js project
 
