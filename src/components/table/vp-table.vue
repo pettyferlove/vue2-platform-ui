@@ -49,12 +49,12 @@
         title="编辑数据">
         <el-form label-width="50">
           <el-form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" :key="dataEdit.id">
-            <el-input v-model="dataEdit[key]" :placeholder="'Please enter' + key"></el-input>
+            <el-input v-model="dataEdit[key]" :placeholder="'请输入' + key"></el-input>
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
           <el-button @click="editDialogVisible = false">取 消</el-button>
-          <el-button type="primary" @click="deleteOk">确 定</el-button>
+          <el-button type="primary" @click="editOk">确 定</el-button>
         </span>
       </el-dialog>
       <el-dialog
@@ -124,18 +124,24 @@
         this.deleteDialogVisible = true
       },
       handleEdit: function (index, row) {
-        console.log(row)
+        for (let i in row) {
+          if (i !== '_index' && i !== '_rowKey') {
+            this.dataEdit[i] = row[i]
+          }
+        }
+        this.editDialogVisible = true
       },
       editOk: function () {
         this.$emit('edit-ok', this.dataEdit)
+        this.editDialogVisible = false
       },
       addOk: function () {
-        this.addDialogVisible = false
         this.$emit('add-ok', this.dataAdd)
+        this.addDialogVisible = false
       },
       deleteOk: function () {
-        this.deleteDialogVisible = false
         this.$emit('delete-ok', this.dataDelete)
+        this.deleteDialogVisible = false
       },
       pageChange: function (page) {
         this.currentPage = page
