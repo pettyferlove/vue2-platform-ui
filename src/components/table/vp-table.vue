@@ -62,6 +62,7 @@
       </el-dialog>
       <el-dialog
         :visible.sync="addDialogVisible"
+        size="tiny"
         title="添加数据">
         <el-form label-width="50">
           <el-form-item v-for="item in columns" :label="item.title" :key="item.id">
@@ -70,13 +71,14 @@
         </el-form>
         <span slot="footer" class="dialog-footer">
           <el-button @click="addDialogVisible = false">取 消</el-button>
-          <el-button type="primary" @click="deleteOk">确 定</el-button>
+          <el-button type="primary" @click="addOk">确 定</el-button>
         </span>
       </el-dialog>
       <el-dialog
         :visible.sync="deleteDialogVisible"
-        title="Delete">
-        Are you sure to delete this data?
+        size="tiny"
+        title="删除数据">
+        确认删除这条数据？
         <span slot="footer" class="dialog-footer">
           <el-button @click="deleteDialogVisible = false">取 消</el-button>
           <el-button type="primary" @click="deleteOk">确 定</el-button>
@@ -124,9 +126,11 @@
         this.$emit('edit-ok', this.dataEdit)
       },
       addOk: function () {
+        this.addDialogVisible = false
         this.$emit('add-ok', this.dataAdd)
       },
       deleteOk: function () {
+        this.deleteDialogVisible = false
         this.$emit('delete-ok', this.dataDelete)
       },
       pageChange: function (page) {
