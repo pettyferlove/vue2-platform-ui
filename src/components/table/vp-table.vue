@@ -166,41 +166,6 @@
       remove: function (index) {
         this.dataShow.splice(index, 1)
       },
-      renderOperate: function (h, params) {
-        return h('div', [
-          h('el-button', {
-            props: {
-              type: 'info',
-              size: 'small'
-            },
-            style: {
-              marginRight: '5px'
-            },
-            on: {
-              click: () => {
-                for (let i in params.row) {
-                  if (i !== '_index' && i !== '_rowKey') {
-                    this.dataEdit[i] = params.row[i]
-                  }
-                }
-                this.modalEdit = true
-              }
-            }
-          }, 'Edit'),
-          h('el-button', {
-            props: {
-              type: 'error',
-              size: 'small'
-            },
-            on: {
-              click: () => {
-                this.dataDelete.push(params.row)
-                this.modalDelete = true
-              }
-            }
-          }, 'Delete')
-        ])
-      },
       convertKey: function (value) {
         let returnValue = value
         /* this.columns.forEach(function (elem) {
@@ -211,29 +176,6 @@
           }
         }) */
         return returnValue
-      }
-    },
-    computed: {
-      showColumns: function () {
-        let showColumn = this.columns.slice()
-        showColumn.forEach(function (elem) {
-          elem.sortable = true
-        })
-        if (this.type === 'edit') {
-          showColumn.unshift({
-            type: 'selection',
-            width: 60,
-            align: 'center'
-          })
-          showColumn.push({
-            title: '操作',
-            key: 'action',
-            width: 150,
-            align: 'center',
-            render: this.renderOperate
-          })
-        }
-        return showColumn
       }
     },
     watch: {
