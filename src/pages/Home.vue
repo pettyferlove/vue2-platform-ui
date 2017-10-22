@@ -75,13 +75,9 @@
             <i class="fa fa-mouse-pointer"></i>
             <span slot="title">登录页</span>
           </el-menu-item>
-          <el-menu-item index="9-2">
+          <el-menu-item index="/lockScreen">
             <i class="fa fa-cogs"></i>
             <span slot="title">锁屏</span>
-          </el-menu-item>
-          <el-menu-item index="9-3">
-            <i class="fa fa-minus"></i>
-            <span slot="title">加载中</span>
           </el-menu-item>
         </el-submenu>
       </el-menu>

@@ -60,6 +60,13 @@ const router = new Router({
       components: {
         other: resolve => require(['@/pages/Login'], resolve)
       }
+    },
+    {
+      path: '/lockScreen',
+      name: 'LockScreen',
+      components: {
+        other: resolve => require(['@/pages/LockScreen'], resolve)
+      }
     }
   ]
 })
