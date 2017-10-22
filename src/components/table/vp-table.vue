@@ -20,11 +20,8 @@
           <el-button  :disabled="deleteDisabled" @click="deleteDialogVisible = true"><i class="fa fa-trash"></i> 删除</el-button>
         </div>
         <el-table :stripe="showStripe" :size="tableSize" :data="dataShow" @selection-change="selectChange">
+          <el-table-column type="selection" width="55" v-if="type === 'edit'"></el-table-column>
           <el-table-column v-for="item in columns" :label="item.title" :prop="item.key" :key="item.id" :sortable="item.sort"></el-table-column>
-          <!--<el-table-column prop="id" label="编号" sortable></el-table-column>
-          <el-table-column prop="name" label="姓名" sortable></el-table-column>
-          <el-table-column prop="age" label="年龄" sortable></el-table-column>
-          <el-table-column prop="address" label="地址" sortable></el-table-column>-->
           <el-table-column label="操作">
             <template slot-scope="scope">
               <el-button
@@ -122,6 +119,13 @@
       }
     },
     methods: {
+      handleDelete: function (index, row) {
+        this.dataDelete.push(row)
+        this.deleteDialogVisible = true
+      },
+      handleEdit: function (index, row) {
+        console.log(row)
+      },
       editOk: function () {
         this.$emit('edit-ok', this.dataEdit)
       },
