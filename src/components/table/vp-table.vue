@@ -7,7 +7,7 @@
       <div class="panel-body">
         <el-row type="flex" justify="space-between" class="control">
           <div class="table-style">
-            <h3>Stripe</h3>
+            <h3>条纹</h3>
             <el-switch v-model="showStripe" style="margin: 0 30px 0 10px"></el-switch>
           </div>
           <div class="search-bar">
@@ -16,15 +16,26 @@
           </div>
         </el-row>
         <div class="edit" v-if="type === 'edit'">
-          <el-button @click="modalAdd = true" ><i class="fa fa-plus"></i> Add</el-button>
-          <el-button  :disabled="deleteDisabled" @click="modalDelete = true"><i class="fa fa-trash"></i> Delete</el-button>
+          <el-button @click="addDialogVisible = true" ><i class="fa fa-plus"></i> 新增</el-button>
+          <el-button  :disabled="deleteDisabled" @click="deleteDialogVisible = true"><i class="fa fa-trash"></i> 删除</el-button>
         </div>
-        <el-table :stripe="showStripe" :size="tableSize" :data="dataShow" @on-selection-change="selectChange">
+        <el-table :stripe="showStripe" :size="tableSize" :data="dataShow" @selection-change="selectChange">
           <el-table-column type="selection" width="55"></el-table-column>
           <el-table-column prop="id" label="编号" sortable></el-table-column>
           <el-table-column prop="name" label="姓名" sortable></el-table-column>
           <el-table-column prop="age" label="年龄" sortable></el-table-column>
           <el-table-column prop="address" label="地址" sortable></el-table-column>
+          <el-table-column label="操作">
+            <template slot-scope="scope">
+              <el-button
+                size="small"
+                @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+              <el-button
+                size="small"
+                type="danger"
+                @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+            </template>
+          </el-table-column>
         </el-table>
         <el-row type="flex" justify="space-between" class="footer">
           <div class="info-bar">
@@ -37,36 +48,39 @@
         </el-row>
       </div>
       <el-dialog
-        v-model="modalEdit"
-        title="Edit"
-        ok-text="OK"
-        cancel-text="Cancel"
-        v-on:on-ok="editOk">
-        <el-form :label-width="50">
+        :visible.sync="editDialogVisible"
+        title="编辑数据">
+        <el-form label-width="50">
           <el-form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" :key="dataEdit.id">
             <el-input v-model="dataEdit[key]" :placeholder="'Please enter' + key"></el-input>
           </el-form-item>
         </el-form>
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="editDialogVisible = false">取 消</el-button>
+          <el-button type="primary" @click="deleteOk">确 定</el-button>
+        </span>
       </el-dialog>
       <el-dialog
-        v-model="modalAdd"
-        title="Add"
-        ok-text="OK"
-        cancel-text="Cancel"
-        v-on:on-ok="addOk">
-        <el-form :label-width="50">
-          <!--<el-form-item v-for="item in columns" :label="item.title" :key="item.id">
-            <Input v-model="dataAdd[item.key]" :placeholder="'Please enter' + item.title"></Input>
-          </el-form-item>-->
+        :visible.sync="addDialogVisible"
+        title="添加数据">
+        <el-form label-width="50">
+          <el-form-item v-for="item in columns" :label="item.title" :key="item.id">
+            <el-input v-model="dataAdd[item.key]" :placeholder="'Please enter' + item.title"></el-input>
+          </el-form-item>
         </el-form>
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="addDialogVisible = false">取 消</el-button>
+          <el-button type="primary" @click="deleteOk">确 定</el-button>
+        </span>
       </el-dialog>
       <el-dialog
-        v-model="modalDelete"
-        title="Delete"
-        ok-text="OK"
-        cancel-text="Cancel"
-        v-on:on-ok="deleteOk">
+        :visible.sync="deleteDialogVisible"
+        title="Delete">
         Are you sure to delete this data?
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="deleteDialogVisible = false">取 消</el-button>
+          <el-button type="primary" @click="deleteOk">确 定</el-button>
+        </span>
       </el-dialog>
     </el-row>
   </el-card>
@@ -81,10 +95,14 @@
         default: 'Basic Table'
       },
       type: String,
+      columns: Array,
       data: Array
     },
     data () {
       return {
+        addDialogVisible: false,
+        editDialogVisible: false,
+        deleteDialogVisible: false,
         deleteDisabled: true,
         dataShow: [],
         showNum: 10,
@@ -185,6 +203,29 @@
           }
         }) */
         return returnValue
+      }
+    },
+    computed: {
+      showColumns: function () {
+        let showColumn = this.columns.slice()
+        showColumn.forEach(function (elem) {
+          elem.sortable = true
+        })
+        if (this.type === 'edit') {
+          showColumn.unshift({
+            type: 'selection',
+            width: 60,
+            align: 'center'
+          })
+          showColumn.push({
+            title: '操作',
+            key: 'action',
+            width: 150,
+            align: 'center',
+            render: this.renderOperate
+          })
+        }
+        return showColumn
       }
     },
     watch: {

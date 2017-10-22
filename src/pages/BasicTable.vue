@@ -1,6 +1,6 @@
 <template>
   <div class="basic-table vp-margin vp-content">
-    <vp-table title="Basic Table" :data="dataTable"></vp-table>
+    <vp-table title="基础表格" :data="dataTable"></vp-table>
   </div>
 </template>
 

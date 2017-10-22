@@ -60,7 +60,7 @@
             <i class="fa fa-hdd-o"></i>
             <span slot="title">基础表格</span>
           </el-menu-item>
-          <el-menu-item index="8-2">
+          <el-menu-item index="/editableTable">
             <i class="fa fa-bars"></i>
             <span slot="title">可编辑表格</span>
           </el-menu-item>

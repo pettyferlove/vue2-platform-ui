@@ -46,6 +46,11 @@ const router = new Router({
           path: '/basicTable',
           name: 'BasicTable',
           component: resolve => require(['@/pages/BasicTable'], resolve)
+        },
+        {
+          path: '/editableTable',
+          name: 'EditableTable',
+          component: resolve => require(['@/pages/EditableTable'], resolve)
         }
       ]
     },
