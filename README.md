@@ -2,11 +2,12 @@
 
 > A Vue.js project
 
-[![](https://img.shields.io/travis/iview/iview-admin.svg?style=flat-square)](https://travis-ci.org/iview/iview-admin)
+[![](https://img.shields.io/travis/iview/iview-admin.svg?style=flat-square)]()
 [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com)
-[![vue](https://img.shields.io/badge/vue-2.5.2-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
-[![iview](https://img.shields.io/badge/iview-2.4.0-brightgreen.svg?style=flat-square)](https://github.com/iview/iview)
-
+[![Vue](https://img.shields.io/badge/vue-2.5.2-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
+[![element--ui](https://img.shields.io/badge/element--ui-1.4.6-blue.svg)](https://github.com/ElemeFE/element)
+[![echarts](https://img.shields.io/badge/echarts-3.7.2-orange.svg)](https://github.com/ElemeFE/element)
+[![font--awesome](https://img.shields.io/badge/font--awesome-4.7.0-green.svg)](https://github.com/ecomfe/echarts)
 ## Build Setup
 
 ``` bash
