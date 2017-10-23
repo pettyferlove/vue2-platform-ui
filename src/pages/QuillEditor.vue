@@ -19,7 +19,7 @@
 </style>
 
 <script>
-  import VpEditor from '../components/editor/vp-editor.vue'
+  import VpEditor from '../components/editor/vp-quill-editor.vue'
   import VpPanel from '../components/common/vp-panel.vue'
   export default {
     components: {VpEditor, VpPanel},

@@ -6,6 +6,7 @@ import router from './router'
 import ElementUI from 'element-ui'
 import VueQuillEditor from 'vue-quill-editor'
 import 'font-awesome/css/font-awesome.css'
+import 'simplemde/dist/simplemde.min.css'
 import './my-theme/index.less'
 import './my-theme/petty.less'
 

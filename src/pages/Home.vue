@@ -24,10 +24,20 @@
           <i class="fa fa-database"></i>
           <span slot="title">面板</span>
         </el-menu-item>
-        <el-menu-item index="/editor">
-          <i class="fa fa-pencil"></i>
-          <span slot="title">编辑器</span>
-        </el-menu-item>
+        <el-submenu index="editor">
+          <template slot="title">
+            <i class="fa fa-pencil"></i>
+            <span slot="title">编辑器</span>
+          </template>
+          <el-menu-item index="/quillEditor">
+            <i class="fa fa-pencil"></i>
+            <span slot="title">Quill-Editor</span>
+          </el-menu-item>
+          <el-menu-item index="/simplemdeEditor">
+            <i class="fa fa-pencil"></i>
+            <span slot="title">Simplemde</span>
+          </el-menu-item>
+        </el-submenu>
         <el-menu-item index="/imageList">
           <i class="fa fa-photo"></i>
           <span slot="title">图片列表</span>
@@ -36,7 +46,7 @@
           <i class="fa fa-bar-chart"></i>
           <span slot="title">图表</span>
         </el-menu-item>
-        <el-submenu index="7">
+        <el-submenu index="ui">
           <template slot="title">
             <i class="fa fa-anchor"></i>
             <span slot="title">UI元素</span>
