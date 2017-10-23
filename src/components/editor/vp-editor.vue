@@ -1,9 +1,9 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
     <el-row class="vp-state-group vp-panel">
-    <quill-editor style="height: 500px" v-model="content"
-                  ref="myQuillEditor">
-    </quill-editor>
+      <quill-editor style="height: 500px" v-model="content"
+                    ref="myQuillEditor">
+      </quill-editor>
     </el-row>
   </el-card>
 </template>
@@ -14,7 +14,12 @@
 
 <script>
   export default {
-    name: 'VpEditor'
+    name: 'VpEditor',
+    data () {
+      return {
+        content: null
+      }
+    }
   }
 </script>
 

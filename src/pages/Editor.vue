@@ -1,6 +1,10 @@
 <template>
-  <div class="vp-content">
-    <vp-editor></vp-editor>
+  <div class="editor vp-content">
+    <el-row>
+      <el-col>
+        <vp-editor></vp-editor>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
