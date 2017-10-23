@@ -24,7 +24,7 @@
           <i class="fa fa-database"></i>
           <span slot="title">面板</span>
         </el-menu-item>
-        <el-menu-item index="4">
+        <el-menu-item index="/editor">
           <i class="fa fa-pencil"></i>
           <span slot="title">编辑器</span>
         </el-menu-item>

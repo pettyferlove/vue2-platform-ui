@@ -43,6 +43,11 @@ const router = new Router({
           component: resolve => require(['@/pages/Charts'], resolve)
         },
         {
+          path: '/editor',
+          name: 'Editor',
+          component: resolve => require(['@/pages/Editor'], resolve)
+        },
+        {
           path: '/basicTable',
           name: 'BasicTable',
           component: resolve => require(['@/pages/BasicTable'], resolve)
