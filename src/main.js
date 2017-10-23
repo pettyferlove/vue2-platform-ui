@@ -4,11 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
+import VueQuillEditor from 'vue-quill-editor'
 import 'font-awesome/css/font-awesome.css'
 import './my-theme/index.less'
 import './my-theme/petty.less'
 
 Vue.use(ElementUI)
+Vue.use(VueQuillEditor)
 
 Vue.config.productionTip = false
 
