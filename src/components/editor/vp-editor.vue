@@ -1,15 +1,26 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
-    <el-row class="vp-state-group vp-panel">
-      <quill-editor style="height: 500px" v-model="content"
-                    ref="myQuillEditor">
+    <el-row class="vp-panel">
+      <quill-editor v-model="content" ref="myQuillEditor" :options="quillOptions">
       </quill-editor>
     </el-row>
   </el-card>
 </template>
 
 <style>
+  .ql-container{
+    height: 500px;
+  }
 
+  .ql-toolbar.ql-snow{
+    border: none;
+    background-color: #fafbfc;
+    border-bottom: 1px solid #eeeff1;
+  }
+
+  .ql-container.ql-snow{
+    border: none;
+  }
 </style>
 
 <script>
@@ -17,7 +28,10 @@
     name: 'VpEditor',
     data () {
       return {
-        content: null
+        content: null,
+        quillOptions: {
+          placeholder: ' '
+        }
       }
     }
   }
