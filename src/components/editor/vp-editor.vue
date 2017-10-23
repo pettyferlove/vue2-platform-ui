@@ -1,7 +1,7 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
     <el-row class="vp-panel">
-      <quill-editor v-model="content" ref="myQuillEditor" :options="quillOptions">
+      <quill-editor v-model="content" ref="myQuillEditor" :options="quillOptions" @change="returnContent">
       </quill-editor>
     </el-row>
   </el-card>
@@ -32,6 +32,11 @@
         quillOptions: {
           placeholder: ' '
         }
+      }
+    },
+    methods: {
+      returnContent: function () {
+        this.$emit('getContent', this.content)
       }
     }
   }
