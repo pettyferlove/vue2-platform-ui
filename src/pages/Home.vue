@@ -102,7 +102,7 @@
           <vp-user-panel class="user-avator" :adminInfo="adminInfo"></vp-user-panel>
         </div>
       </el-row>
-      <section class="main-content">
+      <section class="main-content" id="main-content">
         <transition name="fade" mode="out-in">
           <router-view></router-view>
         </transition>
