@@ -93,7 +93,10 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach((to, from, next) => {
   LoadingBar.finish()
-  document.getElementById('main-content').scrollTop = 0
+  /* var content = document.getElementById('main-content')
+  if (content != null) {
+    content.scrollTop = 0
+  } */
 })
 
 export default router
