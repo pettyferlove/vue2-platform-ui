@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import VueQuillEditor from 'vue-quill-editor'
+import PettyScroll from 'petty-scroll/petty-scrollbar/index'
 import 'font-awesome/css/font-awesome.css'
 import 'simplemde/dist/simplemde.min.css'
 import './my-theme/index.less'
@@ -12,6 +13,7 @@ import './my-theme/petty.less'
 
 Vue.use(ElementUI)
 Vue.use(VueQuillEditor)
+Vue.use(PettyScroll)
 
 Vue.config.productionTip = false
 
