@@ -8,6 +8,7 @@ import VueQuillEditor from 'vue-quill-editor'
 import PettyScroll from 'petty-scroll'
 import 'font-awesome/css/font-awesome.css'
 import 'simplemde/dist/simplemde.min.css'
+import 'petty-scroll/dist/petty-scroll.min.css'
 import './my-theme/index.less'
 import './my-theme/petty.less'
 
