@@ -185,6 +185,13 @@
           this.collapsed ? '' : 'toggle-button--collapse'
         ]
       }
+    },
+    mounted () {
+      this.$notify.info({
+        title: '欢迎登陆系统',
+        message: '这是一条成功的提示消息',
+        offset: 50
+      })
     }
   }
 </script>

@@ -124,7 +124,7 @@
           {
             name: 'Jesse Luo',
             tags: ['cool', 'funy'],
-            value: 90
+            value: 60
           },
           {
             name: 'Angla Cool',
