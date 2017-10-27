@@ -126,6 +126,7 @@
     name: 'home',
     methods: {
       toggleClick () {
+        this.$store.commit('increment')
         const isCollapsed = this.collapsed
         this.collapsed = !isCollapsed
       }
