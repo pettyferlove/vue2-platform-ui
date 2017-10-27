@@ -188,10 +188,10 @@
       }
     },
     mounted () {
-      this.$notify.info({
-        title: '欢迎登陆系统',
+      this.$notify({
+        title: '成功',
         message: '这是一条成功的提示消息',
-        offset: 50
+        type: 'success'
       })
     }
   }
