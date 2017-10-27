@@ -80,17 +80,13 @@
     margin: 0px;
     &:first-child{
       padding:0 10px;
-      color: white;
+      color: #66b1ff;
       font-size: 12px !important;
       font-weight: bold;
-      background: @primary-color;
       border-radius: 4px 4px 0 0;
     }
-    &:last-child{
-      padding:0 10px;
-      font-size: 12px;
-      font-weight: bold;
-      border-radius: 0px 0px 4px 4px;
+    &:first-child:hover{
+      background: white;
     }
     img{
       vertical-align: top;
@@ -122,6 +118,9 @@
       }
     }
   }
+  .el-dropdown-menu__item--divided{
+    line-height: 20px;
+  }
 }
 
 .vp-user-panel{
@@ -151,6 +150,7 @@
   border-radius: 4px;
   padding: 0px;
   li{
+    width: 100px;
     padding: 0px 0;
     padding: 0px;
     margin: 0px;
