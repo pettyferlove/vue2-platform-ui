@@ -1,5 +1,5 @@
 <template>
-  <el-dropdown :trigger="trigger" :menu-align="align" class="vp-msg-push-badge">
+  <el-dropdown :trigger="trigger" :placement="align" class="vp-msg-push-badge">
     <el-badge :value="data.length" class="vp-badge">
       <i class="fa fa-bell"></i>
     </el-badge>
@@ -26,7 +26,7 @@
     props: {
       align: {
         type: String,
-        default: 'end'
+        default: 'bottom-end'
       },
       trigger: {
         type: String,

@@ -1,6 +1,6 @@
 <template>
   <div class="vp-user-panel" >
-    <el-dropdown trigger="click" menu-align="end">
+    <el-dropdown trigger="click" placement="bottom-end">
       <span class="el-dropdown-link">
         {{adminInfo.name}}<i class="el-icon-caret-bottom el-icon--right"></i>
       </span>

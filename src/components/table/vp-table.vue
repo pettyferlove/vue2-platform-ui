@@ -19,7 +19,7 @@
           <el-button @click="addDialogVisible = true" ><i class="fa fa-plus"></i> 新增</el-button>
           <el-button  :disabled="deleteDisabled" @click="deleteDialogVisible = true"><i class="fa fa-trash"></i> 删除</el-button>
         </div>
-        <el-table :stripe="showStripe" :size="tableSize" :data="dataShow" @selection-change="selectChange" highlight-current-row @current-change="handleCurrentChange">
+        <el-table border :stripe="showStripe" :size="tableSize" :data="dataShow" @selection-change="selectChange" highlight-current-row @current-change="handleCurrentChange">
           <el-table-column type="selection" width="55" v-if="type === 'edit'"></el-table-column>
           <el-table-column v-for="item in columns" :label="item.title" :prop="item.key" :key="item.id" :sortable="item.sort"></el-table-column>
           <el-table-column label="操作">
@@ -59,7 +59,6 @@
       </el-dialog>
       <el-dialog
         :visible.sync="addDialogVisible"
-        size="tiny"
         title="添加数据">
         <el-form label-width="50">
           <el-form-item v-for="item in columns" :label="item.title" :key="item.id">
@@ -73,7 +72,6 @@
       </el-dialog>
       <el-dialog
         :visible.sync="deleteDialogVisible"
-        size="tiny"
         title="删除数据">
         确认删除这条数据？
         <span slot="footer" class="dialog-footer">

@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <aside :class="[classes]">
-      <el-menu :default-active="$route.path" theme="dark" :collapse="collapsed" unique-opened :router="true">
+      <el-menu
+        :default-active="$route.path"
+        :collapse="collapsed"
+        unique-opened
+        :router="true">
         <div class="menu-header">
           <div class="logo" :style="{width: collapsed?'64px':'210px'}">
             <div class="logo-group">

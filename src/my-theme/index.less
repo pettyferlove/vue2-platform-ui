@@ -10,14 +10,19 @@
 // 重写菜单栏部分样式
 .el-menu{
   border-radius: 0px;
-}
-
-.el-menu--dark {
   background-color: #1c2438;
 }
 
-.el-menu--dark .el-submenu .el-menu {
+.el-submenu .el-menu {
   background-color: #171e2e;
+}
+
+.el-menu-item{
+  color: #bfcbd9;
+}
+
+.el-submenu__title{
+  color: #bfcbd9;
 }
 
 .el-menu-item{
@@ -34,19 +39,19 @@
   border-right-color: @primary-color ;
 }
 
-.el-menu--dark .el-menu-item:hover, .el-menu--dark .el-submenu__title:hover {
+.el-menu-item:hover, .el-submenu__title:hover {
   color: @primary-color;
   background: #171e2e;
   border-right-color: @primary-color ;
 }
 
-.el-menu--dark .el-submenu .el-menu .el-menu-item:hover {
+.el-submenu .el-menu .el-menu-item:hover {
   color: @primary-color;
   background: #171e2e;
   border-right-color: @primary-color ;
 }
 
-.el-menu--dark .el-submenu .el-menu {
+.el-menu--collapse .el-submenu .el-menu {
   border-radius: 5px 5px 0px 0px;
 }
 
@@ -74,7 +79,7 @@
 }
 
 .el-submenu__title span{
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 .el-menu-item i{
