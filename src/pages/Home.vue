@@ -96,7 +96,7 @@
         </el-submenu>
       </el-menu>
     </aside>
-    <el-row class="main" :style="{paddingLeft: collapsed?'64px':'210px'}">
+    <el-row class="content-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
       <el-row class="header" type="flex" align="middle">
         <span style="margin-left: 20px" @click="toggleClick">
           <i :class="toggleButton"></i>
