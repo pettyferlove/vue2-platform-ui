@@ -17,7 +17,7 @@
         </el-row>
         <div class="edit" v-if="type === 'edit'">
           <el-button @click="addDialogVisible = true" ><i class="fa fa-plus"></i> 新增</el-button>
-          <el-button  :disabled="deleteDisabled" @click="deleteDialogVisible = true"><i class="fa fa-trash"></i> 删除</el-button>
+          <el-button  :disabled="deleteDisabled" @click="deleteOk"><i class="fa fa-trash"></i> 删除</el-button>
         </div>
         <el-table border :stripe="showStripe" :size="tableSize" :data="dataShow" @selection-change="selectChange" highlight-current-row @current-change="handleCurrentChange">
           <el-table-column type="selection" width="55" v-if="type === 'edit'"></el-table-column>
@@ -123,7 +123,7 @@
       },
       handleDelete: function (index, row) {
         this.dataDelete.push(row)
-        this.deleteDialogVisible = true
+        this.deleteOk()
       },
       handleEdit: function (index, row) {
         for (let i in row) {
@@ -142,8 +142,24 @@
         this.addDialogVisible = false
       },
       deleteOk: function () {
-        this.$emit('delete-ok', this.dataDelete)
-        this.deleteDialogVisible = false
+        this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$emit('delete-ok', this.dataDelete)
+          this.$message({
+            type: 'success',
+            message: '删除成功!'
+          })
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          })
+        })
+        /* this.$emit('delete-ok', this.dataDelete)
+        this.deleteDialogVisible = false */
       },
       pageChange: function (page) {
         this.currentPage = page
