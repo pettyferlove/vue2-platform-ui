@@ -105,7 +105,7 @@
         dataShow: [],
         showNum: 10,
         showStripe: false,
-        tableSize: 'default',
+        tableSize: 'mini',
         currentPage: 1,
         keyword: '',
         modalEdit: false,
