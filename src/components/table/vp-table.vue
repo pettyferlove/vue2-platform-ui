@@ -158,8 +158,6 @@
             message: '已取消删除'
           })
         })
-        /* this.$emit('delete-ok', this.dataDelete)
-        this.deleteDialogVisible = false */
       },
       pageChange: function (page) {
         this.currentPage = page
