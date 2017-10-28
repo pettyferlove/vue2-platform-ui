@@ -46,6 +46,7 @@
       </div>
       <el-dialog
         :visible.sync="editDialogVisible"
+        width="600px"
         title="编辑数据">
         <el-form label-width="50">
           <el-form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" :key="dataEdit.id">
@@ -53,12 +54,13 @@
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
-          <el-button @click="editDialogVisible = false">取 消</el-button>
-          <el-button type="primary" @click="editOk">确 定</el-button>
+          <el-button size="small" @click="editDialogVisible = false">取 消</el-button>
+          <el-button size="small" type="primary" @click="editOk">确 定</el-button>
         </span>
       </el-dialog>
       <el-dialog
         :visible.sync="addDialogVisible"
+        width="600px"
         title="添加数据">
         <el-form label-width="50">
           <el-form-item v-for="item in columns" :label="item.title" :key="item.id">
@@ -66,8 +68,8 @@
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
-          <el-button @click="addDialogVisible = false">取 消</el-button>
-          <el-button type="primary" @click="addOk">确 定</el-button>
+          <el-button size="small" @click="addDialogVisible = false">取 消</el-button>
+          <el-button size="small" type="primary" @click="addOk">确 定</el-button>
         </span>
       </el-dialog>
     </el-row>
