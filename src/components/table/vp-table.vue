@@ -70,15 +70,6 @@
           <el-button type="primary" @click="addOk">确 定</el-button>
         </span>
       </el-dialog>
-      <el-dialog
-        :visible.sync="deleteDialogVisible"
-        title="删除数据">
-        确认删除这条数据？
-        <span slot="footer" class="dialog-footer">
-          <el-button @click="deleteDialogVisible = false">取 消</el-button>
-          <el-button type="primary" @click="deleteOk">确 定</el-button>
-        </span>
-      </el-dialog>
     </el-row>
   </el-card>
 </template>
