@@ -91,7 +91,6 @@
         currentRow: null,
         addDialogVisible: false,
         editDialogVisible: false,
-        deleteDialogVisible: false,
         deleteDisabled: true,
         dataShow: [],
         showNum: 10,
