@@ -138,6 +138,7 @@
           type: 'warning'
         }).then(() => {
           this.$emit('delete-ok', this.dataDelete)
+          this.deleteDisabled = true
           this.$message({
             type: 'success',
             message: '删除成功!'
