@@ -7,7 +7,8 @@ import mutations from './mutations'
 Vue.use(Vuex)
 
 const state = {
-  count: 0
+  count: 0,
+  menuCollapsed: false
 }
 
 const store = new Vuex.Store({

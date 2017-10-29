@@ -131,13 +131,13 @@
     methods: {
       toggleClick () {
         this.$store.commit('increment')
-        const isCollapsed = this.collapsed
-        this.collapsed = !isCollapsed
+        this.$store.commit('toggleMenu')
+        this.collapsed = this.$store.state.menuCollapsed
       }
     },
     data () {
       return {
-        collapsed: true,
+        collapsed: this.$store.state.menuCollapsed,
         adminInfo: {
           image: require('@/assets/img/user-petty.jpg'),
           name: 'Pettyfer'
@@ -187,7 +187,7 @@
           'fa',
           'fa-bars',
           'toggle-button',
-          this.collapsed ? '' : 'toggle-button--collapse'
+          this.$store.state.menuCollapsed ? '' : 'toggle-button--collapse'
         ]
       }
     },
