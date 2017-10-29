@@ -462,6 +462,7 @@
 .el-checkbox {
   color: #5a5e66;
   font-weight: 500;
+  font-size: 14px;
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -708,6 +709,9 @@
     border-radius: 0; }
     .el-checkbox-button--mini .el-checkbox-button__inner.is-round {
       padding: 7px 15px; }
+
+.el-checkbox-group {
+  font-size: 0; }
 
 /* BEM support Func
  -------------------------- */
