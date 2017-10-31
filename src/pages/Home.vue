@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home" class="home">
     <aside :class="[classes]">
       <el-menu
         :default-active="$route.path"
@@ -102,6 +102,12 @@
           <i :class="toggleButton"></i>
         </span>
         <div class="avator-con">
+          <el-tooltip class="item" effect="dark" content="全屏" placement="bottom">
+            <i class="btn fa fa-expand" @click="handleFullScreen"></i>
+          </el-tooltip>
+          <el-tooltip class="item" effect="dark" content="锁屏" placement="bottom">
+            <i class="btn fa fa-lock"></i>
+          </el-tooltip>
           <vp-msg-push class="message-push" :data="msgPushData" trigger="click"></vp-msg-push>
           <vp-user-panel class="user-avator" :adminInfo="adminInfo"></vp-user-panel>
         </div>
@@ -133,10 +139,35 @@
     methods: {
       ...mapMutations({
         'toggleEvent': 'toggleMenu'
-      })
+      }),
+      handleFullScreen () {
+        let main = document.getElementById('home')
+        if (this.isFullScreen) {
+          if (document.exitFullscreen) {
+            document.exitFullscreen()
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen()
+          } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen()
+          } else if (document.msExitFullscreen) {
+            document.msExitFullscreen()
+          }
+        } else {
+          if (main.requestFullscreen) {
+            main.requestFullscreen()
+          } else if (main.mozRequestFullScreen) {
+            main.mozRequestFullScreen()
+          } else if (main.webkitRequestFullScreen) {
+            main.webkitRequestFullScreen()
+          } else if (main.msRequestFullscreen) {
+            main.msRequestFullscreen()
+          }
+        }
+      }
     },
     data () {
       return {
+        isFullScreen: false,
         adminInfo: {
           image: require('@/assets/img/user-petty.jpg'),
           name: 'Pettyfer'
@@ -194,6 +225,19 @@
       }
     },
     mounted () {
+      // 监听全屏事件更改状态值
+      document.addEventListener('fullscreenchange', () => {
+        this.isFullScreen = !this.isFullScreen
+      })
+      document.addEventListener('mozfullscreenchange', () => {
+        this.isFullScreen = !this.isFullScreen
+      })
+      document.addEventListener('webkitfullscreenchange', () => {
+        this.isFullScreen = !this.isFullScreen
+      })
+      document.addEventListener('msfullscreenchange', () => {
+        this.isFullScreen = !this.isFullScreen
+      })
       this.$notify({
         title: '成功',
         message: '这是一条成功的提示消息',

@@ -72,6 +72,10 @@ a{
 
 #app{
   .home{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: @background-color-base;
     .sidebar{
       position: fixed;
       height: 100%;
@@ -142,11 +146,18 @@ a{
           transform: rotate(90deg);
         }
         .avator-con{
+          .btn{
+            font-size: 18px;
+            width: 30px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+          }
           position: absolute;
           right: 0;
           top: 0;
           height: @nav-height;
-          width: 300px;
+          width: 350px;
           .message-push{
             margin-right: 60px;
             display: inline-block;
