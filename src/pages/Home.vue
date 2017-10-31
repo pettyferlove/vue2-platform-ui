@@ -98,7 +98,7 @@
     </aside>
     <el-row class="content-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
       <el-row class="header" type="flex" align="middle">
-        <span style="margin-left: 20px" @click="toggleClick">
+        <span style="margin-left: 20px" @click="toggleEvent">
           <i :class="toggleButton"></i>
         </span>
         <div class="avator-con">
@@ -122,22 +122,21 @@
 <script>
   import VpMsgPush from '../components/message/vp-message-push.vue'
   import VpUserPanel from '../components/user/vp-user-panel.vue'
+  import { mapGetters, mapMutations } from 'vuex'
   /* eslint-disable no-useless-computed-key */
   export default {
     components: {
       VpUserPanel,
-      VpMsgPush},
+      VpMsgPush
+    },
     name: 'home',
     methods: {
-      toggleClick () {
-        this.$store.commit('increment')
-        this.$store.commit('toggleMenu')
-        this.collapsed = this.$store.state.menuCollapsed
-      }
+      ...mapMutations({
+        'toggleEvent': 'toggleMenu'
+      })
     },
     data () {
       return {
-        collapsed: this.$store.state.menuCollapsed,
         adminInfo: {
           image: require('@/assets/img/user-petty.jpg'),
           name: 'Pettyfer'
@@ -177,6 +176,9 @@
       }
     },
     computed: {
+      ...mapGetters({
+        collapsed: 'toggleMenu'
+      }),
       classes () {
         return {
           ['sidebar']: true
@@ -187,7 +189,7 @@
           'fa',
           'fa-bars',
           'toggle-button',
-          this.$store.state.menuCollapsed ? '' : 'toggle-button--collapse'
+          this.collapsed ? '' : 'toggle-button--collapse'
         ]
       }
     },
