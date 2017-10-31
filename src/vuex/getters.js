@@ -1,5 +1,4 @@
 const getters = {
-  increment: state => state.count,
-  toggleMenu: state => state.menuCollapsed
+  increment: state => state.count
 }
 export default getters
