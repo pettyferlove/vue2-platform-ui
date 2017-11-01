@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home" class="home">
     <aside :class="[classes]">
       <el-menu
         :default-active="$route.path"
@@ -141,7 +141,7 @@
         'toggleEvent': 'toggleMenu'
       }),
       handleFullScreen () {
-        let screen = document.getElementById('app')
+        let screen = document.getElementById('home')
         if (this.isFullScreen) {
           if (document.exitFullscreen) {
             document.exitFullscreen()
