@@ -177,31 +177,25 @@
             image: require('@/assets/img/user-petty.jpg'),
             from: 'Pettyfer',
             time: '2017-1-8',
-            message: 'I like your website very much!'
+            message: 'Vuex状态管理器添加'
           },
           {
             image: require('@/assets/img/user-petty.jpg'),
             from: 'Pettyfer',
             time: '2017-1-8',
-            message: 'I like your website very much!'
+            message: 'Element UI更新至最新版本'
           },
           {
             image: require('@/assets/img/user-petty.jpg'),
             from: 'Pettyfer',
             time: '2017-1-8',
-            message: 'I like your website very much!'
+            message: 'PettyScrollbar添加'
           },
           {
             image: require('@/assets/img/user-petty.jpg'),
             from: 'Pettyfer',
             time: '2017-1-8',
-            message: 'I like your website very much!'
-          },
-          {
-            image: require('@/assets/img/user-petty.jpg'),
-            from: 'Pettyfer',
-            time: '2017-1-8',
-            message: 'I like your website very much!'
+            message: '增加页面加载滚动条'
           }
         ]
       }
