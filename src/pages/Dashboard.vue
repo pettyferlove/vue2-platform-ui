@@ -30,6 +30,9 @@
       </el-col>
 
       <el-col :lg="8">
+        <vp-weather class="vp-margin-bottom" :data="dataWeather">
+        </vp-weather>
+
         <vp-tabs icon="fa fa-user" title="Briefs" content-height="200px">
           <vp-tabs-item label="Social" name="01">
             <div class="demo-news">
@@ -62,8 +65,6 @@
             </div>
           </vp-tabs-item>
         </vp-tabs>
-        <vp-weather class="vp-margin" :data="dataWeather">
-        </vp-weather>
       </el-col>
     </el-row>
   </div>
@@ -100,49 +101,49 @@
           property: [
             {
               icon: 'fa fa-user',
-              key: 'Sex',
-              value: 'M'
+              key: '性别',
+              value: '男'
             },
             {
               icon: 'fa fa-heart',
-              key: 'Activity',
+              key: '关注',
               value: '9.8'
             },
             {
               icon: 'fa fa-calendar',
-              key: 'Register',
+              key: '注册时间',
               value: '2017-8-9 8:00'
             },
             {
               icon: 'fa fa-calendar',
-              key: 'Latest Login',
+              key: '最后一次登陆',
               value: '2017-9-9 9:10'
             }
           ]
         },
         dataProgress: [
           {
-            name: 'Jesse Luo',
+            name: '张三',
             tags: ['cool', 'funy'],
             value: 60
           },
           {
-            name: 'Angla Cool',
+            name: '李四',
             tags: ['nice', 'sexy', 'literature'],
             value: 30
           },
           {
-            name: 'lele Wang',
+            name: '王玮',
             tags: ['mould', 'shy'],
             value: 80
           },
           {
-            name: 'Jesse Ca',
+            name: '叶伟',
             tags: ['funny', 'hardworking', 'learnd'],
             value: 20
           },
           {
-            name: 'Jesse Lee',
+            name: '叶修',
             tags: ['nice', 'mould'],
             value: 100
           }

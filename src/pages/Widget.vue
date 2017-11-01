@@ -1,6 +1,6 @@
 <template>
   <div class="widget vp-content">
-    <el-row class="vp-margin">
+    <el-row class="vp-margin-top">
       <vp-state-group :data="dataStateGroup">
       </vp-state-group>
     </el-row>

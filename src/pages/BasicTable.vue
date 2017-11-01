@@ -1,5 +1,5 @@
 <template>
-  <div class="basic-table vp-margin vp-content">
+  <div class="basic-table vp-margin-top vp-content">
     <vp-table title="基础表格" :columns="dataColumns" :data="dataTable"></vp-table>
   </div>
 </template>

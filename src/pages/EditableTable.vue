@@ -7,7 +7,7 @@
              v-on:add-ok="add"
              v-on:edit-ok="edit"
              v-on:delete-ok="deletefn"
-             class="vp-margin">
+             class="vp-margin-top">
     </vp-table>
   </div>
 </template>
