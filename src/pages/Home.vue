@@ -141,26 +141,26 @@
         'toggleEvent': 'toggleMenu'
       }),
       handleFullScreen () {
-        let main = document.getElementById('app')
+        let screen = document.getElementById('app')
         if (this.isFullScreen) {
           if (document.exitFullscreen) {
             document.exitFullscreen()
-          } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen()
           } else if (document.webkitCancelFullScreen) {
             document.webkitCancelFullScreen()
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen()
           } else if (document.msExitFullscreen) {
             document.msExitFullscreen()
           }
         } else {
-          if (main.requestFullscreen) {
-            main.requestFullscreen()
-          } else if (main.mozRequestFullScreen) {
-            main.mozRequestFullScreen()
-          } else if (main.webkitRequestFullScreen) {
-            main.webkitRequestFullScreen()
-          } else if (main.msRequestFullscreen) {
-            main.msRequestFullscreen()
+          if (screen.requestFullscreen) {
+            screen.requestFullscreen()
+          } else if (screen.webkitRequestFullScreen) {
+            screen.webkitRequestFullScreen()
+          } else if (screen.mozRequestFullScreen) {
+            screen.mozRequestFullScreen()
+          } else if (screen.msRequestFullscreen) {
+            screen.msRequestFullscreen()
           }
         }
       }
