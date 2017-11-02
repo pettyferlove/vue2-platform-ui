@@ -1,8 +1,8 @@
 <template>
   <div class="login">
     <vp-bg-canvas></vp-bg-canvas>
-      <vp-login>
-      </vp-login>
+    <vp-login>
+    </vp-login>
   </div>
 </template>
 <script>
