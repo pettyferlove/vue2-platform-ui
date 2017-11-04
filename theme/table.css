@@ -1309,8 +1309,6 @@
     .el-table .cell.el-tooltip {
       white-space: nowrap;
       min-width: 50px; }
-  .el-table th:first-child .cell, .el-table td:first-child .cell {
-    padding-left: 0; }
   .el-table--group, .el-table--border {
     border: 1px solid #e6ebf5; }
     .el-table--group::after, .el-table--border::after, .el-table::before {

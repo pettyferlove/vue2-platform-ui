@@ -2655,6 +2655,8 @@
     cursor: not-allowed; }
     .el-select .el-input.is-disabled .el-input__inner:hover {
       border-color: #dfe4ed; }
+  .el-select .el-input.is-focus .el-input__inner {
+    border-color: #409EFF; }
   .el-select > .el-input {
     display: block; }
   .el-select__input {
@@ -2664,7 +2666,7 @@
     margin-left: 15px;
     color: #666;
     font-size: 14px;
-    vertical-align: baseline;
+    vertical-align: middle;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -2702,6 +2704,7 @@
     .el-select .el-tag__close.el-icon-close {
       background-color: #b4bccc;
       right: -7px;
+      top: 0;
       color: #fff; }
       .el-select .el-tag__close.el-icon-close:hover {
         background-color: #878d99; }
@@ -2709,16 +2712,6 @@
         display: block;
         -webkit-transform: translate(0, 0.5px);
         transform: translate(0, 0.5px); }
-  .el-select__tag {
-    display: inline-block;
-    height: 24px;
-    line-height: 24px;
-    font-size: 14px;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #409EFF; }
-    .el-select__tag .el-icon-close {
-      font-size: 14px; }
 
 .el-pagination {
   white-space: nowrap;
@@ -2822,7 +2815,7 @@
     -moz-appearance: textfield; }
     .el-pagination__editor.el-input {
       width: 50px; }
-    .el-pagination__editor .el-input__inner {
+    .el-pagination__editor.el-input .el-input__inner {
       height: 28px; }
     .el-pagination__editor .el-input__inner::-webkit-inner-spin-button, .el-pagination__editor .el-input__inner::-webkit-outer-spin-button {
       -webkit-appearance: none;

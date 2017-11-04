@@ -228,6 +228,12 @@
 --------------------------*/
 /* Break-point
 --------------------------*/
+.el-loading-parent--relative {
+  position: relative !important; }
+
+.el-loading-parent--hidden {
+  overflow: hidden !important; }
+
 .el-loading-mask {
   position: absolute;
   z-index: 10000;

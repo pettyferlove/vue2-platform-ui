@@ -381,6 +381,8 @@
       top: 0;
       bottom: 0;
       left: 11px; }
+    .el-step.is-vertical .el-step__icon.is-icon {
+      width: 24px; }
   .el-step.is-center .el-step__head {
     text-align: center; }
   .el-step.is-center .el-step__main {
@@ -407,8 +409,6 @@
       width: 16px;
       height: 16px;
       font-size: 12px; }
-      .el-step.is-simple .el-step__icon.is-icon {
-        width: 30px; }
     .el-step.is-simple .el-step__icon-inner[class*=el-icon]:not(.is-status) {
       font-size: 18px; }
     .el-step.is-simple .el-step__icon-inner.is-status {

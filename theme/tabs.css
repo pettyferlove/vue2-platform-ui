@@ -424,8 +424,11 @@
     .el-tabs--border-card > .el-tabs__header .el-tabs__item:hover {
       color: #409EFF; }
 
-.el-tabs--top:not(.el-tabs--border-card):not(.el-tabs--card) .el-tabs__item:nth-child(2), .el-tabs--bottom:not(.el-tabs--border-card):not(.el-tabs--card) .el-tabs__item:nth-child(2) {
+.el-tabs--top .el-tabs__item:nth-child(2), .el-tabs--bottom .el-tabs__item:nth-child(2) {
   padding-left: 0; }
+
+.el-tabs--top.el-tabs--border-card .el-tabs__item:nth-child(2), .el-tabs--top.el-tabs--card .el-tabs__item:nth-child(2), .el-tabs--bottom.el-tabs--border-card .el-tabs__item:nth-child(2), .el-tabs--bottom.el-tabs--card .el-tabs__item:nth-child(2) {
+  padding-left: 20px; }
 
 .el-tabs--bottom .el-tabs__header {
   margin-bottom: 0;
