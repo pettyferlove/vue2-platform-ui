@@ -46,7 +46,7 @@
           <i class="fa fa-photo"></i>
           <span slot="title">图片列表</span>
         </el-menu-item>
-        <el-menu-item index="/charts">
+        <el-menu-item index="/echarts">
           <i class="fa fa-bar-chart"></i>
           <span slot="title">图表</span>
         </el-menu-item>

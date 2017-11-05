@@ -38,9 +38,9 @@ const router = new Router({
           component: resolve => require(['@/pages/Icons'], resolve)
         },
         {
-          path: '/charts',
-          name: 'Charts',
-          component: resolve => require(['@/pages/Charts'], resolve)
+          path: '/echarts',
+          name: 'Echarts',
+          component: resolve => require(['@/pages/Echarts'], resolve)
         },
         {
           path: '/quillEditor',
