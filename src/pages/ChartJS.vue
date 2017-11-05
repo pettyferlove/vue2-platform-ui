@@ -1,7 +1,7 @@
 <template>
   <div class="charts vp-content">
-    <el-row>
-      <el-col>
+    <el-row :gutter="16">
+      <el-col :span="14">
         <vp-chart-js-bar-line></vp-chart-js-bar-line>
       </el-col>
     </el-row>
@@ -15,7 +15,7 @@
 <script>
   import VpChartJsBarLine from '../components/chart/chartjs/vp-chartjs-bar-line'
   export default {
-    name: 'ChartJS',
+    name: 'ChartJs',
     components: {
       VpChartJsBarLine
     }

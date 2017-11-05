@@ -2,31 +2,21 @@
   <div class="charts vp-content">
     <el-row :gutter="16">
       <el-col :span="12">
-        <vp-e-charts-bar-line title="Bar Chart" :xAxisData="dataBar1.xAxisData" :series="dataBar1.series">
+        <vp-e-charts-bar-line title="未来一周气温变化" :xAxisData="dataLine.xAxisData" :series="dataLine.series">
         </vp-e-charts-bar-line>
       </el-col>
       <el-col :span="12">
-        <vp-e-charts-bar-line  title="Bar Chart" :xAxisData="dataBar2.xAxisData" :series="dataBar2.series">
-        </vp-e-charts-bar-line>
-      </el-col>
-    </el-row>
-    <el-row :gutter="16">
-      <el-col :span="12">
-        <vp-e-charts-bar-line title="Line Chart" :xAxisData="dataLine1.xAxisData" :series="dataLine1.series">
-        </vp-e-charts-bar-line>
-      </el-col>
-      <el-col :span="12">
-        <vp-e-charts-bar-line title="Line Chart" :xAxisData="dataLine2.xAxisData" :series="dataLine2.series">
+        <vp-e-charts-bar-line title="全年收入与支出" :xAxisData="dataBar.xAxisData" :series="dataBar.series">
         </vp-e-charts-bar-line>
       </el-col>
     </el-row>
     <el-row :gutter="16">
       <el-col :span="12">
-        <vp-e-charts-pie title="Pie Chart" :data="dataPie">
+        <vp-e-charts-pie title="开发语言分布" :data="dataPie">
         </vp-e-charts-pie>
       </el-col>
       <el-col :span="12">
-        <vp-e-charts-radar title="Radar Chart" :indicator="dataRadar.indicator" :data="dataRadar.data">
+        <vp-e-charts-radar title="大气污染物分布" :indicator="dataRadar.indicator" :data="dataRadar.data">
         </vp-e-charts-radar>
       </el-col>
     </el-row>
@@ -37,6 +27,7 @@
   import VpEChartsBarLine from '../components/chart/echarts/vp-echarts-bar-line'
   import VpEChartsPie from '../components/chart/echarts/vp-echarts-pie'
   import VpEChartsRadar from '../components/chart/echarts/vp-echarts-radar'
+
   export default {
     name: 'Charts',
     components: {
@@ -46,54 +37,34 @@
     },
     data: function () {
       return {
-        dataBar1: {
-          xAxisData: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+        dataBar: {
+          xAxisData: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
           series: [
             {
-              name: '销量',
+              name: '收入',
               type: 'bar',
-              data: [50, 200, 360, 100, 100, 200]
-            }
-          ]
-        },
-        dataBar2: {
-          xAxisData: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
-          series: [
-            {
-              name: '销量',
-              type: 'bar',
-              data: [50, 200, 360, 100, 100, 200]
+              data: [50, 200, 360, 100, 100, 200, 50, 200, 360, 100, 100, 200]
             },
             {
-              name: '增长量',
+              name: '支出',
               type: 'bar',
-              data: [5, 20, 36, 10, 10, 20]
+              data: [5, 20, 36, 10, 10, 20, 5, 20, 36, 10, 10, 20]
             }
           ]
         },
-        dataLine1: {
-          xAxisData: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
-          series: [
-            {
-              name: '销量',
-              type: 'line',
-              data: [50, 290, 360, 100, 100, 200]
-            }
-          ]
-        },
-        dataLine2: {
+        dataLine: {
           color: ['#41b883', '#1d8ce0'],
-          xAxisData: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+          xAxisData: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
           series: [
             {
-              name: '销量',
+              name: '最高气温',
               type: 'line',
-              data: [50, 130, 360, 100, 100, 200]
+              data: [11, 11, 15, 13, 12, 13, 10]
             },
             {
-              name: '增长量',
+              name: '最低气温',
               type: 'line',
-              data: [5, 50, 36, 10, 10, 20]
+              data: [1, -2, 2, 5, 3, 2, 0]
             }
           ]
         },
@@ -128,11 +99,11 @@
           data: [
             {
               value: [4300, 10000, 28000, 35000, 50000, 19000],
-              name: '预算分配'
+              name: '2017年'
             },
             {
               value: [5000, 14000, 28000, 31000, 42000, 21000],
-              name: '实际开销'
+              name: '2016年'
             }
           ]
         }

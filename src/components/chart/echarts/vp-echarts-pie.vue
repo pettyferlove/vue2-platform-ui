@@ -69,9 +69,9 @@
       }
     },
     computed: {
-      // 生成一个随机id, 实现图表组件的复用
+      // 随机数+时间戳防止ID重复
       id: function () {
-        return parseInt(Math.random() * 1000000)
+        return parseInt(Math.random() * 1000000) + new Date().getTime()
       },
       legendData: function () {
         let legendData = []

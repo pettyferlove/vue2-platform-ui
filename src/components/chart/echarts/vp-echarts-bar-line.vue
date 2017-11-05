@@ -79,9 +79,9 @@
       }
     },
     computed: {
-      // 生成一个随机id, 实现图表组件的复用
+      // 随机数+时间戳防止ID重复
       id: function () {
-        return parseInt(Math.random() * 1000000)
+        return parseInt(Math.random() * 1000000) + new Date().getTime()
       },
       legendData: function () {
         let legendData = []
@@ -98,7 +98,6 @@
         }
         // 初始化echart
         this.chart = echarts.init(document.getElementById(this.id))
-        // 自定义eChart样式 官方配置指南(http://echarts.baidu.com/option.html#yAxis.splitLine.lineStyle.color)
         this.chart.setOption({
           title: {text: this.title},
           legend: {

@@ -1,7 +1,7 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
     <div class="vp-chartjs-bar vp-panel">
-      <canvas id="myChart" height="400"></canvas>
+      <canvas id="myChart" style="height: 400px"></canvas>
     </div>
   </el-card>
 </template>
