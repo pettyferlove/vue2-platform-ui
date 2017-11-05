@@ -8,11 +8,8 @@
 </template>
 <script>
   import chartTheme from '@/my-theme/chartTheme.js'
-  // 引入 ECharts 主模块
   var echarts = require('echarts/lib/echarts')
-  // 引入柱状图
   require('echarts/lib/chart/radar')
-  // 引入提示框和标题组件
   require('echarts/lib/component/title')
   require('echarts/lib/component/legend')
 
@@ -43,27 +40,12 @@
       // 雷达图indicator值 和data的value一一对应
       indicator: {
         type: Array,
-        required: true,
-        default: function () {
-          return ['AQI', 'PM2.5', 'PM10', 'CO', 'NO2', 'SO2']
-        }
+        required: true
       },
       // 雷达图的值
       data: {
         type: Array,
-        required: true,
-        default: function () {
-          return [
-            {
-              value: [4300, 10000, 28000, 35000, 50000, 19000],
-              name: '预算分配'
-            },
-            {
-              value: [5000, 14000, 28000, 31000, 42000, 21000],
-              name: '实际开销'
-            }
-          ]
-        }
+        required: true
       }
     },
     data: function () {

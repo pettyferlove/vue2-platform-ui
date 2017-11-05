@@ -8,12 +8,9 @@
 </template>
 <script>
   import chartTheme from '@/my-theme/chartTheme.js'
-  // 引入 ECharts 主模块
   var echarts = require('echarts/lib/echarts')
-  // 引入柱状图
   require('echarts/lib/chart/bar')
   require('echarts/lib/chart/line')
-  // 引入提示框和标题组件
   require('echarts/lib/component/tooltip')
   require('echarts/lib/component/title')
   require('echarts/lib/component/legend')
@@ -45,22 +42,12 @@
       // 横坐标数据
       xAxisData: {
         type: Array,
-        required: true,
-        default: function () {
-          return ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-        }
+        required: true
       },
       // 纵坐标数据
       series: {
         type: Array,
-        required: true,
-        default: function () {
-          return [{
-            name: '销量',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
-          }]
-        }
+        required: true
       }
     },
     data () {

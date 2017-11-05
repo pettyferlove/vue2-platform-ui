@@ -8,11 +8,8 @@
 </template>
 <script>
   import chartTheme from '@/my-theme/chartTheme.js'
-  // 引入 ECharts 主模块
   var echarts = require('echarts/lib/echarts')
-  // 引入柱状图
   require('echarts/lib/chart/pie')
-  // 引入提示框和标题组件
   require('echarts/lib/component/tooltip')
   require('echarts/lib/component/title')
   require('echarts/lib/component/legend')
@@ -44,19 +41,7 @@
       // 纵坐标数据
       data: {
         type: Array,
-        required: true,
-        default: function () {
-          return [
-            {
-              name: '数据1',
-              value: 100
-            },
-            {
-              name: '数据2',
-              value: 370
-            }
-          ]
-        }
+        required: true
       }
     },
     data: function () {
