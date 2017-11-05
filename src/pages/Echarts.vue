@@ -2,47 +2,47 @@
   <div class="charts vp-content">
     <el-row :gutter="16">
       <el-col :span="12">
-        <VpChartBarLine title="Bar Chart" :xAxisData="dataBar1.xAxisData" :series="dataBar1.series">
-        </VpChartBarLine>
+        <vp-e-charts-bar-line title="Bar Chart" :xAxisData="dataBar1.xAxisData" :series="dataBar1.series">
+        </vp-e-charts-bar-line>
       </el-col>
       <el-col :span="12">
-        <VpChartBarLine  title="Bar Chart" :xAxisData="dataBar2.xAxisData" :series="dataBar2.series">
-        </VpChartBarLine>
-      </el-col>
-    </el-row>
-    <el-row :gutter="16">
-      <el-col :span="12">
-        <VpChartBarLine title="Line Chart" :xAxisData="dataLine1.xAxisData" :series="dataLine1.series">
-        </VpChartBarLine>
-      </el-col>
-      <el-col :span="12">
-        <VpChartBarLine title="Line Chart" :xAxisData="dataLine2.xAxisData" :series="dataLine2.series">
-        </VpChartBarLine>
+        <vp-e-charts-bar-line  title="Bar Chart" :xAxisData="dataBar2.xAxisData" :series="dataBar2.series">
+        </vp-e-charts-bar-line>
       </el-col>
     </el-row>
     <el-row :gutter="16">
       <el-col :span="12">
-        <VpChartPie title="Pie Chart" :data="dataPie">
-        </VpChartPie>
+        <vp-e-charts-bar-line title="Line Chart" :xAxisData="dataLine1.xAxisData" :series="dataLine1.series">
+        </vp-e-charts-bar-line>
       </el-col>
       <el-col :span="12">
-        <VpChartRadar title="Radar Chart" :indicator="dataRadar.indicator" :data="dataRadar.data">
-        </VpChartRadar>
+        <vp-e-charts-bar-line title="Line Chart" :xAxisData="dataLine2.xAxisData" :series="dataLine2.series">
+        </vp-e-charts-bar-line>
+      </el-col>
+    </el-row>
+    <el-row :gutter="16">
+      <el-col :span="12">
+        <vp-e-charts-pie title="Pie Chart" :data="dataPie">
+        </vp-e-charts-pie>
+      </el-col>
+      <el-col :span="12">
+        <vp-e-charts-radar title="Radar Chart" :indicator="dataRadar.indicator" :data="dataRadar.data">
+        </vp-e-charts-radar>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-  import VpChartBarLine from '../components/chart/echarts/vp-echarts-bar-line'
-  import VpChartPie from '../components/chart/echarts/vp-echarts-pie'
-  import VpChartRadar from '../components/chart/echarts/vp-echarts-radar'
+  import VpEChartsBarLine from '../components/chart/echarts/vp-echarts-bar-line'
+  import VpEChartsPie from '../components/chart/echarts/vp-echarts-pie'
+  import VpEChartsRadar from '../components/chart/echarts/vp-echarts-radar'
   export default {
     name: 'Charts',
     components: {
-      VpChartBarLine,
-      VpChartPie,
-      VpChartRadar
+      VpEChartsBarLine,
+      VpEChartsPie,
+      VpEChartsRadar
     },
     data: function () {
       return {

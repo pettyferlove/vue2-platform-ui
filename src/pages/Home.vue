@@ -46,10 +46,21 @@
           <i class="fa fa-photo"></i>
           <span slot="title">图片列表</span>
         </el-menu-item>
-        <el-menu-item index="/echarts">
-          <i class="fa fa-bar-chart"></i>
-          <span slot="title">图表</span>
-        </el-menu-item>
+        <el-submenu index="chart">
+          <template slot="title">
+            <i class="fa fa-bar-chart"></i>
+            <span slot="title">图表</span>
+          </template>
+          <el-menu-item index="/echarts">
+            <i class="fa fa-line-chart"></i>
+            <span slot="title">ECharts</span>
+          </el-menu-item>
+          <el-menu-item index="/chartjs">
+            <i class="fa fa-pie-chart"></i>
+            <span slot="title">ChartJS</span>
+          </el-menu-item>
+        </el-submenu>
+
         <el-submenu index="ui">
           <template slot="title">
             <i class="fa fa-anchor"></i>
@@ -65,7 +76,7 @@
           </el-menu-item>
         </el-submenu>
 
-        <el-submenu index="8">
+        <el-submenu index="table">
           <template slot="title">
             <i class="fa fa-database"></i>
             <span slot="title">数据表格</span>

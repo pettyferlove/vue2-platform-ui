@@ -1,6 +1,6 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
-    <div class="vp-chart-bar vp-panel">
+    <div class="vp-echarts-bar vp-panel">
       <div class="panel-body" :id="this.id" :style="{ height: height + 'px'}">
       </div>
     </div>
@@ -19,7 +19,7 @@
   require('echarts/lib/component/legend')
 
   export default {
-    name: 'VpChartBarLine',
+    name: 'VpEChartsBarLine',
     props: {
       // 图表区域高度
       title: {
@@ -63,7 +63,7 @@
         }
       }
     },
-    data: function () {
+    data () {
       return {
         // 刻度颜色
         axisColor: {
@@ -92,7 +92,7 @@
       }
     },
     methods: {
-      renderChart: function () {
+      renderChart () {
         if (this.chart) {
           this.chart.dispose()
         }
@@ -100,7 +100,7 @@
         this.chart = echarts.init(document.getElementById(this.id))
         // 自定义eChart样式 官方配置指南(http://echarts.baidu.com/option.html#yAxis.splitLine.lineStyle.color)
         this.chart.setOption({
-          title: { text: this.title },
+          title: {text: this.title},
           legend: {
             icon: 'circle',
             data: this.legendData,
@@ -134,18 +134,25 @@
           },
           series: this.series
         })
+      },
+      resizeChart () {
+        this.chart.resize()
       }
     },
     watch: {
-      xAxisData: function () {
+      xAxisData () {
         this.renderChart()
       },
-      series: function () {
+      series () {
         this.renderChart()
       }
     },
-    mounted: function () {
-      this.renderChart()
+    mounted () {
+      var that = this
+      that.renderChart()
+      window.addEventListener('resize', function () {
+        that.resizeChart()
+      })
     }
   }
 </script>

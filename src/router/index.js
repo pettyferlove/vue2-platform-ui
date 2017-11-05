@@ -43,6 +43,11 @@ const router = new Router({
           component: resolve => require(['@/pages/Echarts'], resolve)
         },
         {
+          path: '/chartjs',
+          name: 'ChartJS',
+          component: resolve => require(['@/pages/ChartJS'], resolve)
+        },
+        {
           path: '/quillEditor',
           name: 'QuillEditor',
           component: resolve => require(['@/pages/QuillEditor'], resolve)

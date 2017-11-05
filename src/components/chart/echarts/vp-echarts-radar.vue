@@ -1,6 +1,6 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
-    <div class="vp-chart-bar vp-panel">
+    <div class="vp-echarts-bar vp-panel">
       <div class="panel-body" :id="this.id" :style="{ height: height + 'px'}">
       </div>
     </div>
@@ -17,7 +17,7 @@
   require('echarts/lib/component/legend')
 
   export default {
-    name: 'VpChartRadar',
+    name: 'VpEChartsRadar',
     props: {
       // 图表区域高度
       title: {
@@ -98,7 +98,7 @@
       }
     },
     methods: {
-      renderChart: function () {
+      renderChart () {
         if (this.chart) {
           this.chart.dispose()
         }
@@ -131,15 +131,22 @@
             data: this.data
           }
         })
+      },
+      resizeChart () {
+        this.chart.resize()
       }
     },
     watch: {
-      data: function () {
+      data () {
         this.renderChart()
       }
     },
-    mounted: function () {
-      this.renderChart()
+    mounted () {
+      var that = this
+      that.renderChart()
+      window.addEventListener('resize', function () {
+        that.resizeChart()
+      })
     }
   }
 </script>
