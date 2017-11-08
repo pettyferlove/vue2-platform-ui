@@ -193,19 +193,26 @@
   overflow: hidden;
   .panel-heading{
     display: flex;
+    background-color: #409eff !important;
     img{
+      height: 70px;
+      border-radius: 35px;
+      vertical-align: middle;
       margin-right: @vp-spacing-base;
     }
     .title{
       display: flex;
       flex-direction: column;
       justify-content: center;
+      vertical-align: middle;
       .name{
-        color: @primary-color;
+        color: white;
+        margin-top: 5px;
         font-size: 18px;
+        font-weight: 300;
       }
       .role{
-        color: @vp-grey;
+        color: white;
       }
     }
   }
@@ -223,13 +230,14 @@
         width: 10px;
       }
       padding: 0 @vp-spacing-base;
-      height: 45px;
-      line-height: 45px;
+      height: 39px;
+      line-height: 39px;
       span{
         flex-grow: 1;
       }
       span:first-child{
-        width: 20%;
+        width: 10%;
+        margin-left: 10px;
       }
       span:nth-child(2){
         width: 40%;
@@ -237,10 +245,14 @@
       span:last-child{
         text-align: right;
         width: 40%;
+        margin-right: 10px;
       }
     }
     li:last-child{
       border-bottom: 1px solid transparent;
+    }
+    li:hover{
+      background: #f7f7f7;
     }
   }
 }

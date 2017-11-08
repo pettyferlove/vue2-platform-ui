@@ -22,7 +22,7 @@
         </el-menu-item>
         <el-menu-item index="/widget">
           <i class="fa fa-cogs"></i>
-          <span slot="title">小组件</span>
+          <span slot="title">组件</span>
         </el-menu-item>
         <el-menu-item index="/panels">
           <i class="fa fa-database"></i>

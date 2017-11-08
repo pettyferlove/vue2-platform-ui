@@ -110,6 +110,11 @@
               value: '9.8'
             },
             {
+              icon: 'fa fa-envelope',
+              key: '邮箱',
+              value: 'pettyferlove@live.cn'
+            },
+            {
               icon: 'fa fa-calendar',
               key: '注册时间',
               value: '2017-8-9 8:00'
