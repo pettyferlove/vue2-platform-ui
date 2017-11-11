@@ -2,30 +2,45 @@
 @nav-height: 60px;
 
 // Color
-@primary-color          : #41b883;
-@info-color             : #1d8ce0;
-@success-color          : #41b883;
-@warning-color          : #ffa000;
-@error-color            : #F60000;
-@link-color             : #35495e;
-@subsidiary-color       : #9ea3b1;
-@title-color            : #1c2438;
+@primary-color: #41b883;
+@info-color: #1d8ce0;
+@success-color: #41b883;
+@warning-color: #ffa000;
+@error-color: #F60000;
+@link-color: #35495e;
+@subsidiary-color: #9ea3b1;
+@title-color: #1c2438;
 // Border color
-@border-color-base      : #dddee1;  // outside
-@border-color-split     : #eeeff1;  // inside
-@table-td-hover-bg      : #fafafa;
+@border-color-base: #dddee1; // outside
+@border-color-split: #eeeff1; // inside
+@table-td-hover-bg: #fafafa;
 
 // Background color
-@background-color-base  : #f1f2f7;  // base
-@menu-dark-active-bg    : #171e2e;
-@menu-dark-title        : #1c2438;
+@background-color-base: #f1f2f7; // base
+@menu-active-bg: #171e2e;
+@menu-title: #1c2438;
+@menu-content-color: #bfcbd9;
 
-html,body{
+@btn-border-radius: 4px;
+@border-radius-small: 4px;
+
+/**
+  Components组件库样式
+ */
+@vp-grey: #99a9c0;
+@vp-grey-light: #f4f4f4;
+@vp-spacing-base: 15px;
+
+@border-split: 1px solid @border-color-split;
+@border-out: 1px solid @border-color-base;
+
+
+html, body {
   margin: 0px;
   border: 0px;
   padding: 0px;
   color: #495060;
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -34,7 +49,7 @@ html,body{
   background-color: @background-color-base;
 }
 
-a{
+a {
   text-decoration: none;
   color: #495060;
 }
@@ -66,23 +81,23 @@ a{
   background-color: #ccc7bf;
 }*/
 
-.el-menu-item.is-active{
+.el-menu-item.is-active {
 
 }
 
-#app{
-  .home{
+#app {
+  .home {
     position: relative;
     width: 100%;
     height: 100%;
     background-color: @background-color-base;
-    .sidebar{
+    .sidebar {
       position: fixed;
       height: 100%;
       z-index: 1010;
       top: 0;
-      .menu-header{
-        .logo{
+      .menu-header {
+        .logo {
           transition: transform .3s ease-in-out, .3s ease-in-out;
           padding: 0px;
           height: @nav-height;
@@ -90,27 +105,27 @@ a{
           font-size: 20px;
           font-weight: bold;
           overflow: hidden;
-          .logo-group{
+          .logo-group {
             line-height: @nav-height;
-            span{
-              .logo-title-light{
+            span {
+              .logo-title-light {
                 color: @primary-color
               }
             }
-            img{
+            img {
               vertical-align: middle;
             }
           }
         }
       }
-      li{
+      li {
         text-align: left;
-        a{
+        a {
           color: inherit;
           display: inline-block;
           width: 100%;
           height: 100%;
-          i{
+          i {
             margin-right: 10px;
           }
         }
@@ -123,30 +138,30 @@ a{
     .el-menu--collapse {
       width: 64px;
     }
-    .content-wrapper{
-      transition: transform .3s ease-in-out,padding .3s ease-in-out;
+    .content-wrapper {
+      transition: transform .3s ease-in-out, padding .3s ease-in-out;
       box-sizing: border-box;
       position: relative;
       display: block;
       padding-left: 210px;
       width: 100%;
-      .header{
+      .header {
         position: relative;
         z-index: 999;
         width: 100%;
         height: @nav-height;
         top: 0;
-        box-shadow: 0 1px 8px rgba(0,0,0,.3);
+        box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
         background: white;
-        .toggle-button{
+        .toggle-button {
           font-size: 20px;
           transition: All 0.4s ease-in-out;
         }
-        .toggle-button--collapse{
+        .toggle-button--collapse {
           transform: rotate(90deg);
         }
-        .avator-con{
-          .btn{
+        .avator-con {
+          .btn {
             font-size: 18px;
             width: 30px;
             display: inline-block;
@@ -158,7 +173,7 @@ a{
           top: 0;
           height: @nav-height;
           width: 350px;
-          .message-push{
+          .message-push {
             margin-right: 60px;
             display: inline-block;
             width: 30px;
@@ -166,7 +181,7 @@ a{
             text-align: center;
             cursor: pointer;
           }
-          .user-avator{
+          .user-avator {
             position: absolute;
             right: 0;
             top: 0;
@@ -178,23 +193,23 @@ a{
         }
       }
 
-      .main-content{
+      .main-content {
         position: relative;
         padding: 0px;
-        height: calc(~"100vh - "@nav-height);
+        height: calc(~"100vh - " @nav-height);
       }
     }
   }
 }
 
-.main-footer{
+.main-footer {
   font-size: 14px;
   margin-bottom: 5px;
 }
 
-.vp-content{
-  &>.el-row{
-    &>.el-col{
+.vp-content {
+  & > .el-row {
+    & > .el-col {
       margin-top: 15px;
     }
   }
@@ -205,6 +220,7 @@ a{
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s
 }
+
 .fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
   opacity: 0
 }
@@ -217,32 +233,30 @@ a{
   justify-content: center;
 }
 
-.vp-margin-top{
+.vp-margin-top {
   margin-top: 14px;
 }
 
-.vp-margin-bottom{
+.vp-margin-bottom {
   margin-bottom: 14px;
 }
 
-.vp-margin-left{
+.vp-margin-left {
   margin-left: 14px;
 }
 
-.vp-margin-right{
+.vp-margin-right {
   margin-right: 14px;
 }
 
-.icons-page{
+.icons-page {
   margin-top: 14px;
-  section{
+  section {
     margin-top: 15px;
   }
 }
 
-
-
-.login{
+.login {
   position: fixed;
   top: 0;
   left: 0;
@@ -253,7 +267,7 @@ a{
   background-position: center top;
   -webkit-background-size: cover;
   background-size: cover;
-  .vertical-align{
+  .vertical-align {
     vertical-align: middle;
     height: 100%;
   }
@@ -263,35 +277,36 @@ a{
     vertical-align: middle;
     content: "";
   }
-  .login-main{
+  .login-main {
     background: url("../assets/img/photo4.jpg") repeat;
-    height: 100%!important;
+    height: 100% !important;
     padding-right: 400px;
     text-align: left;
     padding-left: 50px;
-    .login-content{
+    .login-content {
       padding: 0px 0px 80px 80px;
       display: inline-block;
       max-width: 100%;
       font-size: 14px;
-      .page-brand{
+      .page-brand {
         color: white;
         display: inline-block;
         max-width: 100%;
         font-weight: bold;
-        .login-title{
+        .login-title {
           font-size: 80px;
           line-height: 80px;
           padding-bottom: 20px;
         }
       }
-      .vertical-align-middle{
+      .vertical-align-middle {
         vertical-align: middle;
       }
     }
   }
 }
-.lock-screen, .loading{
+
+.lock-screen, .loading {
   display: flex;
   justify-content: center;
   align-items: center;

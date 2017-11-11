@@ -4,51 +4,52 @@
 
 // 自定义element-ui样式
 
-.collapsed{
-  width:64px;
+.collapsed {
+  width: 64px;
 }
+
 // 重写菜单栏部分样式
-.el-menu{
+.el-menu {
   border-radius: 0px;
-  background-color: #1c2438;
+  background-color: @menu-title;
 }
 
 .el-submenu .el-menu {
-  background-color: #171e2e;
+  background-color: @menu-active-bg;
 }
 
-.el-menu-item{
-  color: #bfcbd9;
+.el-menu-item {
+  color: @menu-content-color;
 }
 
-.el-submenu__title{
-  color: #bfcbd9;
+.el-submenu__title {
+  color: @menu-content-color;
 }
 
-.el-menu-item{
+.el-menu-item {
   border-right: 3px solid transparent;
 }
 
-.el-submenu .el-menu .el-menu-item{
-  background-color: #171e2e;
+.el-submenu .el-menu .el-menu-item {
+  background-color: @menu-active-bg;
 }
 
-.el-menu-item.is-active{
+.el-menu-item.is-active {
   color: @primary-color;
-  background: #171e2e;
-  border-right-color: @primary-color ;
+  background: @menu-active-bg;
+  border-right-color: @primary-color;
 }
 
 .el-menu-item:hover, .el-submenu__title:hover {
   color: @primary-color;
-  background: #171e2e;
-  border-right-color: @primary-color ;
+  background: @menu-active-bg;
+  border-right-color: @primary-color;
 }
 
 .el-submenu .el-menu .el-menu-item:hover {
   color: @primary-color;
-  background: #171e2e;
-  border-right-color: @primary-color ;
+  background: @menu-active-bg;
+  border-right-color: @primary-color;
 }
 
 .el-menu--collapse .el-submenu .el-menu {
@@ -65,7 +66,7 @@
 }
 
 .el-menu-item, .el-submenu__title {
-  background-color: #1c2438;
+  background-color: @menu-title;
   height: 46px;
   line-height: 46px;
   font-size: 14px;
@@ -75,30 +76,29 @@
   transition: border-color .3s, background-color .3s, color .3s;
 }
 
-.el-submenu__title i{
+.el-submenu__title i {
   margin-left: 4px;
 }
 
-.el-submenu__title span{
+.el-submenu__title span {
   margin-left: 4px;
 }
 
-.el-menu-item i{
+.el-menu-item i {
   margin-left: 4px;
 }
 
-.el-menu-item span{
+.el-menu-item span {
   margin-left: 4px;
 }
-
 
 // el-card样式修改
-.el-card{
+.el-card {
   border: none;
 
 }
 
-.el-card:hover{
+.el-card:hover {
   box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, .16), 0px 0px 24px 0px rgba(0, 0, 0, .15);
   transition: all .3s ease-in-out;
 }
@@ -106,6 +106,6 @@
 // el-input样式修改
 .el-input__inner:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px rgba(45,140,240,.2);
-  transition: border .2s ease-in-out,background .2s ease-in-out,box-shadow .2s ease-in-out;
+  box-shadow: 0 0 0 2px rgba(45, 140, 240, .2);
+  transition: border .2s ease-in-out, background .2s ease-in-out, box-shadow .2s ease-in-out;
 }
