@@ -12,7 +12,6 @@ import 'font-awesome/css/font-awesome.css'
 import 'simplemde/dist/simplemde.min.css'
 import 'petty-scroll/dist/petty-scroll.min.css'
 import './my-theme/index.less'
-import './my-theme/petty.less'
 
 Vue.use(Vuex)
 Vue.use(ElementUI)
