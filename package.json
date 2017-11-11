@@ -1,6 +1,6 @@
 {
   "name": "vue2-platform-ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Vue.js project",
   "author": "Pettyfer <pettyferlove@live.cn>",
   "private": true,
@@ -17,6 +17,7 @@
     "echarts": "^3.7.2",
     "element-ui": "^2.0.3",
     "font-awesome": "^4.7.0",
+    "js-cookie": "^2.2.0",
     "petty-scroll": "^1.2.7",
     "simplemde": "^1.11.2",
     "vue": "^2.5.3",

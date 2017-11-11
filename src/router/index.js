@@ -14,71 +14,71 @@ const router = new Router({
       children: [
         {
           path: '/',
-          name: 'Dashboard',
+          name: 'dashboard',
           component: resolve => require(['@/pages/Dashboard'], resolve)
         },
         {
           path: '/panels',
-          name: 'Panels',
+          name: 'panels',
           component: resolve => require(['@/pages/Panels'], resolve)
         },
         {
           path: '/widget',
-          name: 'Widget',
+          name: 'widget',
           component: resolve => require(['@/pages/Widget'], resolve)
         },
         {
           path: '/imageList',
-          name: 'ImageList',
+          name: 'imageList',
           component: resolve => require(['@/pages/ImageList'], resolve)
         },
         {
           path: '/icons',
-          name: 'Icons',
+          name: 'icons',
           component: resolve => require(['@/pages/Icons'], resolve)
         },
         {
           path: '/echarts',
-          name: 'Echarts',
+          name: 'echarts',
           component: resolve => require(['@/pages/Echarts'], resolve)
         },
         {
           path: '/chartjs',
-          name: 'ChartJS',
+          name: 'chartjs',
           component: resolve => require(['@/pages/ChartJS'], resolve)
         },
         {
           path: '/quillEditor',
-          name: 'QuillEditor',
+          name: 'quillEditor',
           component: resolve => require(['@/pages/QuillEditor'], resolve)
         },
         {
           path: '/simplemdeEditor',
-          name: 'SimplemdeEditor',
+          name: 'simplemdeEditor',
           component: resolve => require(['@/pages/SimplemdeEditor'], resolve)
         },
         {
           path: '/basicTable',
-          name: 'BasicTable',
+          name: 'basicTable',
           component: resolve => require(['@/pages/BasicTable'], resolve)
         },
         {
           path: '/editableTable',
-          name: 'EditableTable',
+          name: 'editableTable',
           component: resolve => require(['@/pages/EditableTable'], resolve)
         }
       ]
     },
     {
       path: '/login',
-      name: 'Login',
+      name: 'login',
       components: {
         other: resolve => require(['@/pages/Login'], resolve)
       }
     },
     {
       path: '/lockScreen',
-      name: 'LockScreen',
+      name: 'lockScreen',
       components: {
         other: resolve => require(['@/pages/LockScreen'], resolve)
       }
