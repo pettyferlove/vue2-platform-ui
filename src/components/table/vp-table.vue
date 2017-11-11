@@ -114,7 +114,9 @@
         this.currentRow = row
       },
       handleDelete: function (index, row) {
-        this.dataDelete.push(row)
+        // 数组起始位置添加数组
+        // TODO: push在末尾添加，添加第一个元素会添加两个
+        this.dataDelete.unshift(row)
         this.deleteOk()
       },
       handleEdit: function (index, row) {
@@ -146,6 +148,8 @@
             message: '删除成功!'
           })
         }).catch(() => {
+          this.deleteDisabled = true
+          this.dataDelete.splice(0, this.dataDelete.length)
           this.$message({
             type: 'info',
             message: '已取消删除'
