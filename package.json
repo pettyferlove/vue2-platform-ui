@@ -45,8 +45,6 @@
     "cross-env": "^5.1.1",
     "cross-spawn": "^5.1.0",
     "css-loader": "^0.28.7",
-    "element-theme": "^2.0.0",
-    "element-theme-chalk": "^2.0.3",
     "eslint": "^4.10.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
