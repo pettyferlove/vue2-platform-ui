@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import LoadingBar from '../components/progress/vp-loading-bar'
 import Router from 'vue-router'
+import Cookies from 'js-cookie'
 
 Vue.use(Router)
 Vue.use(LoadingBar)
@@ -10,10 +11,12 @@ const router = new Router({
   routes: [
     {
       path: '/',
+      redirect: '/dashboard',
+      name: 'home',
       component: resolve => require(['@/pages/Home'], resolve),
       children: [
         {
-          path: '/',
+          path: '/dashboard',
           name: 'dashboard',
           component: resolve => require(['@/pages/Dashboard'], resolve)
         },
@@ -72,16 +75,12 @@ const router = new Router({
     {
       path: '/login',
       name: 'login',
-      components: {
-        other: resolve => require(['@/pages/Login'], resolve)
-      }
+      component: resolve => require(['@/pages/Login'], resolve)
     },
     {
       path: '/lockScreen',
       name: 'lockScreen',
-      components: {
-        other: resolve => require(['@/pages/LockScreen'], resolve)
-      }
+      component: resolve => require(['@/pages/LockScreen'], resolve)
     }
   ]
 })
@@ -93,7 +92,20 @@ router.beforeEach((to, from, next) => {
     height: 2
   })
   LoadingBar.start()
-  next()
+  if (!Cookies.get('user_token') && to.name !== 'login') {
+    next({
+      name: 'login'
+    })
+    LoadingBar.finish()
+  } else if (Cookies.get('user_token') && to.name === 'login') {
+    next({
+      name: 'home'
+    })
+    LoadingBar.finish()
+  } else {
+    next()
+    LoadingBar.finish()
+  }
 })
 
 router.afterEach((to, from, next) => {

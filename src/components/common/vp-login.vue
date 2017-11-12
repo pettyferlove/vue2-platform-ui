@@ -9,7 +9,7 @@
       <div class="login-form">
         <el-input v-model="username" placeholder="请输入用户名"></el-input>
         <el-input v-model="password" type="password" placeholder="请输入密码"></el-input>
-        <router-link to="/"><el-button type="primary">登陆</el-button></router-link>
+        <el-button @click="loginSubmit" type="primary">登陆</el-button>
       </div>
       <div class="login-footer">
         <el-checkbox v-model="remenber">记住我</el-checkbox>
@@ -19,6 +19,8 @@
   </el-row>
 </template>
 <script>
+  import Cookis from 'js-cookie'
+
   export default {
     name: 'VpLogin',
     data: function () {
@@ -26,6 +28,14 @@
         username: '',
         password: '',
         remenber: false
+      }
+    },
+    methods: {
+      loginSubmit () {
+        Cookis.set('user_token', 'adadadd')
+        this.$router.push({
+          name: 'home'
+        })
       }
     }
   }

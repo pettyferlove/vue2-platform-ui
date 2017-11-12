@@ -16,7 +16,7 @@
             </div>
           </div>
         </div>
-        <el-menu-item index="/">
+        <el-menu-item index="/dashboard">
           <i class="fa fa-dashboard"></i>
           <span slot="title">仪表盘</span>
         </el-menu-item>
