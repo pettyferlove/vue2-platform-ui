@@ -125,8 +125,16 @@ export const lockRouter = {
   component: resolve => require(['@/pages/LockScreen'], resolve)
 }
 
+export const otherRouter = {
+  path: '/',
+  redirect: '/dashboard',
+  name: 'otherRouter',
+  component: resolve => require(['@/pages/Home'], resolve)
+}
+
 export const routers = [
   ...homeRouter,
   lockRouter,
-  loginRouter
+  loginRouter,
+  otherRouter
 ]
