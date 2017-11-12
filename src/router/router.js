@@ -14,6 +14,7 @@ export const homeRouter = [
   },
   {
     path: '/widget',
+    redirect: '/widget/index',
     name: 'widget',
     component: resolve => require(['@/pages/Home'], resolve),
     children: [
@@ -26,6 +27,7 @@ export const homeRouter = [
   },
   {
     path: '/panels',
+    redirect: '/panels/index',
     name: 'panels',
     component: resolve => require(['@/pages/Home'], resolve),
     children: [
@@ -38,6 +40,7 @@ export const homeRouter = [
   },
   {
     path: '/editor',
+    redirect: '/editor/quill',
     name: 'editor',
     component: resolve => require(['@/pages/Home'], resolve),
     children: [
@@ -55,6 +58,7 @@ export const homeRouter = [
   },
   {
     path: '/imageList',
+    redirect: '/imageList/index',
     name: 'imageList',
     component: resolve => require(['@/pages/Home'], resolve),
     children: [
@@ -67,6 +71,7 @@ export const homeRouter = [
   },
   {
     path: '/chart',
+    redirect: '/chart/echarts',
     name: 'chart',
     component: resolve => require(['@/pages/Home'], resolve),
     children: [
@@ -84,6 +89,7 @@ export const homeRouter = [
   },
   {
     path: '/ui',
+    redirect: '/ui/icons',
     name: 'ui',
     component: resolve => require(['@/pages/Home'], resolve),
     children: [
@@ -96,6 +102,7 @@ export const homeRouter = [
   },
   {
     path: '/table',
+    redirect: '/table/basicTable',
     name: 'table',
     component: resolve => require(['@/pages/Home'], resolve),
     children: [
