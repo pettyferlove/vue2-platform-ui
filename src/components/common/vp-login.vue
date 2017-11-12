@@ -37,7 +37,7 @@
         let that = this
         that.loading = true
         setTimeout(function () {
-          Cookis.set('user_token', 'adadadd')
+          Cookis.set('user_token', 'pettyfer')
           that.$router.push({
             name: 'home'
           })
