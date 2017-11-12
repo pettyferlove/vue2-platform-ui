@@ -16,15 +16,15 @@
             </div>
           </div>
         </div>
-        <el-menu-item index="/dashboard">
+        <el-menu-item index="/dashboard/index">
           <i class="fa fa-dashboard"></i>
           <span slot="title">仪表盘</span>
         </el-menu-item>
-        <el-menu-item index="/widget">
+        <el-menu-item index="/widget/index">
           <i class="fa fa-cogs"></i>
           <span slot="title">组件</span>
         </el-menu-item>
-        <el-menu-item index="/panels">
+        <el-menu-item index="/panels/index">
           <i class="fa fa-database"></i>
           <span slot="title">面板</span>
         </el-menu-item>
@@ -33,16 +33,16 @@
             <i class="fa fa-pencil"></i>
             <span slot="title">编辑器</span>
           </template>
-          <el-menu-item index="/quillEditor">
+          <el-menu-item index="/editor/quill">
             <i class="fa fa-pencil"></i>
             <span slot="title">Quill-Editor</span>
           </el-menu-item>
-          <el-menu-item index="/simplemdeEditor">
+          <el-menu-item index="/editor/simplemde">
             <i class="fa fa-pencil"></i>
             <span slot="title">Simplemde</span>
           </el-menu-item>
         </el-submenu>
-        <el-menu-item index="/imageList">
+        <el-menu-item index="/imageList/index">
           <i class="fa fa-photo"></i>
           <span slot="title">图片列表</span>
         </el-menu-item>
@@ -51,11 +51,11 @@
             <i class="fa fa-bar-chart"></i>
             <span slot="title">图表</span>
           </template>
-          <el-menu-item index="/echarts">
+          <el-menu-item index="/chart/echarts">
             <i class="fa fa-line-chart"></i>
             <span slot="title">ECharts</span>
           </el-menu-item>
-          <el-menu-item index="/chartjs">
+          <el-menu-item index="/chart/chartjs">
             <i class="fa fa-pie-chart"></i>
             <span slot="title">ChartJS</span>
           </el-menu-item>
@@ -66,11 +66,11 @@
             <i class="fa fa-anchor"></i>
             <span slot="title">UI元素</span>
           </template>
-          <el-menu-item index="/icons">
+          <el-menu-item index="/ui/icons">
             <i class="fa fa-font"></i>
             <span slot="title">字体图标</span>
           </el-menu-item>
-          <el-menu-item index="/icons">
+          <el-menu-item index="/ui/icons">
             <i class="fa fa-font"></i>
             <span slot="title">字体图标</span>
           </el-menu-item>
@@ -81,11 +81,11 @@
             <i class="fa fa-database"></i>
             <span slot="title">数据表格</span>
           </template>
-          <el-menu-item index="/basicTable">
+          <el-menu-item index="/table/basicTable">
             <i class="fa fa-hdd-o"></i>
             <span slot="title">基础表格</span>
           </el-menu-item>
-          <el-menu-item index="/editableTable">
+          <el-menu-item index="/table/editableTable">
             <i class="fa fa-bars"></i>
             <span slot="title">可编辑表格</span>
           </el-menu-item>
@@ -176,6 +176,9 @@
         }
       }
     },
+    created () {
+      this.$store.commit('updateMenuList')
+    },
     data () {
       return {
         isFullScreen: false,
@@ -213,7 +216,8 @@
     },
     computed: {
       ...mapGetters({
-        collapsed: 'toggleMenu'
+        collapsed: 'getToggleMenu',
+        menuList: 'getMenuList'
       }),
       classes () {
         return {
