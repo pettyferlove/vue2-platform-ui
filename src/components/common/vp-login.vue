@@ -7,9 +7,10 @@
       </div>
       <h3>登陆系统</h3>
       <div class="login-form">
-        <el-input v-model="username" placeholder="请输入用户名"></el-input>
-        <el-input v-model="password" type="password" placeholder="请输入密码"></el-input>
-        <el-button @click="loginSubmit" type="primary">登陆</el-button>
+        <el-input size="medium" v-model="username" placeholder="请输入用户名"></el-input>
+        <el-input size="medium" v-model="password" type="password" placeholder="请输入密码"></el-input>
+        <el-button size="medium" @click="loginSubmit" type="primary" :loading="loading" :disabled="loading">登陆
+        </el-button>
       </div>
       <div class="login-footer">
         <el-checkbox v-model="remenber">记住我</el-checkbox>
@@ -27,15 +28,21 @@
       return {
         username: '',
         password: '',
-        remenber: false
+        remenber: false,
+        loading: false
       }
     },
     methods: {
       loginSubmit () {
-        Cookis.set('user_token', 'adadadd')
-        this.$router.push({
-          name: 'home'
-        })
+        let that = this
+        that.loading = true
+        setTimeout(function () {
+          Cookis.set('user_token', 'adadadd')
+          that.$router.push({
+            name: 'home'
+          })
+          that.loading = false
+        }, 1000)
       }
     }
   }
