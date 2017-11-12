@@ -25,19 +25,7 @@ const mutations = {
     state.menuCollapsed = !state.menuCollapsed
   },
   updateMenuList (state) {
-    let menuList = []
-    /* if (homeRouter.children.length <= 1) {
-      menuList.push(homeRouter)
-    } else {
-      let i = menuList.push(homeRouter)
-      let childrenArr = []
-      childrenArr = homeRouter.children.filter(child => {
-        return child
-      })
-      menuList[i - 1].children = childrenArr
-    } */
-    console.table(menuList)
-    console.table(homeRouter)
+    state.menuList = homeRouter
   }
 }
 

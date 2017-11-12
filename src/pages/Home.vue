@@ -1,7 +1,7 @@
 <template>
   <div id="home" class="home">
     <aside :class="[classes]">
-      <vp-sidebar-menu :isCollapse="collapsed"></vp-sidebar-menu>
+      <vp-sidebar-menu :menuData="menuList" :isCollapse="collapsed"></vp-sidebar-menu>
     </aside>
     <el-row class="content-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
       <el-row class="header" type="flex" align="middle">
@@ -35,8 +35,9 @@
 <script>
   import VpMsgPush from '../components/message/vp-message-push.vue'
   import VpUserPanel from '../components/user/vp-user-panel.vue'
-  import { mapGetters, mapMutations } from 'vuex'
   import VpSidebarMenu from '../components/menu/vp-sidebar_menu.vue'
+  import { mapGetters, mapMutations } from 'vuex'
+
   /* eslint-disable no-useless-computed-key */
   export default {
     components: {

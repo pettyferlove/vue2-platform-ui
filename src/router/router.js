@@ -1,48 +1,47 @@
+import Home from '@/pages/Home'
+
 export const homeRouter = [
   {
-    path: '/dashboard',
-    redirect: '/dashboard/index',
+    path: '/',
+    redirect: '/dashboard',
     name: 'home',
-    component: resolve => require(['@/pages/Home'], resolve),
+    component: Home,
     children: [
       {
-        path: 'index',
+        path: 'dashboard',
         name: 'dashboard_index',
         component: resolve => require(['@/pages/Dashboard'], resolve)
       }
     ]
   },
   {
-    path: '/widget',
-    redirect: '/widget/index',
+    path: '/',
     name: 'widget',
-    component: resolve => require(['@/pages/Home'], resolve),
+    component: Home,
     children: [
       {
-        path: 'index',
+        path: 'widget',
         name: 'widget_index',
         component: resolve => require(['@/pages/Widget'], resolve)
       }
     ]
   },
   {
-    path: '/panels',
-    redirect: '/panels/index',
+    path: '/',
     name: 'panels',
-    component: resolve => require(['@/pages/Home'], resolve),
+    component: Home,
     children: [
       {
-        path: 'index',
+        path: 'panels',
         name: 'panels_index',
         component: resolve => require(['@/pages/Panels'], resolve)
       }
     ]
   },
   {
-    path: '/editor',
-    redirect: '/editor/quill',
+    path: '/',
     name: 'editor',
-    component: resolve => require(['@/pages/Home'], resolve),
+    component: Home,
     children: [
       {
         path: 'quill',
@@ -57,23 +56,21 @@ export const homeRouter = [
     ]
   },
   {
-    path: '/imageList',
-    redirect: '/imageList/index',
+    path: '/',
     name: 'imageList',
-    component: resolve => require(['@/pages/Home'], resolve),
+    component: Home,
     children: [
       {
-        path: 'index',
+        path: 'imageList',
         name: 'imageList_index',
         component: resolve => require(['@/pages/ImageList'], resolve)
       }
     ]
   },
   {
-    path: '/chart',
-    redirect: '/chart/echarts',
+    path: '/',
     name: 'chart',
-    component: resolve => require(['@/pages/Home'], resolve),
+    component: Home,
     children: [
       {
         path: 'echarts',
@@ -88,10 +85,9 @@ export const homeRouter = [
     ]
   },
   {
-    path: '/ui',
-    redirect: '/ui/icons',
+    path: '/',
     name: 'ui',
-    component: resolve => require(['@/pages/Home'], resolve),
+    component: Home,
     children: [
       {
         path: 'icons',
@@ -101,10 +97,9 @@ export const homeRouter = [
     ]
   },
   {
-    path: '/table',
-    redirect: '/table/basicTable',
+    path: '/',
     name: 'table',
-    component: resolve => require(['@/pages/Home'], resolve),
+    component: Home,
     children: [
       {
         path: 'basicTable',
@@ -132,16 +127,8 @@ export const lockRouter = {
   component: resolve => require(['@/pages/LockScreen'], resolve)
 }
 
-export const otherRouter = {
-  path: '/',
-  redirect: '/dashboard',
-  name: 'otherRouter',
-  component: resolve => require(['@/pages/Home'], resolve)
-}
-
 export const routers = [
   ...homeRouter,
   lockRouter,
-  loginRouter,
-  otherRouter
+  loginRouter
 ]
