@@ -5,7 +5,7 @@
     </aside>
     <el-row class="home-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
       <el-row class="home-wrapper-header" type="flex" align="middle">
-        <span style="" @click="toggleEvent">
+        <span @click="toggleEvent">
           <i :class="toggleButton"></i>
         </span>
         <vp-breadcrumb-nav></vp-breadcrumb-nav>

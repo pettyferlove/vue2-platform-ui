@@ -3,7 +3,14 @@ import { homeRouter } from '@/router/router'
 // state
 const state = {
   menuCollapsed: false,
-  menuList: []
+  menuList: [],
+  breadcrumbList: [
+    {
+      title: '首页',
+      name: 'home',
+      path: '/'
+    }
+  ]
 }
 
 // getters
@@ -17,7 +24,8 @@ const getters = {
     }
     return state.menuCollapsed
   },
-  getMenuList: state => state.menuList
+  getMenuList: state => state.menuList,
+  getBreadcrumbList: state => state.breadcrumbList
 }
 
 // actions
