@@ -3,8 +3,8 @@
     <aside :class="[classes]">
       <vp-sidebar-menu :menuData="menuList" :isCollapse="collapsed"></vp-sidebar-menu>
     </aside>
-    <el-row class="content-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
-      <el-row class="header" type="flex" align="middle">
+    <el-row class="home-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
+      <el-row class="home-wrapper-header" type="flex" align="middle">
         <span style="margin-left: 20px" @click="toggleEvent">
           <i :class="toggleButton"></i>
         </span>
@@ -20,7 +20,7 @@
         </div>
       </el-row>
       <petty-scroll>
-        <div class="main-content" id="main-content">
+        <div class="home-wrapper-main" id="main-content">
           <div style="overflow: hidden">
             <transition name="fade" mode="out-in">
               <router-view></router-view>
@@ -120,7 +120,7 @@
       }),
       classes () {
         return {
-          ['sidebar']: true
+          ['home-sidebar']: true
         }
       },
       toggleButton () {

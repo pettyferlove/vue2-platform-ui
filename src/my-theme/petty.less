@@ -56,7 +56,7 @@ a {
     width: 100%;
     height: 100%;
     background-color: @background-color-base;
-    .sidebar {
+    &-sidebar {
       position: fixed;
       height: 100%;
       z-index: 1010;
@@ -103,14 +103,14 @@ a {
     .el-menu--collapse {
       width: 64px;
     }
-    .content-wrapper {
+    &-wrapper {
       transition: transform .3s ease-in-out, padding .3s ease-in-out;
       box-sizing: border-box;
       position: relative;
       display: block;
       padding-left: 210px;
       width: 100%;
-      .header {
+      &-header {
         position: relative;
         z-index: 999;
         width: 100%;
@@ -158,7 +158,7 @@ a {
         }
       }
 
-      .main-content {
+      &-main {
         position: relative;
         padding: 0px;
         height: calc(~"100vh - " @nav-height);
