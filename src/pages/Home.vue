@@ -5,9 +5,10 @@
     </aside>
     <el-row class="home-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
       <el-row class="home-wrapper-header" type="flex" align="middle">
-        <span style="margin-left: 20px" @click="toggleEvent">
+        <span style="" @click="toggleEvent">
           <i :class="toggleButton"></i>
         </span>
+        <vp-breadcrumb-nav></vp-breadcrumb-nav>
         <div class="avator-con">
           <el-tooltip class="item" effect="dark" content="全屏" placement="bottom">
             <i class="btn fa fa-expand" @click="handleFullScreen"></i>
@@ -36,11 +37,13 @@
   import VpMsgPush from '../components/message/vp-message-push.vue'
   import VpUserPanel from '../components/user/vp-user-panel.vue'
   import VpSidebarMenu from '../components/menu/vp-sidebar_menu.vue'
+  import VpBreadcrumbNav from '../components/common/vp-breadcrumb-nav.vue'
   import { mapGetters, mapMutations } from 'vuex'
 
   /* eslint-disable no-useless-computed-key */
   export default {
     components: {
+      VpBreadcrumbNav,
       VpSidebarMenu,
       VpUserPanel,
       VpMsgPush
