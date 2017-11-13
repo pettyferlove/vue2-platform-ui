@@ -8,7 +8,15 @@ const state = {
 
 // getters
 const getters = {
-  getToggleMenu: state => state.menuCollapsed,
+  getToggleMenu: function () {
+    let collapsed = localStorage.getItem('menuCollapsed')
+    if (collapsed === 'true') {
+      state.menuCollapsed = true
+    } else {
+      state.menuCollapsed = false
+    }
+    return state.menuCollapsed
+  },
   getMenuList: state => state.menuList
 }
 
@@ -22,7 +30,9 @@ const actions = {
 // mutations
 const mutations = {
   toggleMenu (state) {
-    state.menuCollapsed = !state.menuCollapsed
+    let isCollapsed = !state.menuCollapsed
+    localStorage.setItem('menuCollapsed', isCollapsed)
+    state.menuCollapsed = isCollapsed
   },
   updateMenuList (state) {
     state.menuList = homeRouter
