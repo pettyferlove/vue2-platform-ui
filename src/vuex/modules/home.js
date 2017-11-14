@@ -7,13 +7,11 @@ const state = {
   routerList: [
     ...homeRouter
   ],
-  breadcrumbList: [
-    {
-      title: '首页',
-      name: 'home',
-      path: '/'
-    }
-  ]
+  breadcrumbList: [{
+    title: '首页',
+    name: 'home',
+    path: '/'
+  }]
 }
 
 // getters
@@ -49,7 +47,14 @@ const mutations = {
     state.menuList = homeRouter
   },
   updateBreadcrumbList (state, routerPath) {
+    state.breadcrumbList.splice(0, state.breadcrumbList.length)
     let routerList = state.routerList
+    let home = {
+      title: '首页',
+      name: 'home',
+      path: '/'
+    }
+    state.breadcrumbList.push(home)
     routerList.forEach(item => {
       let _tempPath = item.path
       if (item.children.length <= 1) {
