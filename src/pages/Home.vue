@@ -36,7 +36,7 @@
 <script>
   import VpMsgPush from '../components/message/vp-message-push.vue'
   import VpUserPanel from '../components/user/vp-user-panel.vue'
-  import VpSidebarMenu from '../components/menu/vp-sidebar_menu.vue'
+  import VpSidebarMenu from '../components/menu/vp-sidebar-menu.vue'
   import VpBreadcrumbNav from '../components/common/vp-breadcrumb-nav.vue'
   import { mapGetters, mapMutations } from 'vuex'
 
@@ -80,6 +80,11 @@
     },
     created () {
       this.$store.commit('updateMenuList')
+    },
+    watch: {
+      '$route' (to) {
+        this.$store.commit('updateBreadcrumbList', to.path)
+      }
     },
     data () {
       return {
@@ -136,6 +141,7 @@
       }
     },
     mounted () {
+      this.$store.commit('updateBreadcrumbList', this.$route.path)
       // 监听全屏事件更改状态值
       document.addEventListener('fullscreenchange', () => {
         this.isFullScreen = !this.isFullScreen

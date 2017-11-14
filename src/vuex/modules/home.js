@@ -4,6 +4,9 @@ import { homeRouter } from '@/router/router'
 const state = {
   menuCollapsed: false,
   menuList: [],
+  routerList: [
+    ...homeRouter
+  ],
   breadcrumbList: [
     {
       title: '首页',
@@ -44,6 +47,41 @@ const mutations = {
   },
   updateMenuList (state) {
     state.menuList = homeRouter
+  },
+  updateBreadcrumbList (state, routerPath) {
+    let routerList = state.routerList
+    routerList.forEach(item => {
+      let _tempPath = item.path
+      if (item.children.length <= 1) {
+        _tempPath += item.children[0].path
+        if (routerPath === _tempPath) {
+          let _temp = {
+            title: item.title,
+            name: item.children[0].name,
+            path: item.children[0].path
+          }
+          state.breadcrumbList.push(_temp)
+        }
+      } else {
+        item.children.filter(child => {
+          let _tempPathChild = _tempPath
+          _tempPathChild += child.path
+          if (routerPath === _tempPathChild) {
+            let _tempParent = {
+              title: item.title,
+              name: item.name
+            }
+            let _tempChild = {
+              title: child.title,
+              name: child.name,
+              path: child.path
+            }
+            state.breadcrumbList.push(_tempParent)
+            state.breadcrumbList.push(_tempChild)
+          }
+        })
+      }
+    })
   }
 }
 
