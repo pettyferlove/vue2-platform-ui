@@ -18,8 +18,9 @@ a {
   text-decoration: none;
   color: #495060;
 }
+
 // 移除浏览器默认焦点样式
-:focus{
+:focus {
   outline: none;
 }
 
@@ -120,7 +121,7 @@ a {
         width: 100%;
         height: @nav-height;
         top: 0;
-        box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+        box-shadow: 0 2px 1px 1px hsla(0,0%,39%,.1);
         background: white;
         .toggle-button {
           margin-left: 20px;
@@ -163,11 +164,25 @@ a {
           }
         }
       }
+      &-tags {
+        z-index: 100;
+        text-align: left;
+        position: relative;
+        width: 100%;
+        height: @open-tags-height;
+        top: 0;
+        box-shadow: 0 2px 1px 1px hsla(0,0%,39%,.1);
+        overflow: hidden;
+        background: #f0f0f0;
+        padding: 4px;
+        .el-tag{
 
+        }
+      }
       &-main {
         position: relative;
         padding: 0px;
-        height: calc(~"100vh - " @nav-height);
+        height: calc(~"100vh - " @nav-height ~"-" @open-tags-height);
       }
     }
   }
@@ -181,10 +196,10 @@ a {
 .vp-content {
   & > .el-row {
     & > .el-col {
-      margin-top: 15px;
+      margin-bottom: 10px;
     }
   }
-  padding: 5px 15px 15px 15px;
+  padding: 10px;
 }
 
 //router-view过渡动画

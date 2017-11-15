@@ -20,6 +20,9 @@
           <vp-user-panel class="user-avator" :adminInfo="adminInfo"></vp-user-panel>
         </div>
       </el-row>
+      <el-row class="home-wrapper-tags">
+        <vp-open-tags></vp-open-tags>
+      </el-row>
       <petty-scroll>
         <div class="home-wrapper-main" id="main-content">
           <div style="overflow: hidden">
@@ -38,11 +41,13 @@
   import VpUserPanel from '../components/user/vp-user-panel.vue'
   import VpSidebarMenu from '../components/menu/vp-sidebar-menu.vue'
   import VpBreadcrumbNav from '../components/common/vp-breadcrumb-nav.vue'
+  import VpOpenTags from '../components/common/vp-open-tags.vue'
   import { mapGetters, mapMutations } from 'vuex'
 
   /* eslint-disable no-useless-computed-key */
   export default {
     components: {
+      VpOpenTags,
       VpBreadcrumbNav,
       VpSidebarMenu,
       VpUserPanel,
