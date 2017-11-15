@@ -2,16 +2,20 @@ import { homeRouter } from '@/router/router'
 
 // state
 const state = {
+  // 菜单折叠
   menuCollapsed: false,
   menuList: [],
+  // Router
   routerList: [
     ...homeRouter
   ],
+  // 面包屑
   breadcrumbList: [{
     title: '首页',
     name: 'home',
     path: '/'
-  }]
+  }],
+  tagList: []
 }
 
 // getters
