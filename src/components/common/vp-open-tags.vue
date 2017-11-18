@@ -12,17 +12,19 @@
       </el-dropdown>
     </div>
     <div ref="scrollTags" class="vp-open-tags-body" :style="{left: scrollLeft + 'px'}">
+      <!--TODO: 默认关闭按钮事件冒泡会触发子组件与父组件的事件，屏蔽之，重写@click.stop-->
       <el-tag
         v-for="item in openPageList"
         :key="item.name"
         class="vp-open-tags-body-tag"
         color="white"
-        :closable="item.name==='home_index'?false:true"
-        @close="closeTag(item)"
         @click.native="switchPage(item)"
         type="info">
         <span class="tag-dot-inner" :style="{background: (item.name===currentTagName?'#409EFF':'')}"></span>
         {{item.title}}
+        <i class="el-tag__close el-icon-close"
+           v-if="item.name!=='home_index'"
+           @click.stop="closeTag(item)"></i>
       </el-tag>
       <!--<el-tag class="vp-open-tags-body-tag" color="white" closable type="default"><span class="tag-dot-inner"
                                                                                         style="background: #409EFF"></span>面板
