@@ -111,6 +111,13 @@ const mutations = {
         })
       }
     })
+  },
+  clearAllTags (state) {
+    state.openPageList.splice(1)
+    localStorage.openPageList = JSON.stringify(state.openPageList)
+  },
+  clearOtherTags (state, vp) {
+    console.log(vp)
   }
 }
 

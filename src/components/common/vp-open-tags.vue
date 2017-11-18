@@ -47,7 +47,12 @@
     },
     methods: {
       handleCommand (command) {
-        console.log(command)
+        if (command === 'closeAll') {
+          this.$store.commit('clearAllTags')
+        } else {
+          this.$store.commit('clearOtherTags', this)
+        }
+        this.scrollLeft = 0
       },
       switchPage (item) {
         this.$router.push(item)
