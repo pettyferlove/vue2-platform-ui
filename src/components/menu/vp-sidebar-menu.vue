@@ -14,10 +14,6 @@
         </div>
       </div>
     </div>
-    <el-menu-item index="/dashboard">
-      <i class="fa fa-dashboard"></i>
-      <span slot="title">仪表盘</span>
-    </el-menu-item>
     <el-menu-item index="/widget">
       <i class="fa fa-cogs"></i>
       <span slot="title">组件</span>

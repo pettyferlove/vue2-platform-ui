@@ -3,14 +3,13 @@ import Home from '@/pages/Home'
 export const homeRouter = [
   {
     path: '/',
-    redirect: '/dashboard',
     name: 'home',
-    title: '仪表盘',
+    title: '首页',
     component: Home,
     children: [
       {
-        path: 'dashboard',
-        name: 'dashboard_index',
+        path: '/',
+        name: 'home_index',
         component: resolve => require(['@/pages/Dashboard'], resolve)
       }
     ]
