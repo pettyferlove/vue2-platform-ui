@@ -794,7 +794,11 @@
     z-index: 10;
   }
   &-body{
-    padding: 4px;
+    position: absolute;
+    padding: 4px 10px;
+    overflow: visible;
+    white-space: nowrap;
+    transition: left .3s ease;
     &-tag {
       display: inline-block;
       border: 1px solid #e9eaec;
