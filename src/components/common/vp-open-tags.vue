@@ -18,6 +18,7 @@
         class="vp-open-tags-body-tag"
         color="white"
         :closable="item.name==='home_index'?false:true"
+        @close="closeTag(item)"
         @click.native="switchPage(item)"
         type="info">
         <span class="tag-dot-inner" :style="{background: (item.name===currentTagName?'#409EFF':'')}"></span>
@@ -46,6 +47,9 @@
       }
     },
     methods: {
+      closeTag (item) {
+        console.log(item)
+      },
       handleCommand (command) {
         if (command === 'closeAll') {
           this.$store.commit('closeAllTags')

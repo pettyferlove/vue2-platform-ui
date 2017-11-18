@@ -39,7 +39,7 @@
         setTimeout(function () {
           Cookis.set('user_token', 'pettyfer')
           that.$router.push({
-            name: 'home'
+            name: 'home_index'
           })
           that.loading = false
         }, 1000)
