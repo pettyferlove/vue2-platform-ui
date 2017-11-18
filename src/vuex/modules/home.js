@@ -37,7 +37,15 @@ const getters = {
   },
   getMenuList: state => state.menuList,
   getBreadcrumbList: state => state.breadcrumbList,
-  getOpenTagsList: state => state.openTagsList
+  getOpenTagsList: function () {
+    if (localStorage.openTagsList) {
+      let _tempList = JSON.parse(localStorage.openTagsList)
+      if (_tempList.length > state.openTagsList.length) {
+        state.openTagsList = JSON.parse(localStorage.openTagsList)
+      }
+    }
+    return state.openTagsList
+  }
 }
 
 // actions

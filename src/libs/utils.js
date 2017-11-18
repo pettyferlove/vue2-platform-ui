@@ -10,6 +10,8 @@ util.updateOpenTags = function (_state, _tag) {
   })
   if (!isOpen) {
     _state.push(_tag)
+    // 保存至本地
+    localStorage.openTagsList = JSON.stringify(_state)
   }
 }
 

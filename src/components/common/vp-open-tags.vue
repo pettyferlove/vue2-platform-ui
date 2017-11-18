@@ -1,13 +1,13 @@
 <template>
   <div ref="scrollBody" class="vp-open-tags" @mousewheel="mouseHandler">
     <div class="vp-open-tags-close">
-      <el-dropdown size="small" placement="top">
+      <el-dropdown size="small" placement="top" @command="handleCommand">
         <el-button size="mini" type="primary">
           关闭操作<i class="el-icon-arrow-down el-icon--right"></i>
         </el-button>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>关闭其他</el-dropdown-item>
-          <el-dropdown-item>关闭全部</el-dropdown-item>
+          <el-dropdown-item command="closeOther">关闭其他</el-dropdown-item>
+          <el-dropdown-item command="closeAll">关闭全部</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -46,6 +46,9 @@
       }
     },
     methods: {
+      handleCommand (command) {
+        console.log(command)
+      },
       switchPage (item) {
         this.$router.push(item)
       },
