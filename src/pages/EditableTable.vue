@@ -6,8 +6,7 @@
              :data="dataTable"
              v-on:add-ok="add"
              v-on:edit-ok="edit"
-             v-on:delete-ok="deletefn"
-             class="vp-margin-top">
+             v-on:delete-ok="deletefn">
     </vp-table>
   </div>
 </template>

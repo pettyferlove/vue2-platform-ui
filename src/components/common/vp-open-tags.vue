@@ -18,7 +18,7 @@
         :key="item.name"
         class="vp-open-tags-body-tag"
         color="white"
-        :closable="item.name==='home'?false:true"
+        :closable="item.name==='home_index'?false:true"
         type="info">
         <span class="tag-dot-inner" :style="{background: (item.name===currentTagName?'#409EFF':'')}"></span>
         {{item.title}}
@@ -42,7 +42,7 @@
     data () {
       return {
         scrollLeft: 0,
-        currentTagName: 'home'
+        currentTagName: this.$route.name
       }
     },
     methods: {
@@ -62,6 +62,11 @@
           }
         }
         this.scrollLeft = left
+      }
+    },
+    watch: {
+      '$route' (to) {
+        this.currentTagName = to.name
       }
     },
     computed: {

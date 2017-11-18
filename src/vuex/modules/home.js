@@ -1,4 +1,5 @@
 import { homeRouter } from '@/router/router'
+import util from '@/libs/utils'
 
 // state
 const state = {
@@ -17,7 +18,7 @@ const state = {
   }],
   openTagsList: [{
     title: '首页',
-    name: 'home',
+    name: 'home_index',
     path: '/'
   }],
   tagList: []
@@ -56,9 +57,10 @@ const mutations = {
   updateMenuList (state) {
     state.menuList = homeRouter
   },
-  updateBreadcrumbList (state, routerPath) {
+  updateOpenPageList (state, routerPath) {
     state.breadcrumbList.splice(0, state.breadcrumbList.length)
     let routerList = state.routerList
+    // 初始压入首页
     let home = {
       title: '首页',
       name: 'home',
@@ -75,6 +77,8 @@ const mutations = {
             name: item.children[0].name,
             path: item.children[0].path
           }
+          // 更新面包屑的同时更新OpenTags数组
+          util.updateOpenTags(state.openTagsList, _temp)
           state.breadcrumbList.push(_temp)
         }
       } else {
@@ -91,6 +95,8 @@ const mutations = {
               name: child.name,
               path: child.path
             }
+            // 更新面包屑的同时更新OpenTags数组
+            util.updateOpenTags(state.openTagsList, _tempChild)
             state.breadcrumbList.push(_tempParent)
             state.breadcrumbList.push(_tempChild)
           }

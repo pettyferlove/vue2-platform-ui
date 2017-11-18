@@ -89,7 +89,7 @@
     watch: {
       // 检测Router改变并映射到面包屑组件
       '$route' (to) {
-        this.$store.commit('updateBreadcrumbList', to.path)
+        this.$store.commit('updateOpenPageList', to.path)
       }
     },
     data () {
@@ -148,7 +148,7 @@
     },
     mounted () {
       // 初始化面包屑
-      this.$store.commit('updateBreadcrumbList', this.$route.path)
+      this.$store.commit('updateOpenPageList', this.$route.path)
       // 监听全屏事件更改状态值
       document.addEventListener('fullscreenchange', () => {
         this.isFullScreen = !this.isFullScreen
