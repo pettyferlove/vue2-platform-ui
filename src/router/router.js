@@ -131,6 +131,9 @@ export const homeRouter = [
 export const loginRouter = {
   path: '/login',
   name: 'login',
+  meta: {
+    title: '登陆'
+  },
   component: resolve => require(['@/pages/Login'], resolve)
 }
 
