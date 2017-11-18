@@ -3,7 +3,6 @@ import Main from '@/pages/Main'
 export const homeRouter = [
   {
     path: '/',
-    name: 'home',
     title: '首页',
     component: Main,
     children: [

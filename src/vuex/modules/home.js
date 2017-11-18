@@ -15,6 +15,11 @@ const state = {
     name: 'home',
     path: '/'
   }],
+  openTagsList: [{
+    title: '首页',
+    name: 'home',
+    path: '/'
+  }],
   tagList: []
 }
 
@@ -30,7 +35,8 @@ const getters = {
     return state.menuCollapsed
   },
   getMenuList: state => state.menuList,
-  getBreadcrumbList: state => state.breadcrumbList
+  getBreadcrumbList: state => state.breadcrumbList,
+  getOpenTagsList: state => state.openTagsList
 }
 
 // actions

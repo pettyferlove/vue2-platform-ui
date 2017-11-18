@@ -13,17 +13,19 @@
       </el-dropdown>
     </div>
     <div ref="scrollTags" class="vp-open-tags-body" :style="{left: scrollLeft + 'px'}">
-      <el-tag class="vp-open-tags-body-tag" color="white" closable type="info"><span class="tag-dot-inner"></span>仪表盘
+      <el-tag
+        v-for="item in openTagsList"
+        :key="item.name"
+        class="vp-open-tags-body-tag"
+        color="white"
+        :closable="item.name==='home'?false:true"
+        type="info">
+        <span class="tag-dot-inner" :style="{background: (item.name===currentTagName?'#409EFF':'')}"></span>
+        {{item.title}}
       </el-tag>
-      <el-tag class="vp-open-tags-body-tag" color="white" closable type="info"><span class="tag-dot-inner"></span>组件
-      </el-tag>
-      <el-tag class="vp-open-tags-body-tag" color="white" closable type="default"><span class="tag-dot-inner"
+      <!--<el-tag class="vp-open-tags-body-tag" color="white" closable type="default"><span class="tag-dot-inner"
                                                                                         style="background: #409EFF"></span>面板
-      </el-tag>
-      <el-tag class="vp-open-tags-body-tag" color="white" closable type="info"><span class="tag-dot-inner"></span>编辑器
-      </el-tag>
-      <el-tag class="vp-open-tags-body-tag" color="white" closable type="info"><span class="tag-dot-inner"></span>图片列表
-      </el-tag>
+      </el-tag>-->
     </div>
   </div>
 </template>
@@ -33,11 +35,14 @@
 </style>
 
 <script>
+  import { mapGetters } from 'vuex'
+
   export default {
     name: 'VpOpenTags',
     data () {
       return {
-        scrollLeft: 0
+        scrollLeft: 0,
+        currentTagName: 'home'
       }
     },
     methods: {
@@ -58,6 +63,11 @@
         }
         this.scrollLeft = left
       }
+    },
+    computed: {
+      ...mapGetters({
+        openTagsList: 'getOpenTagsList'
+      })
     }
   }
 </script>
