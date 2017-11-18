@@ -1,13 +1,12 @@
 <template>
   <div ref="scrollBody" class="vp-open-tags" @mousewheel="mouseHandler">
     <div class="vp-open-tags-close">
-      <el-dropdown size="mini" placement="top">
+      <el-dropdown size="small" placement="top">
         <el-button size="mini" type="primary">
           关闭操作<i class="el-icon-arrow-down el-icon--right"></i>
         </el-button>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>定位当前</el-dropdown-item>
-          <el-dropdown-item divided>关闭其他</el-dropdown-item>
+          <el-dropdown-item>关闭其他</el-dropdown-item>
           <el-dropdown-item>关闭全部</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -19,6 +18,7 @@
         class="vp-open-tags-body-tag"
         color="white"
         :closable="item.name==='home_index'?false:true"
+        @click.native="switchPage(item)"
         type="info">
         <span class="tag-dot-inner" :style="{background: (item.name===currentTagName?'#409EFF':'')}"></span>
         {{item.title}}
@@ -46,6 +46,9 @@
       }
     },
     methods: {
+      switchPage (item) {
+        this.$router.push(item)
+      },
       mouseHandler (e) {
         let left = 0
         if (e.wheelDelta > 0) {
