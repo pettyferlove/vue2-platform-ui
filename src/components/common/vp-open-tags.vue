@@ -22,6 +22,7 @@
         type="info">
         <span class="tag-dot-inner" :style="{background: (item.name===currentTagName?'#409EFF':'')}"></span>
         {{item.title}}
+        <!--TODO: 直接使用element-ui 关闭按钮样式-->
         <i class="el-tag__close el-icon-close"
            v-if="item.name!=='home_index'"
            @click.stop="closeTag(item)"></i>
@@ -50,6 +51,24 @@
     },
     methods: {
       closeTag (item) {
+        // 关闭的Tag正处于当前激活状态，此时将会将激活标签移动至左起第一个标签（标签List大于1）
+        if (item.name === this.currentTagName) {
+          let leftTag = ''
+          if (this.openPageList.length > 1) {
+            let _tempIndex = 1
+            this.openPageList.forEach((_item, index) => {
+              if (_item.name === item.name) {
+                _tempIndex = index
+              }
+            })
+            leftTag = this.openPageList[_tempIndex - 1].name
+          } else {
+            leftTag = this.openPageList[0].name
+          }
+          this.$router.push({
+            name: leftTag
+          })
+        }
         this.$store.commit('closeTag', item.name)
       },
       handleCommand (command) {
