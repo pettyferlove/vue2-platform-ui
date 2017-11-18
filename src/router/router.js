@@ -1,16 +1,16 @@
-import Home from '@/pages/Home'
+import Main from '@/pages/Main'
 
 export const homeRouter = [
   {
     path: '/',
     name: 'home',
     title: '首页',
-    component: Home,
+    component: Main,
     children: [
       {
         path: '/',
         name: 'home_index',
-        component: resolve => require(['@/pages/Dashboard'], resolve)
+        component: resolve => require(['@/pages/Home'], resolve)
       }
     ]
   },
@@ -18,7 +18,7 @@ export const homeRouter = [
     path: '/',
     name: 'widget',
     title: '组件',
-    component: Home,
+    component: Main,
     children: [
       {
         path: 'widget',
@@ -31,7 +31,7 @@ export const homeRouter = [
     path: '/',
     name: 'panels',
     title: '面板',
-    component: Home,
+    component: Main,
     children: [
       {
         path: 'panels',
@@ -44,7 +44,7 @@ export const homeRouter = [
     path: '/',
     name: 'editor',
     title: '富文本编辑器',
-    component: Home,
+    component: Main,
     children: [
       {
         path: 'quill',
@@ -64,7 +64,7 @@ export const homeRouter = [
     path: '/',
     name: 'imageList',
     title: '图片列表',
-    component: Home,
+    component: Main,
     children: [
       {
         path: 'imageList',
@@ -77,7 +77,7 @@ export const homeRouter = [
     path: '/',
     name: 'chart',
     title: '图表',
-    component: Home,
+    component: Main,
     children: [
       {
         path: 'echarts',
@@ -97,7 +97,7 @@ export const homeRouter = [
     path: '/',
     name: 'ui',
     title: 'UI元素',
-    component: Home,
+    component: Main,
     children: [
       {
         path: 'icons',
@@ -111,7 +111,7 @@ export const homeRouter = [
     path: '/',
     name: 'table',
     title: '表格',
-    component: Home,
+    component: Main,
     children: [
       {
         path: 'basicTable',

@@ -1,173 +1,198 @@
 <template>
-  <div id="home" class="home">
-    <aside :class="[classes]">
-      <vp-sidebar-menu :menuData="menuList" :isCollapse="collapsed"></vp-sidebar-menu>
-    </aside>
-    <el-row class="home-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
-      <el-row class="home-wrapper-header" type="flex" align="middle">
-        <span @click="toggleEvent">
-          <i :class="toggleButton"></i>
-        </span>
-        <vp-breadcrumb-nav></vp-breadcrumb-nav>
-        <div class="avator-con">
-          <el-tooltip class="item" effect="dark" content="全屏" placement="bottom">
-            <i class="btn fa fa-expand" @click="handleFullScreen"></i>
-          </el-tooltip>
-          <el-tooltip class="item" effect="dark" content="锁屏" placement="bottom">
-            <i class="btn fa fa-lock"></i>
-          </el-tooltip>
-          <vp-msg-push class="message-push" :data="msgPushData" trigger="click"></vp-msg-push>
-          <vp-user-panel class="user-avator" :adminInfo="adminInfo"></vp-user-panel>
-        </div>
-      </el-row>
-      <el-row class="home-wrapper-tags">
-        <vp-open-tags></vp-open-tags>
-      </el-row>
-      <petty-scroll>
-        <div class="home-wrapper-main" id="main-content">
-          <div style="overflow: hidden">
-            <transition name="fade" mode="out-in">
-              <router-view></router-view>
-            </transition>
-          </div>
-        </div>
-      </petty-scroll>
+  <div class="dashboard vp-content">
+    <el-row :gutter="15">
+      <el-col :lg="6" :md="12">
+      <vp-state-over-view idName="new-user" color="#41b883" icon="fa fa-user" title="新增用户" :count="996"></vp-state-over-view>
+      </el-col>
+      <el-col :lg="6" :md="12">
+      <vp-state-over-view idName="page-view" color="#1d8ce0" icon="fa fa-eye" title="访问量" :count="109009"></vp-state-over-view>
+      </el-col>
+      <el-col :lg="6" :md="12">
+      <vp-state-over-view idName="suggest" color="#ffa000" icon="fa fa-pencil" title="意见" :count="1010"></vp-state-over-view>
+      </el-col>
+      <el-col :lg="6" :md="12">
+      <vp-state-over-view idName="download-num" color="#f60000" icon="fa fa-download" title="下载量" :count="9960"></vp-state-over-view>
+      </el-col>
+    </el-row>
+
+    <el-row :gutter="16">
+      <el-col :lg="6">
+        <vp-user-preview :brief="dataUserPreview.brief" :property="dataUserPreview.property"></vp-user-preview>
+      </el-col>
+      <el-col :lg="18">
+        <vp-progress title="工作进度" :data="dataProgress"></vp-progress>
+      </el-col>
+    </el-row>
+
+    <el-row :gutter="16">
+      <el-col :lg="16">
+      <vp-timeline title="时间轴" :data="dataTimeline"></vp-timeline>
+      </el-col>
+
+      <el-col :lg="8">
+        <vp-weather class="vp-margin-bottom" :data="dataWeather">
+        </vp-weather>
+
+        <vp-tabs icon="fa fa-user" title="Briefs" content-height="200px">
+          <vp-tabs-item label="Social" name="01">
+            <div class="demo-news">
+              <h2>" Lorem ipsum dolor sit amet, consectetur adipiscing. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Business" name="02">
+            <div class="demo-news">
+              <h2>" Phasellus massa urna, vehicula bibendum. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Entertainment" name="03">
+            <div class="demo-news">
+              <h2>" Duis vitae dictum erat. In ut lorem turpis. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Sport" name="04">
+            <div class="demo-news">
+              <h2>" Etiam sit amet urna feugiat, laoreet urna quis. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Health" name="05">
+            <div class="demo-news">
+              <h2>" Fusce nec eleifend ligula. "</h2>
+            </div>
+          </vp-tabs-item>
+          <vp-tabs-item label="Education" name="06">
+            <div class="demo-news">
+              <h2>" Fusce commodo nunc justo, id mattis. "</h2>
+            </div>
+          </vp-tabs-item>
+        </vp-tabs>
+      </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-  import VpMsgPush from '../components/message/vp-message-push.vue'
-  import VpUserPanel from '../components/user/vp-user-panel.vue'
-  import VpSidebarMenu from '../components/menu/vp-sidebar-menu.vue'
-  import VpBreadcrumbNav from '../components/common/vp-breadcrumb-nav.vue'
-  import VpOpenTags from '../components/common/vp-open-tags.vue'
-  import { mapGetters, mapMutations } from 'vuex'
+  import VpStateOverView from '../components/state/vp-state-overview.vue'
+  import VpUserPreview from '../components/user/vp-user-preview.vue'
+  import VpProgress from '../components/progress/vp-progress.vue'
+  import VpTimeline from '../components/timeline/vp-timeline.vue'
+  import VpTabs from '../components/tabs/vp-tabs.vue'
+  import VpTabsItem from '../components/tabs/vp-tabs-item.vue'
+  import VpWeather from '../components/weather/vp-weather.vue'
 
-  /* eslint-disable no-useless-computed-key */
   export default {
+    name: 'Home',
     components: {
-      VpOpenTags,
-      VpBreadcrumbNav,
-      VpSidebarMenu,
-      VpUserPanel,
-      VpMsgPush
-    },
-    name: 'home',
-    methods: {
-      ...mapMutations({
-        'toggleEvent': 'toggleMenu'
-      }),
-      handleFullScreen () {
-        let screen = document.getElementById('home')
-        if (this.isFullScreen) {
-          if (document.exitFullscreen) {
-            document.exitFullscreen()
-          } else if (document.webkitCancelFullScreen) {
-            document.webkitCancelFullScreen()
-          } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen()
-          } else if (document.msExitFullscreen) {
-            document.msExitFullscreen()
-          }
-        } else {
-          if (screen.requestFullscreen) {
-            screen.requestFullscreen()
-          } else if (screen.webkitRequestFullScreen) {
-            screen.webkitRequestFullScreen()
-          } else if (screen.mozRequestFullScreen) {
-            screen.mozRequestFullScreen()
-          } else if (screen.msRequestFullscreen) {
-            screen.msRequestFullscreen()
-          }
-        }
-      }
-    },
-    created () {
-      this.$store.commit('updateMenuList')
-    },
-    watch: {
-      // 检测Router改变并映射到面包屑组件
-      '$route' (to) {
-        this.$store.commit('updateBreadcrumbList', to.path)
-      }
+      VpWeather,
+      VpTabsItem,
+      VpTabs,
+      VpTimeline,
+      VpUserPreview,
+      VpProgress,
+      VpStateOverView
     },
     data () {
       return {
-        isFullScreen: false,
-        adminInfo: {
-          image: require('@/assets/img/user-petty.jpg'),
-          name: 'Pettyfer'
+        dataUserPreview: {
+          brief: {
+            photo: require('@/assets/img/user-petty.jpg'),
+            name: 'Pettyfer Alex',
+            role: 'Administrator'
+          },
+          property: [
+            {
+              icon: 'fa fa-user',
+              key: '性别',
+              value: '男'
+            },
+            {
+              icon: 'fa fa-heart',
+              key: '关注',
+              value: '9.8'
+            },
+            {
+              icon: 'fa fa-envelope',
+              key: '邮箱',
+              value: 'pettyferlove@live.cn'
+            },
+            {
+              icon: 'fa fa-calendar',
+              key: '注册时间',
+              value: '2017-8-9 8:00'
+            },
+            {
+              icon: 'fa fa-calendar',
+              key: '最后一次登陆',
+              value: '2017-9-9 9:10'
+            }
+          ]
         },
-        msgPushData: [
+        dataProgress: [
           {
-            image: require('@/assets/img/user-petty.jpg'),
-            from: 'Pettyfer',
-            time: '2017-1-8',
-            message: 'Vuex状态管理器添加'
+            name: '张三',
+            tags: ['cool', 'funy'],
+            value: 60
           },
           {
-            image: require('@/assets/img/user-petty.jpg'),
-            from: 'Pettyfer',
-            time: '2017-1-8',
-            message: 'Element UI更新至最新版本'
+            name: '李四',
+            tags: ['nice', 'sexy', 'literature'],
+            value: 30
           },
           {
-            image: require('@/assets/img/user-petty.jpg'),
-            from: 'Pettyfer',
-            time: '2017-1-8',
-            message: 'PettyScrollbar添加'
+            name: '王玮',
+            tags: ['mould', 'shy'],
+            value: 80
           },
           {
-            image: require('@/assets/img/user-petty.jpg'),
-            from: 'Pettyfer',
-            time: '2017-1-8',
-            message: '增加页面加载滚动条'
+            name: '叶伟',
+            tags: ['funny', 'hardworking', 'learnd'],
+            value: 20
+          },
+          {
+            name: '叶修',
+            tags: ['nice', 'mould'],
+            value: 100
           }
-        ]
-      }
-    },
-    computed: {
-      ...mapGetters({
-        collapsed: 'getToggleMenu',
-        menuList: 'getMenuList'
-      }),
-      classes () {
-        return {
-          ['home-sidebar']: true
+        ],
+        dataTimeline: [
+          {
+            date: '2017-7-15',
+            time: '8:35 am',
+            content: 'Lorem ipsum dolor sit amet consiquest dio'
+          },
+          {
+            date: '2017-7-15',
+            time: '8:35 am',
+            content: 'Lorem ipsum dolor sit amet consiquest dio'
+          },
+          {
+            date: '2017-7-15',
+            time: '8:35 am',
+            content: 'Lorem ipsum dolor sit amet consiquest dio'
+          },
+          {
+            date: '2017-7-15',
+            time: '8:35 am',
+            content: 'Lorem ipsum dolor sit amet consiquest dio'
+          },
+          {
+            date: '2017-7-15',
+            time: '8:35 am',
+            content: 'Lorem ipsum dolor sit amet consiquest dio'
+          }
+        ],
+        dataWeather: {
+          location: 'Beijing',
+          weather: 'cloudy',
+          temprature: '30°',
+          humidity: '56%',
+          percip: '1.50in',
+          winds: '10mph'
         }
-      },
-      toggleButton () {
-        return [
-          'fa',
-          'fa-bars',
-          'toggle-button',
-          this.collapsed ? '' : 'toggle-button--collapse'
-        ]
       }
-    },
-    mounted () {
-      // 初始化面包屑
-      this.$store.commit('updateBreadcrumbList', this.$route.path)
-      // 监听全屏事件更改状态值
-      document.addEventListener('fullscreenchange', () => {
-        this.isFullScreen = !this.isFullScreen
-      })
-      document.addEventListener('mozfullscreenchange', () => {
-        this.isFullScreen = !this.isFullScreen
-      })
-      document.addEventListener('webkitfullscreenchange', () => {
-        this.isFullScreen = !this.isFullScreen
-      })
-      document.addEventListener('msfullscreenchange', () => {
-        this.isFullScreen = !this.isFullScreen
-      })
-      this.$notify({
-        title: '成功',
-        message: '这是一条成功的提示消息',
-        type: 'success',
-        offset: 60
-      })
     }
   }
 </script>
+
+<style lang="less">
+
+</style>
