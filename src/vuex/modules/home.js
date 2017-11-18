@@ -16,7 +16,7 @@ const state = {
     name: 'home',
     path: '/'
   }],
-  openTagsList: [{
+  openPageList: [{
     title: '首页',
     name: 'home_index',
     path: '/'
@@ -37,14 +37,14 @@ const getters = {
   },
   getMenuList: state => state.menuList,
   getBreadcrumbList: state => state.breadcrumbList,
-  getOpenTagsList: function () {
-    if (localStorage.openTagsList) {
-      let _tempList = JSON.parse(localStorage.openTagsList)
-      if (_tempList.length > state.openTagsList.length) {
-        state.openTagsList = JSON.parse(localStorage.openTagsList)
+  getOpenPageList: function () {
+    if (localStorage.openPageList) {
+      let _tempList = JSON.parse(localStorage.openPageList)
+      if (_tempList.length > state.openPageList.length) {
+        state.openPageList = JSON.parse(localStorage.openPageList)
       }
     }
-    return state.openTagsList
+    return state.openPageList
   }
 }
 
@@ -86,7 +86,7 @@ const mutations = {
             path: item.children[0].path
           }
           // 更新面包屑的同时更新OpenTags数组
-          util.updateOpenTags(state.openTagsList, _temp)
+          util.updateOpenTags(state.openPageList, _temp)
           state.breadcrumbList.push(_temp)
         }
       } else {
@@ -104,7 +104,7 @@ const mutations = {
               path: child.path
             }
             // 更新面包屑的同时更新OpenTags数组
-            util.updateOpenTags(state.openTagsList, _tempChild)
+            util.updateOpenTags(state.openPageList, _tempChild)
             state.breadcrumbList.push(_tempParent)
             state.breadcrumbList.push(_tempChild)
           }

@@ -13,7 +13,7 @@
     </div>
     <div ref="scrollTags" class="vp-open-tags-body" :style="{left: scrollLeft + 'px'}">
       <el-tag
-        v-for="item in openTagsList"
+        v-for="item in openPageList"
         :key="item.name"
         class="vp-open-tags-body-tag"
         color="white"
@@ -77,7 +77,7 @@
     },
     computed: {
       ...mapGetters({
-        openTagsList: 'getOpenTagsList'
+        openPageList: 'getOpenPageList'
       })
     }
   }
