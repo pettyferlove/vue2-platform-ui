@@ -48,9 +48,9 @@
     methods: {
       handleCommand (command) {
         if (command === 'closeAll') {
-          this.$store.commit('clearAllTags')
+          this.$store.commit('closeAllTags')
         } else {
-          this.$store.commit('clearOtherTags', this)
+          this.$store.commit('closeOtherTags', this)
         }
         this.scrollLeft = 0
       },

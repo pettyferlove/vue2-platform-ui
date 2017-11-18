@@ -1,3 +1,4 @@
+import router from '@/router/index'
 import { homeRouter } from '@/router/router'
 import util from '@/libs/utils'
 
@@ -112,12 +113,28 @@ const mutations = {
       }
     })
   },
-  clearAllTags (state) {
+  closeAllTags (state) {
+    router.push({
+      name: 'home_index'
+    })
     state.openPageList.splice(1)
     localStorage.openPageList = JSON.stringify(state.openPageList)
   },
-  clearOtherTags (state, vp) {
-    console.log(vp)
+  closeOtherTags (state, vp) {
+    let currentTagIndex = 0
+    let currentTagName = vp.$route.name
+    state.openPageList.forEach((item, index) => {
+      if (item.name === currentTagName) {
+        currentTagIndex = index
+      }
+    })
+    if (currentTagIndex === 0) {
+      state.openPageList.splice(1)
+    } else {
+      state.openPageList.splice(currentTagIndex + 1)
+      state.openPageList.splice(1, currentTagIndex - 1)
+    }
+    localStorage.openPageList = JSON.stringify(state.openPageList)
   }
 }
 
