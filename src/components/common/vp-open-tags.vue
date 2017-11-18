@@ -48,7 +48,7 @@
     },
     methods: {
       closeTag (item) {
-        console.log(item)
+        this.$store.commit('closeTag', item.name)
       },
       handleCommand (command) {
         if (command === 'closeAll') {

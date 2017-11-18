@@ -135,6 +135,14 @@ const mutations = {
       state.openPageList.splice(1, currentTagIndex - 1)
     }
     localStorage.openPageList = JSON.stringify(state.openPageList)
+  },
+  closeTag (state, name) {
+    state.openPageList.forEach((item, index) => {
+      if (item.name === name) {
+        state.openPageList.splice(index, 1)
+      }
+    })
+    localStorage.openPageList = JSON.stringify(state.openPageList)
   }
 }
 
