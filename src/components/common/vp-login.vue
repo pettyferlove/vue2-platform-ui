@@ -6,12 +6,17 @@
         <p><span>VUE</span>PettyDev</p>
       </div>
       <h3>登陆系统</h3>
-      <div class="login-form">
-        <el-input size="medium" v-model="username" placeholder="请输入用户名"></el-input>
-        <el-input size="medium" v-model="password" type="password" placeholder="请输入密码"></el-input>
-        <el-button size="medium" @click="loginSubmit" type="primary" :loading="loading" :disabled="loading">登陆
+      <el-form status-icon ref="loginForm" :model="loginForm" :rules="loginRules" class="login-body">
+        <el-form-item prop="username">
+          <el-input size="medium" v-model="loginForm.username" type="text" placeholder="请输入用户名"></el-input>
+        </el-form-item>
+        <el-form-item prop="password">
+          <el-input size="medium" v-model="loginForm.password" type="password" placeholder="请输入密码"></el-input>
+        </el-form-item>
+        <el-button size="medium" @click="loginSubmit('loginForm')" type="primary" :loading="loading"
+                   :disabled="loading">登陆
         </el-button>
-      </div>
+      </el-form>
       <div class="login-footer">
         <el-checkbox v-model="remenber">记住我</el-checkbox>
         <span class="forget"><a href="#">忘记密码</a></span>
@@ -24,25 +29,53 @@
 
   export default {
     name: 'VpLogin',
-    data: function () {
+    data () {
+      var validateUsername = function (rule, value, callback) {
+        if (value === '') {
+          callback(new Error('请输入用户名'))
+        } else {
+          callback()
+        }
+      }
+      var validatePassword = function (rule, value, callback) {
+        if (value === '') {
+          callback(new Error('请输入密码'))
+        } else {
+          callback()
+        }
+      }
       return {
-        username: '',
-        password: '',
+        loginForm: {
+          username: 'pettyferlove@live.cn',
+          password: ''
+        },
         remenber: false,
-        loading: false
+        loading: false,
+        loginRules: {
+          username: [
+            {validator: validateUsername, trigger: 'blur'}
+          ],
+          password: [
+            {validator: validatePassword, trigger: 'blur'}
+          ]
+        }
       }
     },
     methods: {
-      loginSubmit () {
+      loginSubmit (formName) {
         let that = this
-        that.loading = true
-        setTimeout(function () {
-          Cookis.set('user_token', 'pettyfer')
-          that.$router.push({
-            name: 'home_index'
-          })
-          that.loading = false
-        }, 1000)
+        that.$refs[formName].validate((valid) => {
+          if (valid) {
+            that.loading = true
+            setTimeout(function () {
+              Cookis.set('user_token', 'pettyfer')
+              that.$router.push({
+                name: 'home_index'
+              })
+              that.loading = false
+            }, 1000)
+          }
+        })
       }
     }
   }
