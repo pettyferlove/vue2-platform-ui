@@ -4,6 +4,7 @@ export const homeRouter = [
   {
     path: '/',
     name: 'widget',
+    icon: 'fa fa-cogs',
     title: '组件',
     component: Main,
     children: [
@@ -17,6 +18,7 @@ export const homeRouter = [
   {
     path: '/',
     name: 'panels',
+    icon: 'fa fa-database',
     title: '面板',
     component: Main,
     children: [
@@ -30,17 +32,20 @@ export const homeRouter = [
   {
     path: '/',
     name: 'editor',
+    icon: 'fa fa-pencil',
     title: '富文本编辑器',
     component: Main,
     children: [
       {
         path: 'quill',
+        icon: 'fa fa-pencil',
         title: 'Quill富文本编辑器',
         name: 'quill_index',
         component: resolve => require(['@/pages/QuillEditor'], resolve)
       },
       {
         path: 'simplemde',
+        icon: 'fa fa-pencil',
         title: 'Simplemde编辑器',
         name: 'simplemde_index',
         component: resolve => require(['@/pages/SimplemdeEditor'], resolve)
@@ -50,6 +55,7 @@ export const homeRouter = [
   {
     path: '/',
     name: 'imageList',
+    icon: 'fa fa-photo',
     title: '图片列表',
     component: Main,
     children: [
@@ -63,17 +69,20 @@ export const homeRouter = [
   {
     path: '/',
     name: 'chart',
+    icon: 'fa fa-bar-chart',
     title: '图表',
     component: Main,
     children: [
       {
         path: 'echarts',
+        icon: 'fa fa-line-chart',
         title: 'ECharts',
         name: 'echarts_index',
         component: resolve => require(['@/pages/Echarts'], resolve)
       },
       {
         path: 'chartjs',
+        icon: 'fa fa-pie-chart',
         title: 'ChartJS',
         name: 'chartjs_index',
         component: resolve => require(['@/pages/ChartJS'], resolve)
@@ -83,6 +92,7 @@ export const homeRouter = [
   {
     path: '/',
     name: 'ui',
+    icon: 'fa fa-anchor',
     title: 'UI元素',
     component: Main,
     children: [
@@ -97,17 +107,20 @@ export const homeRouter = [
   {
     path: '/',
     name: 'table',
-    title: '表格',
+    icon: 'fa fa-database',
+    title: '数据表格',
     component: Main,
     children: [
       {
         path: 'basicTable',
+        icon: 'fa fa-hdd-o',
         title: '基础表格',
         name: 'basicTable_index',
         component: resolve => require(['@/pages/BasicTable'], resolve)
       },
       {
         path: 'editableTable',
+        icon: 'fa fa-bars',
         title: '可编辑表格',
         name: 'editableTable_index',
         component: resolve => require(['@/pages/EditableTable'], resolve)
