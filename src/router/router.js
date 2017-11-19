@@ -3,18 +3,6 @@ import Main from '@/pages/Main'
 export const homeRouter = [
   {
     path: '/',
-    title: '首页',
-    component: Main,
-    children: [
-      {
-        path: '/',
-        name: 'home_index',
-        component: resolve => require(['@/pages/Home'], resolve)
-      }
-    ]
-  },
-  {
-    path: '/',
     name: 'widget',
     title: '组件',
     component: Main,
@@ -128,6 +116,19 @@ export const homeRouter = [
   }
 ]
 
+export const otherRouter = {
+  path: '/',
+  title: '首页',
+  component: Main,
+  children: [
+    {
+      path: '/',
+      name: 'home_index',
+      component: resolve => require(['@/pages/Home'], resolve)
+    }
+  ]
+}
+
 export const loginRouter = {
   path: '/login',
   name: 'login',
@@ -144,6 +145,7 @@ export const lockRouter = {
 }
 
 export const routers = [
+  otherRouter,
   ...homeRouter,
   lockRouter,
   loginRouter
