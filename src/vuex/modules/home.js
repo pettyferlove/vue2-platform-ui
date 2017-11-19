@@ -14,13 +14,13 @@ const state = {
   // 面包屑
   breadcrumbList: [{
     title: '首页',
-    name: 'home',
-    path: '/'
+    name: 'home_index',
+    path: '/home'
   }],
   openPageList: [{
     title: '首页',
     name: 'home_index',
-    path: '/'
+    path: '/home'
   }],
   tagList: []
 }

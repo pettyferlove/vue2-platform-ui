@@ -119,10 +119,11 @@ export const homeRouter = [
 export const otherRouter = {
   path: '/',
   title: '首页',
+  redirect: 'home',
   component: Main,
   children: [
     {
-      path: '/',
+      path: '/home',
       name: 'home_index',
       component: resolve => require(['@/pages/Home'], resolve)
     }
