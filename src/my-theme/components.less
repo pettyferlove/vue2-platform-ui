@@ -838,7 +838,7 @@
   padding: 0;
   list-style: none;
   background: #fff;
-  border-radius: 2px;
+  border-radius: 4px;
   position: relative;
   -webkit-transition: all .3s;
   -o-transition: all .3s;
@@ -898,10 +898,26 @@
             color: #67C23A;
           }
         }
-        .day-yony {
-          display: inline-block;
-          font-size: 14px;
-          line-height: 22px;
+      }
+    }
+    &-als-area {
+      margin-bottom: 12px;
+      position: relative;
+      width: 100%;
+      color: rgba(0, 0, 0, 0.65);
+      &-content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        .mini-chart{
+          position: relative;
+          width: 100%;
+          .chart-content{
+            position: absolute;
+            bottom: -34px;
+            width: 100%;
+          }
         }
       }
     }

@@ -9,17 +9,12 @@
         </span>
       </div>
       <div class="analysis-card-container-body">
-          <vp-count-up idName="als-area" :endVal="8540" class="count" style="color:#000000"></vp-count-up>
+        <vp-count-up idName="als-area" :endVal="8540" class="count" style="color:#000000"></vp-count-up>
       </div>
-      <div class="analysis-card-container-als-text" style="height: 46px;">
-        <div class="analysis-card-container-als-text-content">
-          <div class="yony" title="" style="margin-right: 16px;">
-            <span>周同比<span class="ratio">12%</span></span>
-            <span class="arrow-red"><i class="el-icon-caret-top"></i></span>
-          </div>
-          <div class="yony" title="">
-            <span>日环比<span class="ratio">11%</span></span>
-            <span class="arrow-green"><i class="el-icon-caret-bottom"></i></span>
+      <div class="analysis-card-container-als-area" style="height: 46px;">
+        <div class="analysis-card-container-als-area-content">
+          <div class="mini-chart" style="height: 46px">
+            <div id="c1" style="" class="chart-content"></div>
           </div>
         </div>
       </div>
@@ -36,10 +31,51 @@
 
 <script>
   import VpCountUp from '../common/vp-count-up.vue'
+  import G2 from 'g2'
 
   export default {
     components: {VpCountUp},
-    name: 'VpMiniAnalysisArea'
+    name: 'VpMiniAnalysisArea',
+    data () {
+      return {
+        areaData: [
+          {'year': '1986', 'ACME': 162},
+          {'year': '1987', 'ACME': 134},
+          {'year': '1988', 'ACME': 116},
+          {'year': '1989', 'ACME': 122},
+          {'year': '1990', 'ACME': 178},
+          {'year': '1991', 'ACME': 144},
+          {'year': '1992', 'ACME': 125},
+          {'year': '1993', 'ACME': 176},
+          {'year': '1994', 'ACME': 156},
+          {'year': '1995', 'ACME': 195},
+          {'year': '1996', 'ACME': 215},
+          {'year': '1997', 'ACME': 176},
+          {'year': '1998', 'ACME': 167},
+          {'year': '1999', 'ACME': 142},
+          {'year': '2000', 'ACME': 117},
+          {'year': '2001', 'ACME': 113},
+          {'year': '2002', 'ACME': 132}
+        ]
+      }
+    },
+    mounted () {
+      let Frame = G2.Frame
+      let frame = new Frame(this.areaData)
+      frame = Frame.combinColumns(frame, ['ACME'], 'value', 'type', 'year')
+      var chart = new G2.Chart({
+        id: 'c1',
+        forceFit: true,
+        height: 90,
+        plotCfg: {
+          margin: [36, 5, 30, 5]
+        }
+      })
+      chart.axis(false)
+      chart.source(frame)
+      chart.area().position('year*value').color('type').shape('smooth')
+      chart.render()
+    }
   }
 </script>
 
