@@ -13,6 +13,7 @@
     </div>
     <div ref="scrollTags" class="vp-open-tags-body" :style="{left: scrollLeft + 'px'}">
       <!--TODO: 默认关闭按钮事件冒泡会触发子组件与父组件的事件，屏蔽之，重写@click.stop-->
+      <!--TODO: Bug已提交至官方主项目，等待更新即可解决-->
       <el-tag
         v-for="item in openPageList"
         :key="item.name"
