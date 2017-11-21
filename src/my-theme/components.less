@@ -780,7 +780,7 @@
   padding-right: 120px;
   width: 100%;
   height: 100%;
-  &-close{
+  &-close {
     position: absolute;
     right: 0;
     top: 0;
@@ -790,10 +790,10 @@
     width: 110px;
     height: 100%;
     background: #fff;
-    box-shadow: -3px 0 15px 3px rgba(0,0,0,.1);
+    box-shadow: -3px 0 15px 3px rgba(0, 0, 0, .1);
     z-index: 10;
   }
-  &-body{
+  &-body {
     position: absolute;
     padding: 4px 10px;
     overflow: visible;
@@ -823,6 +823,99 @@
     }
     &-tag:hover {
       opacity: .85;
+    }
+  }
+}
+
+.analysis-card {
+  font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  text-align: left;
+  &-container {
+    padding: 20px 24px 8px;
+    position: relative;
+    &-title {
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 14px;
+      position: relative;
+      line-height: 22px;
+      height: 22px;
+      &-tip {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &-body {
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      white-space: nowrap;
+      color: rgba(0, 0, 0, 0.85);
+      margin-top: 4px;
+      margin-bottom: 0;
+      font-size: 30px;
+      line-height: 38px;
+      height: 38px;
+    }
+    &-als-text {
+      margin-bottom: 12px;
+      position: relative;
+      width: 100%;
+      color: rgba(0, 0, 0, 0.65);
+      &-content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        .yony {
+          display: inline-block;
+          font-size: 14px;
+          line-height: 22px;
+          .ratio {
+            margin-left: 8px;
+            color: rgba(0, 0, 0, 0.85);
+          }
+          .arrow-red {
+            color: #FA5555;
+          }
+          .arrow-green {
+            color: #67C23A;
+          }
+        }
+        .day-yony {
+          display: inline-block;
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+    &-footer{
+      border-top: 1px solid #e8e8e8;
+      padding-top: 9px;
+      margin-top: 8px;
+      &-content{
+        white-space: nowrap;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        margin: 0;
+      }
     }
   }
 }
