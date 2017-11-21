@@ -8,7 +8,9 @@
           </el-tooltip>
         </span>
       </div>
-      <div class="analysis-card-container-body">¥ 126,560</div>
+      <div class="analysis-card-container-body">
+        ¥ <vp-count-up idName="als-text" :endVal="126560" class="count" style="color:#000000"></vp-count-up>
+      </div>
       <div class="analysis-card-container-als-text" style="height: 46px;">
         <div class="analysis-card-container-als-text-content">
           <div class="yony" title="" style="margin-right: 16px;">
@@ -33,7 +35,9 @@
 </style>
 
 <script>
+  import VpCountUp from '../common/vp-count-up.vue'
   export default {
+    components: {VpCountUp},
     name: 'VpMiniAnalysisText'
   }
 </script>

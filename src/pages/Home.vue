@@ -6,13 +6,13 @@
         <vp-mini-analysis-text></vp-mini-analysis-text>
       </el-col>
       <el-col :lg="6" :md="12">
-        <vp-state-over-view idName="page-view" color="#1d8ce0" icon="fa fa-eye" title="访问量" :count="109009"></vp-state-over-view>
+        <vp-mini-analysis-line></vp-mini-analysis-line>
       </el-col>
       <el-col :lg="6" :md="12">
-        <vp-state-over-view idName="suggest" color="#ffa000" icon="fa fa-pencil" title="意见" :count="1010"></vp-state-over-view>
+        <vp-mini-analysis-area></vp-mini-analysis-area>
       </el-col>
       <el-col :lg="6" :md="12">
-        <vp-state-over-view idName="download-num" color="#f60000" icon="fa fa-download" title="下载量" :count="9960"></vp-state-over-view>
+        <vp-mini-analysis-bar></vp-mini-analysis-bar>
       </el-col>
     </el-row>
 
@@ -95,10 +95,16 @@
   import VpTabsItem from '../components/tabs/vp-tabs-item.vue'
   import VpWeather from '../components/weather/vp-weather.vue'
   import VpMiniAnalysisText from '../components/analysis/vp-mini-analysis-text.vue'
+  import VpMiniAnalysisLine from '../components/analysis/vp-mini-analysis-line.vue'
+  import VpMiniAnalysisArea from '../components/analysis/vp-mini-analysis-area.vue'
+  import VpMiniAnalysisBar from '../components/analysis/vp-mini-analysis-bar.vue'
 
   export default {
     name: 'Home',
     components: {
+      VpMiniAnalysisBar,
+      VpMiniAnalysisArea,
+      VpMiniAnalysisLine,
       VpMiniAnalysisText,
       VpWeather,
       VpTabsItem,

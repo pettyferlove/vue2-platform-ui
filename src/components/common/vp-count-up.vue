@@ -1,5 +1,5 @@
 <template>
-  <p><span v-cloak :id="idName">{{ startVal }}</span><span>{{ unit }}</span></p>
+  <span><span v-cloak :id="idName">{{ startVal }}</span><span>{{ unit }}</span></span>
 </template>
 
 <style>

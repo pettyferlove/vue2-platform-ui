@@ -9,7 +9,7 @@
         </span>
       </div>
       <div class="analysis-card-container-body">
-        <vp-count-up idName="als-line" :endVal="6560" class="count" style="color:#000000"></vp-count-up>
+        <vp-count-up idName="als-bar" :endVal="1320" class="count" style="color:#000000"></vp-count-up>
       </div>
       <div class="analysis-card-container-als-text" style="height: 46px;">
         <div class="analysis-card-container-als-text-content">
@@ -39,7 +39,7 @@
 
   export default {
     components: {VpCountUp},
-    name: 'VpMiniAnalysisLine'
+    name: 'VpMiniAnalysisBar'
   }
 </script>
 
