@@ -75,7 +75,7 @@
       })
       chart.axis(false)
       chart.source(this.areaData)
-      chart.area().position('year*ACME').color('type').shape('smooth')
+      chart.area().position('year*ACME').color('#ca5fe4').shape('smooth')
       chart.render()
     }
   }
