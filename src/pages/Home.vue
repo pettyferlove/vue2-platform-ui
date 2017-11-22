@@ -27,7 +27,7 @@
 
     <el-row :gutter="16">
       <el-col :lg="16">
-        <vp-timeline title="时间轴" :data="dataTimeline"></vp-timeline>
+        <vp-timeline title="工作计划" :data="dataTimeline"></vp-timeline>
       </el-col>
 
       <el-col :lg="8">
@@ -166,27 +166,27 @@
           {
             date: '2017-7-15',
             time: '8:35 am',
-            content: 'Lorem ipsum dolor sit amet consiquest dio'
+            content: '起床上班'
           },
           {
             date: '2017-7-15',
-            time: '8:35 am',
-            content: 'Lorem ipsum dolor sit amet consiquest dio'
+            time: '9:35 am',
+            content: '晨会'
           },
           {
             date: '2017-7-15',
-            time: '8:35 am',
-            content: 'Lorem ipsum dolor sit amet consiquest dio'
+            time: '10:35 am',
+            content: '项目数据维护/更新'
           },
           {
             date: '2017-7-15',
-            time: '8:35 am',
-            content: 'Lorem ipsum dolor sit amet consiquest dio'
+            time: '12:00 am',
+            content: '午餐'
           },
           {
             date: '2017-7-15',
-            time: '8:35 am',
-            content: 'Lorem ipsum dolor sit amet consiquest dio'
+            time: '15:40 pm',
+            content: '项目测试/上线'
           }
         ],
         dataWeather: {
