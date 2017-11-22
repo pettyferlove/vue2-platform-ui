@@ -16,3 +16,9 @@ selenium-debug.log
 *.njsproj
 *.sln
 package-lock.json
+src/my-theme/common-style.css
+src/my-theme/components.css
+src/my-theme/element-ui-overwrite.css
+src/my-theme/index.css
+src/my-theme/petty.css
+theme/
