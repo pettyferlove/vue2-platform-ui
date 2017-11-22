@@ -11,15 +11,10 @@
       <div class="analysis-card-container-body">
         <vp-count-up :isUnit="false" idName="als-bar" :endVal="1320" class="count" style="color:#000000"></vp-count-up>
       </div>
-      <div class="analysis-card-container-als-text" style="height: 46px;">
-        <div class="analysis-card-container-als-text-content">
-          <div class="yony" title="" style="margin-right: 16px;">
-            <span>周同比<span class="ratio">12%</span></span>
-            <span class="arrow-red"><i class="el-icon-caret-top"></i></span>
-          </div>
-          <div class="yony" title="">
-            <span>日环比<span class="ratio">11%</span></span>
-            <span class="arrow-green"><i class="el-icon-caret-bottom"></i></span>
+      <div class="analysis-card-container-als-area" style="height: 46px;">
+        <div class="analysis-card-container-als-area-content">
+          <div class="mini-chart" style="height: 46px">
+            <div :id="this.id" style="" class="chart-content"></div>
           </div>
         </div>
       </div>
@@ -39,7 +34,13 @@
 
   export default {
     components: {VpCountUp},
-    name: 'VpMiniAnalysisBar'
+    name: 'VpMiniAnalysisBar',
+    computed: {
+      // 随机数+时间戳防止ID重复
+      id: function () {
+        return parseInt(Math.random() * 1000000) + '_' + new Date().getTime()
+      }
+    }
   }
 </script>
 

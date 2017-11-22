@@ -62,7 +62,7 @@
     computed: {
       // 随机数+时间戳防止ID重复
       id: function () {
-        return parseInt(Math.random() * 1000000) + new Date().getTime()
+        return parseInt(Math.random() * 1000000) + '_' + new Date().getTime()
       }
     },
     mounted () {
@@ -72,6 +72,7 @@
       var chart = new G2.Chart({
         id: this.id,
         forceFit: true,
+        animate: true,
         height: 100,
         plotCfg: {
           margin: [36, -10, 30, -10]

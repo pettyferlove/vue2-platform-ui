@@ -18,16 +18,20 @@
 
     <el-row :gutter="15">
       <el-col :lg="6" :md="12">
-      <vp-state-over-view idName="new-user" color="#41b883" icon="fa fa-user" title="新增用户" :count="996"></vp-state-over-view>
+        <vp-state-over-view idName="new-user" color="#41b883" icon="fa fa-user" title="新增用户"
+                            :count="996"></vp-state-over-view>
       </el-col>
       <el-col :lg="6" :md="12">
-      <vp-state-over-view idName="page-view" color="#1d8ce0" icon="fa fa-eye" title="访问量" :count="109009"></vp-state-over-view>
+        <vp-state-over-view idName="page-view" color="#1d8ce0" icon="fa fa-eye" title="访问量"
+                            :count="109009"></vp-state-over-view>
       </el-col>
       <el-col :lg="6" :md="12">
-      <vp-state-over-view idName="suggest" color="#ffa000" icon="fa fa-pencil" title="意见" :count="1010"></vp-state-over-view>
+        <vp-state-over-view idName="suggest" color="#ffa000" icon="fa fa-pencil" title="意见"
+                            :count="1010"></vp-state-over-view>
       </el-col>
       <el-col :lg="6" :md="12">
-      <vp-state-over-view idName="download-num" color="#f60000" icon="fa fa-download" title="下载量" :count="9960"></vp-state-over-view>
+        <vp-state-over-view idName="download-num" color="#f60000" icon="fa fa-download" title="下载量"
+                            :count="9960"></vp-state-over-view>
       </el-col>
     </el-row>
 
@@ -42,7 +46,7 @@
 
     <el-row :gutter="16">
       <el-col :lg="16">
-      <vp-timeline title="时间轴" :data="dataTimeline"></vp-timeline>
+        <vp-timeline title="时间轴" :data="dataTimeline"></vp-timeline>
       </el-col>
 
       <el-col :lg="8">

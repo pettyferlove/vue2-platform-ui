@@ -48,7 +48,7 @@
     computed: {
       // 随机数+时间戳防止ID重复
       id: function () {
-        return parseInt(Math.random() * 1000000) + new Date().getTime()
+        return parseInt(Math.random() * 1000000) + '_' + new Date().getTime()
       }
     },
     mounted () {
