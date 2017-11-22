@@ -1,7 +1,7 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
     <el-row class="vp-progress vp-panel">
-      <el-row type="flex"  align="middle" justify="space-between" class="panel-heading">
+      <el-row type="flex" align="middle" justify="space-between" class="panel-heading">
         {{ title }}
         <el-radio-group v-model="order" size="small" @change="handleSortData">
           <el-radio-button label="0"><i class="fa fa-bars"></i></el-radio-button>
@@ -19,10 +19,12 @@
             {{ item.name }}
           </td>
           <td v-if="item.tags" :key="item.id" style="width: 25%">
-            <el-tag style="margin-left: 10px" type="primary" v-for="item in item.tags" :key="item.id">{{ item }}</el-tag>
+            <el-tag style="margin-left: 10px" type="primary" v-for="item in item.tags" :key="item.id">{{ item }}
+            </el-tag>
           </td>
           <td style="width: 50%">
-            <el-progress :percentage="item.value" :stroke-width="10"></el-progress>
+            <el-progress :percentage="item.value"
+                         :status="item.value>50?item.value===100?'success':'':'exception'"></el-progress>
           </td>
         </tr>
         </tbody>
@@ -82,6 +84,9 @@
         } else if (this.order === '-1') {
           this.sortData(this.rebuildData, -1)
         }
+      },
+      checkStatus: function () {
+        return 'success'
       }
     },
     created () {
