@@ -17,6 +17,29 @@ export const homeRouter = [
   },
   {
     path: '/',
+    name: 'form',
+    icon: 'fa fa-check-square-o',
+    title: '表单',
+    component: Main,
+    children: [
+      {
+        path: 'basicForm',
+        icon: 'fa fa-plus-square-o',
+        title: '基础表单',
+        name: 'quill_index',
+        component: resolve => require(['@/pages/BasicForm'], resolve)
+      },
+      {
+        path: 'stepForm',
+        icon: 'fa fa-step-forward',
+        title: '分步表单',
+        name: 'simplemde_index',
+        component: resolve => require(['@/pages/StepForm'], resolve)
+      }
+    ]
+  },
+  {
+    path: '/',
     name: 'panels',
     icon: 'fa fa-database',
     title: '面板',
@@ -32,20 +55,20 @@ export const homeRouter = [
   {
     path: '/',
     name: 'editor',
-    icon: 'fa fa-pencil',
+    icon: 'fa fa-edit',
     title: '富文本编辑器',
     component: Main,
     children: [
       {
         path: 'quill',
-        icon: 'fa fa-pencil',
+        icon: 'fa fa-text-width',
         title: 'Quill富文本编辑器',
         name: 'quill_index',
         component: resolve => require(['@/pages/QuillEditor'], resolve)
       },
       {
         path: 'simplemde',
-        icon: 'fa fa-pencil',
+        icon: 'fa fa-dedent',
         title: 'Simplemde编辑器',
         name: 'simplemde_index',
         component: resolve => require(['@/pages/SimplemdeEditor'], resolve)
