@@ -14,7 +14,7 @@
       <div class="analysis-card-container-als-area" style="height: 46px;">
         <div class="analysis-card-container-als-area-content">
           <div class="mini-chart" style="height: 46px">
-            <div id="c1" style="" class="chart-content"></div>
+            <div :id="this.id" style="" class="chart-content"></div>
           </div>
         </div>
       </div>
@@ -59,16 +59,22 @@
         ]
       }
     },
+    computed: {
+      // 随机数+时间戳防止ID重复
+      id: function () {
+        return parseInt(Math.random() * 1000000) + new Date().getTime()
+      }
+    },
     mounted () {
       let Frame = G2.Frame
       let frame = new Frame(this.areaData)
       frame = Frame.combinColumns(frame, ['ACME'], 'value', 'type', 'year')
       var chart = new G2.Chart({
-        id: 'c1',
+        id: this.id,
         forceFit: true,
-        height: 90,
+        height: 100,
         plotCfg: {
-          margin: [36, 5, 30, 5]
+          margin: [36, -10, 30, -10]
         }
       })
       chart.axis(false)
