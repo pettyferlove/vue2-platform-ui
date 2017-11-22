@@ -9,7 +9,7 @@
         </span>
       </div>
       <div class="analysis-card-container-body">
-        <vp-count-up idName="als-area" :endVal="8540" class="count" style="color:#000000"></vp-count-up>
+        <vp-count-up :isUnit="false" idName="als-area" :endVal="8540" class="count" style="color:#000000"></vp-count-up>
       </div>
       <div class="analysis-card-container-als-area" style="height: 46px;">
         <div class="analysis-card-container-als-area-content">

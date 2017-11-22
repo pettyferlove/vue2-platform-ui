@@ -17,6 +17,10 @@
       }
     },
     props: {
+      isUnit: {
+        type: Boolean,
+        required: true
+      },
       startVal: {
         type: Number,
         default: 0
@@ -56,7 +60,7 @@
     mounted () {
       this.$nextTick(() => {
         setTimeout(() => {
-          let res = numberTransform(this.endVal)
+          let res = numberTransform(this.endVal, this.isUnit)
           let endNumber = res.val
           this.unit = res.unit
           let demo = {}
@@ -69,20 +73,24 @@
     }
   }
 
-  function numberTransform (val) {
+  function numberTransform (val, isUnit) {
     let endVal = 0
     let endUnit = ''
-    if (val < 1000) {
-      endVal = val
-    } else if (val >= 1000 && val < 1000000) {
-      endVal = parseInt(val / 1000)
-      endUnit = 'K+'
-    } else if (val >= 1000000 && val < 10000000000) {
-      endVal = parseInt(val / 1000000)
-      endUnit = 'M+'
+    if (isUnit) {
+      if (val < 1000) {
+        endVal = val
+      } else if (val >= 1000 && val < 1000000) {
+        endVal = parseInt(val / 1000)
+        endUnit = 'K+'
+      } else if (val >= 1000000 && val < 10000000000) {
+        endVal = parseInt(val / 1000000)
+        endUnit = 'M+'
+      } else {
+        endVal = parseInt(val / 1000000000)
+        endUnit = 'B+'
+      }
     } else {
-      endVal = parseInt(val / 1000000000)
-      endUnit = 'B+'
+      endVal = val
     }
     return {
       val: endVal,

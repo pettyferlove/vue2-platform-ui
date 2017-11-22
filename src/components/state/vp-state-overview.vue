@@ -5,7 +5,7 @@
         <i :class="icon"></i>
       </el-col>
       <el-col :span="14" class="value">
-        <vp-count-up :idName="idName" :endVal="count" class="count" :style="{ color: color }"></vp-count-up>
+        <vp-count-up :isUnit="true" :idName="idName" :endVal="count" class="count" :style="{ color: color }"></vp-count-up>
         <p class="title">{{ title }}</p>
       </el-col>
     </el-row>
