@@ -3,6 +3,20 @@ import Main from '@/pages/Main'
 export const homeRouter = [
   {
     path: '/',
+    name: 'analysis',
+    icon: 'fa fa-cogs',
+    title: '数据分析',
+    component: Main,
+    children: [
+      {
+        path: 'analysis',
+        name: 'analysis_index',
+        component: resolve => require(['@/pages/DataAnalysis'], resolve)
+      }
+    ]
+  },
+  {
+    path: '/',
     name: 'widget',
     icon: 'fa fa-cogs',
     title: '组件',
@@ -26,14 +40,14 @@ export const homeRouter = [
         path: 'basicForm',
         icon: 'fa fa-plus-square-o',
         title: '基础表单',
-        name: 'quill_index',
+        name: 'basicForm_index',
         component: resolve => require(['@/pages/BasicForm'], resolve)
       },
       {
         path: 'stepForm',
         icon: 'fa fa-step-forward',
         title: '分步表单',
-        name: 'simplemde_index',
+        name: 'stepForm_index',
         component: resolve => require(['@/pages/StepForm'], resolve)
       }
     ]

@@ -2,12 +2,13 @@
 
 </template>
 
+<style>
+
+</style>
+
 <script>
   export default {
-    name: 'Home'
+    name: 'VpUserWelcome'
   }
 </script>
 
-<style lang="less">
-
-</style>
