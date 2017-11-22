@@ -14,12 +14,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@antv/g2": "^3.0.0",
     "chart.js": "^2.7.1",
     "countup": "^1.8.2",
     "echarts": "^3.8.5",
     "element-ui": "^2.0.5",
     "font-awesome": "^4.7.0",
-    "g2": "^2.3.13",
     "js-cookie": "^2.2.0",
     "petty-scroll": "^1.2.7",
     "simplemde": "^1.11.2",

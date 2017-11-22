@@ -31,7 +31,7 @@
 
 <script>
   import VpCountUp from '../common/vp-count-up.vue'
-  import G2 from 'g2'
+  import G2 from '@antv/g2'
 
   export default {
     components: {VpCountUp},
@@ -66,21 +66,16 @@
       }
     },
     mounted () {
-      let Frame = G2.Frame
-      let frame = new Frame(this.areaData)
-      frame = Frame.combinColumns(frame, ['ACME'], 'value', 'type', 'year')
       var chart = new G2.Chart({
-        id: this.id,
+        container: this.id,
         forceFit: true,
         animate: true,
         height: 100,
-        plotCfg: {
-          margin: [36, -10, 30, -10]
-        }
+        padding: [36, -10, 30, -10]
       })
       chart.axis(false)
-      chart.source(frame)
-      chart.area().position('year*value').color('type').shape('smooth')
+      chart.source(this.areaData)
+      chart.area().position('year*ACME').color('type').shape('smooth')
       chart.render()
     }
   }
