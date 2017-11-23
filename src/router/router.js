@@ -4,7 +4,7 @@ export const homeRouter = [
   {
     path: '/',
     name: 'analysis',
-    icon: 'fa fa-cogs',
+    icon: 'fa fa-dashboard',
     title: '数据分析',
     component: Main,
     children: [
