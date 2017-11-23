@@ -1,10 +1,10 @@
 <template>
-  <div id="home" class="home">
+  <div id="main" class="main">
     <aside :class="[classes]">
       <vp-sidebar-menu :menuData="menuList" :isCollapse="collapsed"></vp-sidebar-menu>
     </aside>
-    <el-row class="home-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
-      <el-row class="home-wrapper-header" type="flex" align="middle">
+    <el-row class="main-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
+      <el-row class="main-wrapper-header" type="flex" align="middle">
         <span @click="toggleEvent">
           <i :class="toggleButton"></i>
         </span>
@@ -21,11 +21,11 @@
         </div>
       </el-row>
       <!--TODO: 屏蔽OpenTags 可选择开启，开启需在common-style 将open-tags-height调整至合适值即可-->
-      <!--<el-row class="home-wrapper-tags">
+      <!--<el-row class="main-wrapper-tags">
         <vp-open-tags></vp-open-tags>
       </el-row>-->
       <petty-scroll>
-        <div class="home-wrapper-main" id="main-content">
+        <div class="main-wrapper-main" id="main-content">
           <div style="overflow: hidden">
             <transition name="fade" mode="out-in">
               <router-view></router-view>
@@ -60,7 +60,7 @@
         'toggleEvent': 'toggleMenu'
       }),
       handleFullScreen () {
-        let screen = document.getElementById('home')
+        let screen = document.getElementById('main')
         if (this.isFullScreen) {
           if (document.exitFullscreen) {
             document.exitFullscreen()
@@ -135,7 +135,7 @@
       }),
       classes () {
         return {
-          ['home-sidebar']: true
+          ['main-sidebar']: true
         }
       },
       toggleButton () {
