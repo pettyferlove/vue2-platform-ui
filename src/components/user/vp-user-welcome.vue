@@ -1,5 +1,9 @@
 <template>
   <div class="user-welcome">
+    <div class="user-welcome-info">
+      <span>2017年11月23日</span>
+      <span>周四</span>
+    </div>
     <div class="user-welcome-detail">
       <div class="user-welcome-detail-main">
         <div class="user-welcome-detail-main-row">
