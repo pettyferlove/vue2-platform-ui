@@ -7,7 +7,7 @@
     <div class="user-welcome-detail">
       <div class="user-welcome-detail-main">
         <el-row :gutter="16">
-          <el-col :lg="12" :md="12">
+          <el-col :lg="12" :md="24">
             <div class="user-welcome-detail-main-content">
               <div class="header-content">
                 <div class="avatar">
@@ -22,7 +22,7 @@
               </div>
             </div>
           </el-col>
-          <el-col :lg="12" :md="12">
+          <el-col :lg="12" :md="24">
             <div class="user-welcome-detail-main-extra">
               <div class="extra-content">
                 <div><p>项目数</p>
