@@ -15,7 +15,7 @@ const VueRouter = new Router({
 VueRouter.beforeEach((to, from, next) => {
   window.document.title = to.meta.title || '主页'
   LoadingBar.config({
-    color: '#41b883',
+    color: '#409EFF',
     failedColor: '#ed3f14',
     height: 2
   })
