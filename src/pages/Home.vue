@@ -8,7 +8,7 @@
 
     <el-row :gutter="16">
       <el-col :lg="16" :md="12">
-
+        <vp-user-item></vp-user-item>
       </el-col>
       <el-col :lg="8" :md="12">
         <vp-user-index-num></vp-user-index-num>
@@ -20,9 +20,11 @@
 <script>
   import VpUserWelcome from '../components/user/vp-user-welcome.vue'
   import VpUserIndexNum from '../components/user/vp-user-index-num.vue'
+  import VpUserItem from '../components/user/vp-user-item.vue'
 
   export default {
     components: {
+      VpUserItem,
       VpUserIndexNum,
       VpUserWelcome},
     name: 'Home'
