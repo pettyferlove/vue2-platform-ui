@@ -960,85 +960,80 @@
       -webkit-box-flex: 1;
       -ms-flex: auto;
       flex: auto;
-      &-row {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        &-content {
-          margin-bottom: 16px;
-          -webkit-box-flex: 1;
-          -ms-flex: auto;
-          flex: auto;
-          .header-content {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            .avatar {
-              -webkit-box-flex: 0;
-              -ms-flex: 0 1 72px;
-              flex: 0 1 72px;
-              margin-bottom: 8px;
-              .avatar-circle {
-                overflow: hidden;
-                border-radius: 72px;
-                display: block;
-                width: 72px;
-                height: 72px;
-              }
+      &-content {
+        margin-bottom: 16px;
+        -webkit-box-flex: 1;
+        -ms-flex: auto;
+        flex: auto;
+        .header-content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          .avatar {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 1 72px;
+            flex: 0 1 72px;
+            margin-bottom: 8px;
+            .avatar-circle {
+              overflow: hidden;
+              border-radius: 72px;
+              display: block;
+              width: 72px;
+              height: 72px;
             }
-            .content {
-              text-align: left;
-              position: relative;
-              top: 4px;
-              margin-left: 24px;
-              -webkit-box-flex: 1;
-              -ms-flex: 1 1 auto;
-              flex: 1 1 auto;
-              color: rgba(0, 0, 0, 0.45);
-              line-height: 22px;
-              &-title {
-                font-size: 20px;
-                line-height: 28px;
-                font-weight: 500;
-                color: rgba(0, 0, 0, 0.85);
-                margin-bottom: 12px;
-              }
-              &-detail {
-                font-size: 14px;
-              }
+          }
+          .content {
+            text-align: left;
+            position: relative;
+            top: 4px;
+            margin-left: 24px;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            color: rgba(0, 0, 0, 0.45);
+            line-height: 22px;
+            &-title {
+              font-size: 20px;
+              line-height: 28px;
+              font-weight: 500;
+              color: rgba(0, 0, 0, 0.85);
+              margin-bottom: 12px;
+            }
+            &-detail {
+              font-size: 14px;
             }
           }
         }
-        &-extra {
-          margin-left: 88px;
-          min-width: 242px;
-          text-align: right;
-          margin-bottom: 16px;
-          -webkit-box-flex: 1;
-          -ms-flex: auto;
-          flex: auto;
-          .extra-content {
-            zoom: 1;
-            float: right;
-            & > div {
-              padding: 0 32px;
-              position: relative;
-              float: left;
-              & > p:first-child {
+      }
+      &-extra {
+        margin-left: 88px;
+        min-width: 242px;
+        text-align: right;
+        margin-bottom: 16px;
+        -webkit-box-flex: 1;
+        -ms-flex: auto;
+        flex: auto;
+        .extra-content {
+          zoom: 1;
+          float: right;
+          & > div {
+            padding: 0 32px;
+            position: relative;
+            float: left;
+            & > p:first-child {
+              color: rgba(0, 0, 0, 0.45);
+              font-size: 14px;
+              line-height: 22px;
+              margin-bottom: 4px;
+            }
+            & > p {
+              color: rgba(0, 0, 0, 0.85);
+              font-size: 30px;
+              line-height: 38px;
+              margin: 0;
+              & > span {
                 color: rgba(0, 0, 0, 0.45);
-                font-size: 14px;
-                line-height: 22px;
-                margin-bottom: 4px;
-              }
-              & > p {
-                color: rgba(0, 0, 0, 0.85);
-                font-size: 30px;
-                line-height: 38px;
-                margin: 0;
-                & > span {
-                  color: rgba(0, 0, 0, 0.45);
-                  font-size: 20px;
-                }
+                font-size: 20px;
               }
             }
           }
