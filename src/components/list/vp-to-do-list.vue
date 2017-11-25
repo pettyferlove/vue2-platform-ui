@@ -1,10 +1,19 @@
 <template>
   <div class="vp-to-do-list">
-    <vp-to-do-item></vp-to-do-item>
-    <vp-to-do-item></vp-to-do-item>
-    <vp-to-do-item></vp-to-do-item>
-    <vp-to-do-item></vp-to-do-item>
-    <vp-to-do-item></vp-to-do-item>
+    <div class="vp-to-do-list-content">
+      <vp-to-do-item></vp-to-do-item>
+      <vp-to-do-item></vp-to-do-item>
+      <vp-to-do-item></vp-to-do-item>
+      <vp-to-do-item></vp-to-do-item>
+      <vp-to-do-item></vp-to-do-item>
+    </div>
+    <div class="vp-to-do-list-footer">
+      <el-pagination
+        :page-size="100"
+        layout="prev, pager, next, jumper"
+        :total="1000">
+      </el-pagination>
+    </div>
   </div>
 </template>
 

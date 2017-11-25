@@ -41,7 +41,7 @@
       const chart = new G2.Chart({
         container: this.id,
         forceFit: true,
-        height: 350,
+        height: 375,
         padding: [0, 0, 0, 0]
       })
       chart.source(dv, {
