@@ -16,7 +16,7 @@
                 </span>
                 </div>
                 <div class="content">
-                  <div class="content-title">早安，曲丽丽，祝你开心每一天！</div>
+                  <div class="content-title">早安，Pettyfer，祝你开心每一天！</div>
                   <div class="content-detail">Java开发工程师 | 某某公司-某某部门-某某项目组-Java开发工程师</div>
                 </div>
               </div>
