@@ -2,7 +2,7 @@
   <vp-panel title="个人指数" class="vp-user-index">
     <vp-mini-radar></vp-mini-radar>
     <el-row>
-      <el-col span="8">
+      <el-col :span="8">
         <div class="legend">
           <p>
             <span class="dot" style="background-color: rgb(24, 144, 255);"></span>
@@ -10,7 +10,7 @@
           </p>
           <h6>34</h6></div>
       </el-col>
-      <el-col span="8">
+      <el-col :span="8">
         <div class="legend">
           <p>
             <span class="dot" style="background-color: rgb(250, 204, 20);"></span>
@@ -18,7 +18,7 @@
           </p>
           <h6>34</h6></div>
       </el-col>
-      <el-col span="8">
+      <el-col :span="8">
         <div class="legend">
           <p>
             <span class="dot" style="background-color: rgb(47, 194, 91);"></span>

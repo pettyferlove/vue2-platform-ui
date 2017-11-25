@@ -6,6 +6,7 @@ import util from '@/libs/utils'
 const state = {
   // 菜单折叠
   menuCollapsed: false,
+  autoCollapsed: true,
   menuList: [],
   // Router
   routerList: [
@@ -58,9 +59,17 @@ const actions = {
 
 // mutations
 const mutations = {
+  setToggleMenu (state, isCollapsed) {
+    if (state.autoCollapsed) {
+      localStorage.setItem('menuCollapsed', isCollapsed)
+      state.menuCollapsed = isCollapsed
+    }
+  },
   toggleMenu (state) {
     let isCollapsed = !state.menuCollapsed
     localStorage.setItem('menuCollapsed', isCollapsed)
+    // 如果用户手动切换折叠状态关闭自动折叠将操作权交给用户
+    state.autoCollapsed = false
     state.menuCollapsed = isCollapsed
   },
   updateMenuList (state) {

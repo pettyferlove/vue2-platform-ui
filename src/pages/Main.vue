@@ -57,7 +57,8 @@
     name: 'Main',
     methods: {
       ...mapMutations({
-        'toggleEvent': 'toggleMenu'
+        'toggleEvent': 'toggleMenu',
+        'setToggleMenu': 'setToggleMenu'
       }),
       handleFullScreen () {
         let screen = document.getElementById('main')
@@ -148,6 +149,7 @@
       }
     },
     mounted () {
+      let that = this
       // 初始化面包屑
       this.$store.commit('updateOpenPageList', this.$route.path)
       // 监听全屏事件更改状态值
@@ -168,6 +170,14 @@
         message: '这是一条成功的提示消息',
         type: 'success',
         offset: 60
+      })
+      let screen = document.getElementById('main')
+      window.addEventListener('resize', function () {
+        if (screen.offsetWidth < 765) {
+          that.setToggleMenu(true)
+        } else if (screen.offsetWidth > 1376) {
+          that.setToggleMenu(false)
+        }
       })
     }
   }
