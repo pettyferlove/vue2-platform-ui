@@ -8,7 +8,7 @@
 
     <el-row :gutter="16">
       <el-col :lg="16" :md="12">
-        <vp-user-welcome></vp-user-welcome>
+
       </el-col>
       <el-col :lg="8" :md="12">
         <vp-user-index-num></vp-user-index-num>
