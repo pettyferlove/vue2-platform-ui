@@ -13,6 +13,13 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "build": "node build/build.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pettyferlove/vue2-platform-ui.git"
+  },
+  "homepage": "https://github.com/pettyferlove/vue2-platform-ui",
+  "author": "pettyferlove@live.cn",
+  "license": "MIT",
   "dependencies": {
     "@antv/data-set": "^0.6.2",
     "@antv/g2": "^3.0.0",
