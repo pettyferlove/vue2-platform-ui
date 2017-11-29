@@ -10,6 +10,7 @@
         </span>
         <vp-breadcrumb-nav></vp-breadcrumb-nav>
         <div class="avator-con">
+          <vp-user-search></vp-user-search>
           <el-tooltip class="item" effect="dark" content="全屏" placement="bottom">
             <i class="btn fa fa-expand" @click="handleFullScreen"></i>
           </el-tooltip>
@@ -44,10 +45,12 @@
   import VpBreadcrumbNav from '../components/common/vp-breadcrumb-nav.vue'
   import VpOpenTags from '../components/common/vp-open-tags.vue'
   import { mapGetters, mapMutations } from 'vuex'
+  import VpUserSearch from '../components/user/vp-user-search.vue'
 
   /* eslint-disable no-useless-computed-key */
   export default {
     components: {
+      VpUserSearch,
       VpOpenTags,
       VpBreadcrumbNav,
       VpSidebarMenu,
