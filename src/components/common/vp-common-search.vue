@@ -19,7 +19,7 @@
 
 <script>
   export default {
-    name: 'VpUserSearch',
+    name: 'VpCommonSearch',
     methods: {
       querySearch (queryString, cb) {
         var restaurants = this.restaurants
