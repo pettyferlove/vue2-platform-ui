@@ -1,5 +1,5 @@
 <template>
-  <vp-panel title="待办事项" class="vp-user-item">
+  <vp-panel title="用户动态" class="vp-user-dynamic">
     <vp-to-do-list></vp-to-do-list>
   </vp-panel>
 </template>
@@ -10,13 +10,13 @@
 
 <script>
   import VpPanel from '../common/vp-panel.vue'
-  import VpToDoList from '../list/vp-to-do-list.vue'
+  import VpToDoList from '../list/vp-list.vue'
 
   export default {
     components: {
       VpToDoList,
       VpPanel},
-    name: 'VpUserItem'
+    name: 'VpUserDynamic'
   }
 </script>
 
