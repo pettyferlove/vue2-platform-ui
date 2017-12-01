@@ -1,13 +1,16 @@
 <template>
   <span class="vp-search">
-    <i class="fa fa-search"></i>
-    <div class="vp-search-content">
+    <i @click="activeSearch" class="fa fa-search"></i>
+    <div :class="['vp-search-content', searchActive?inputActive:'']">
       <el-autocomplete
+        v-focus="this.searchActive"
         class="inline-input"
         v-model="state1"
         :fetch-suggestions="querySearch"
+        :trigger-on-focus="false"
         placeholder="站内搜索"
         @select="handleSelect"
+        @blur="blurSearch"
       ></el-autocomplete>
     </div>
   </span>
@@ -18,9 +21,32 @@
 </style>
 
 <script>
+  /* eslint-disable no-useless-computed-key */
+
   export default {
     name: 'VpCommonSearch',
+    directives: {
+      focus: {
+        update: function (el, {value}) {
+          if (value) {
+            el.getElementsByTagName('input')[0].focus()
+            // el.focus()
+          }
+        }
+      }
+    },
     methods: {
+      activeSearch () {
+        this.searchActive = true
+      },
+      createFilter (queryString) {
+        return (restaurant) => {
+          return (restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0)
+        }
+      },
+      blurSearch () {
+        this.searchActive = false
+      },
       querySearch (queryString, cb) {
         var restaurants = this.restaurants
         var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants
@@ -33,6 +59,8 @@
     },
     data () {
       return {
+        inputActive: 'input-active',
+        searchActive: false,
         state1: '',
         restaurants: [
           {'value': '三全鲜食（北新泾店）', 'address': '长宁区新渔路144号'},
