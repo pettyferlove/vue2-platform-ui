@@ -49,7 +49,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         // element-ui ES6语法编译配置
-        include: [resolve('src'), resolve('test'), resolve('/node_modules/element-ui/src'), resolve('/node_modules/element-ui/packages')]
+        include: [resolve('src'), resolve('test'), resolve('/node_modules/element-ui/src'), resolve('/node_modules/element-ui/packages'), resolve('/node_modules/petty-scroll/src')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
