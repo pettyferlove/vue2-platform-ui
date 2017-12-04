@@ -1,8 +1,13 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
     <div class="vp-panel" :style="{ backgroundColor: bgColor }" :class="{ bgStyle: bgColor }">
-      <div v-if="title" class="panel-heading" :style="{ backgroundColor: hdColor }" :class="{ bgStyle: hdColor }">
-        {{ title }}
+      <div class="panel-heading" :style="{ backgroundColor: hdColor }" :class="{ bgStyle: hdColor }">
+        <div v-if="title" class="panel-heading-title">
+          {{ title }}
+        </div>
+        <div class="panel-heading-other">
+          <slot name="other"></slot>
+        </div>
       </div>
       <div class="panel-body">
         <slot></slot>

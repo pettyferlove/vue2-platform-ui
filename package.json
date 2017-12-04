@@ -33,12 +33,13 @@
     "petty-scroll": "^1.2.7",
     "simplemde": "^1.11.2",
     "vue": "^2.5.9",
-    "vue-quill-editor": "^3.0.3",
+    "vue-quill-editor": "^3.0.4",
     "vue-router": "^3.0.1",
+    "vuedraggable": "^2.15.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
+    "autoprefixer": "^7.2.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
     "babel-jest": "^21.2.0",
