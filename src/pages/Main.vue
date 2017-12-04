@@ -22,9 +22,9 @@
         </div>
       </el-row>
       <!--TODO: 屏蔽OpenTags 可选择开启，开启需在common-style 将open-tags-height调整至合适值即可-->
-      <!--<el-row class="main-wrapper-tags">
+      <el-row class="main-wrapper-tags">
         <vp-open-tags></vp-open-tags>
-      </el-row>-->
+      </el-row>
       <petty-scroll>
         <div class="main-wrapper-main" id="main-content">
           <div style="overflow: hidden">

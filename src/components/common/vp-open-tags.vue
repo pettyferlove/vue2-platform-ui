@@ -17,20 +17,15 @@
       <el-tag
         v-for="item in openPageList"
         :key="item.name"
+        :closable="item.name!=='home_index'"
         class="vp-open-tags-body-tag"
         color="white"
         @click.native="switchPage(item)"
+        @close="closeTag(item)"
         type="info">
         <span class="tag-dot-inner" :style="{background: (item.name===currentTagName?'#409EFF':'')}"></span>
         {{item.title}}
-        <!--TODO: 直接使用element-ui 关闭按钮样式-->
-        <i class="el-tag__close el-icon-close"
-           v-if="item.name!=='home_index'"
-           @click.stop="closeTag(item)"></i>
       </el-tag>
-      <!--<el-tag class="vp-open-tags-body-tag" color="white" closable type="default"><span class="tag-dot-inner"
-                                                                                        style="background: #409EFF"></span>面板
-      </el-tag>-->
     </div>
   </div>
 </template>
