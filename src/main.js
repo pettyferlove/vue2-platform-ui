@@ -11,6 +11,7 @@ import PettyScroll from 'petty-scroll'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'font-awesome/css/font-awesome.css'
 import 'simplemde/dist/simplemde.min.css'
+import 'animate.css'
 import 'petty-scroll/dist/petty-scroll.min.css'
 import './my-theme/index.less'
 
