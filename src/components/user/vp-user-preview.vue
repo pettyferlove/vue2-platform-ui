@@ -1,7 +1,7 @@
 <template>
   <el-card :body-style="{ padding: '0px' }">
     <el-row class="vp-user-preview vp-panel">
-      <div class="panel-heading">
+      <div class="panel-heading" style="padding: 15px">
         <img :src="brief.photo" height="90" alt="photo">
         <span class="title">
         <span class="name">{{ brief.name }}</span>
