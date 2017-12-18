@@ -37,11 +37,11 @@
       return {
         todoList: [
           // state待办事项当前处理状态 true已办 false为办
-          {name: 'Design a nice theme', date: '2017-11-23 09:12:34', state: false},
-          {name: 'Make the theme responsive', date: '2017-12-01 05:11:34', state: false},
-          {name: 'Let theme shine like a star', date: '2017-8-01 14:12:38', state: false},
-          {name: 'Check your messages and notifications', date: '2017-11-01 12:12:34', state: false},
-          {name: 'Let theme shine like a star', date: '2017-11-08 18:08:34', state: false}
+          {id: 1, name: 'Design a nice theme', date: '2017-11-23 09:12:34', state: false},
+          {id: 2, name: 'Make the theme responsive', date: '2017-12-01 05:11:34', state: false},
+          {id: 3, name: 'Let theme shine like a star', date: '2017-8-01 14:12:38', state: false},
+          {id: 4, name: 'Check your messages and notifications', date: '2017-11-01 12:12:34', state: false},
+          {id: 5, name: 'Let theme shine like a star', date: '2017-11-08 18:08:34', state: false}
         ]
       }
     }

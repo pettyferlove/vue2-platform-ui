@@ -2,7 +2,7 @@
   <span>
     <draggable class="vp-todo-list" v-model="todo">
       <transition-group type="transition" name="flip-list">
-        <li v-for="item in todo" :key="item.name">
+        <li v-for="item in todo" :key="item.id">
           <span class="handle ui-sortable-handle">
             <i class="fa fa-ellipsis-v"></i>
             <i class="fa fa-ellipsis-v"></i>
