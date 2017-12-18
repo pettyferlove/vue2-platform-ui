@@ -14,6 +14,7 @@ import 'simplemde/dist/simplemde.min.css'
 import 'animate.css'
 import 'petty-scroll/dist/petty-scroll.min.css'
 import './my-theme/index.less'
+import 'quill/dist/quill.core.css'
 
 Vue.use(Vuex)
 Vue.use(ElementUI)
