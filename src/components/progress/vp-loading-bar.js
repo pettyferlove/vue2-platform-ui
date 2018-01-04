@@ -99,7 +99,7 @@ export default {
 
     timer = setInterval(() => {
       percent += Math.floor(Math.random() * 3 + 5)
-      if (percent > 95) {
+      if (percent > 80) {
         clearTimer()
       }
       update({

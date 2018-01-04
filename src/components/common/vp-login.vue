@@ -66,6 +66,7 @@
         let that = this
         that.$refs[formName].validate((valid) => {
           if (valid) {
+            that.$LoadingBar.start()
             that.loading = true
             setTimeout(function () {
               Cookis.set('user_token', 'pettyfer')
@@ -73,7 +74,7 @@
                 name: 'home_index'
               })
               that.loading = false
-            }, 1000)
+            }, 5000)
           }
         })
       }
