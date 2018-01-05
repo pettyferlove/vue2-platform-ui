@@ -12,14 +12,14 @@
       <table>
         <tbody>
         <tr v-for="(item, index) in rebuildData" :key="item.id">
-          <td style="width: 10%">
+          <td style="width: 3%">
             {{ index | indexPlus }}
           </td>
-          <td style="width: 15%">
+          <td style="width: 10%">
             {{ item.name }}
           </td>
           <td v-if="item.tags" :key="item.id" style="width: 25%">
-            <el-tag style="margin-left: 10px" type="primary" v-for="item in item.tags" :key="item.id">{{ item }}
+            <el-tag style="margin-left: 5px" size="small" type="primary" v-for="item in item.tags" :key="item.id">{{ item }}
             </el-tag>
           </td>
           <td style="width: 50%">
