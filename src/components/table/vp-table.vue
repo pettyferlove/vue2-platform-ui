@@ -8,10 +8,10 @@
         <el-row type="flex" justify="space-between" class="control">
           <div class="table-style">
             <h3>条纹</h3>
-            <el-switch v-model="showStripe" style="margin: 0 30px 0 10px"></el-switch>
+            <el-switch v-model="showStripe" style="margin: 0 30px 0 10px"/>
           </div>
           <div class="search-bar">
-            <el-input placeholder="Please enter ..." v-model="keyword" style="width: 300px"></el-input>
+            <el-input placeholder="Please enter ..." v-model="keyword" style="width: 300px"/>
             <el-button type="ghost" @click="search"><i class="fa fa-search"></i></el-button>
           </div>
         </el-row>
@@ -20,8 +20,8 @@
           <el-button  :disabled="deleteDisabled" @click="deleteOk"><i class="fa fa-trash"></i> 删除</el-button>
         </div>
         <el-table border :stripe="showStripe" :size="tableSize" :data="dataShow" @selection-change="selectChange" highlight-current-row @current-change="handleCurrentChange">
-          <el-table-column type="selection" width="55" v-if="type === 'edit'"></el-table-column>
-          <el-table-column v-for="item in columns" :label="item.title" :prop="item.key" :key="item.id" :sortable="item.sort"></el-table-column>
+          <el-table-column type="selection" width="55" v-if="type === 'edit'"/>
+          <el-table-column v-for="item in columns" :label="item.title" :prop="item.key" :key="item.id" :sortable="item.sort"/>
           <el-table-column label="操作">
             <template slot-scope="scope">
               <el-button
@@ -40,7 +40,7 @@
           </div>
           <div class="page">
             <span class="total">Total {{ data.length }}</span>
-            <el-pagination :total="data.length" :current-page="currentPage" :page-size="showNum" @current-change="pageChange"></el-pagination>
+            <el-pagination :total="data.length" :current-page="currentPage" :page-size="showNum" @current-change="pageChange"/>
           </div>
         </el-row>
       </div>
@@ -50,7 +50,7 @@
         title="编辑数据">
         <el-form label-width="50">
           <el-form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" :key="dataEdit.id">
-            <el-input v-model="dataEdit[key]" :placeholder="'请输入' + key"></el-input>
+            <el-input v-model="dataEdit[key]" :placeholder="'请输入' + key"/>
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
@@ -64,7 +64,7 @@
         title="添加数据">
         <el-form label-width="50">
           <el-form-item v-for="item in columns" :label="item.title" :key="item.id">
-            <el-input v-model="dataAdd[item.key]" :placeholder="'Please enter' + item.title"></el-input>
+            <el-input v-model="dataAdd[item.key]" :placeholder="'Please enter' + item.title"/>
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">

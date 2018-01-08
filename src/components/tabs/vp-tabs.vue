@@ -10,7 +10,7 @@
     </div>
     <div class="body" :style="{ height: contentHeight }">
       <ul>
-        <slot></slot>
+        <slot/>
       </ul>
     </div>
     <div class="footer">

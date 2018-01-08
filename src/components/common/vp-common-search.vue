@@ -11,7 +11,7 @@
         placeholder="站内搜索"
         @select="handleSelect"
         @blur="blurSearch"
-      ></el-autocomplete>
+      />
     </div>
   </span>
 </template>

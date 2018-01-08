@@ -2,7 +2,7 @@
   <div class="editor vp-content">
     <el-row>
       <el-col>
-        <vp-simplemde></vp-simplemde>
+        <vp-simplemde/>
       </el-col>
     </el-row>
   </div>

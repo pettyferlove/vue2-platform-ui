@@ -1,35 +1,35 @@
 <template>
   <div id="main" class="main">
     <aside :class="[classes]">
-      <vp-sidebar-menu :menuData="menuList" :isCollapse="collapsed"></vp-sidebar-menu>
+      <vp-sidebar-menu :menuData="menuList" :isCollapse="collapsed"/>
     </aside>
     <el-row class="main-wrapper" :style="{paddingLeft: collapsed?'64px':'210px'}">
       <el-row class="main-wrapper-header" type="flex" align="middle">
         <span @click="toggleEvent">
           <i :class="toggleButton"></i>
         </span>
-        <vp-breadcrumb-nav></vp-breadcrumb-nav>
+        <vp-breadcrumb-nav/>
         <div class="avator-con">
-          <vp-common-search></vp-common-search>
+          <vp-common-search/>
           <el-tooltip class="item" effect="dark" content="全屏" placement="bottom">
             <i class="btn fa fa-expand" @click="handleFullScreen"></i>
           </el-tooltip>
           <el-tooltip class="item" effect="dark" content="锁屏" placement="bottom">
             <i class="btn fa fa-lock"></i>
           </el-tooltip>
-          <vp-msg-push class="message-push" :data="msgPushData" trigger="click"></vp-msg-push>
-          <vp-user-panel class="user-avator" :adminInfo="adminInfo"></vp-user-panel>
+          <vp-msg-push class="message-push" :data="msgPushData" trigger="click"/>
+          <vp-user-panel class="user-avator" :adminInfo="adminInfo"/>
         </div>
       </el-row>
       <!--TODO: 屏蔽OpenTags 可选择开启，开启需在common-style 将open-tags-height调整至合适值即可-->
       <el-row class="main-wrapper-tags">
-        <vp-open-tags></vp-open-tags>
+        <vp-open-tags/>
       </el-row>
       <petty-scroll>
         <div class="main-wrapper-main" id="main-content">
           <div style="overflow: hidden">
             <transition name="fade" mode="out-in">
-              <router-view></router-view>
+              <router-view/>
             </transition>
           </div>
         </div>

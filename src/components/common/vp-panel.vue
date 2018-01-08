@@ -6,11 +6,11 @@
           {{ title }}
         </div>
         <div class="panel-heading-other">
-          <slot name="other"></slot>
+          <slot name="other"/>
         </div>
       </div>
       <div class="panel-body">
-        <slot></slot>
+        <slot/>
       </div>
     </div>
   </el-card>

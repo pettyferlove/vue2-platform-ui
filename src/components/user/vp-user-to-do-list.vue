@@ -15,7 +15,7 @@
         </div>
       </div>
     </petty-scroll>-->
-    <vp-todo-list :todo="todoList"></vp-todo-list>
+    <vp-todo-list :todo="todoList"/>
   </vp-panel>
 </template>
 

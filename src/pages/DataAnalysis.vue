@@ -3,31 +3,31 @@
 
     <el-row :gutter="15">
       <el-col :lg="6" :md="12">
-        <vp-mini-analysis-text></vp-mini-analysis-text>
+        <vp-mini-analysis-text/>
       </el-col>
       <el-col :lg="6" :md="12">
-        <vp-mini-analysis-line></vp-mini-analysis-line>
+        <vp-mini-analysis-line/>
       </el-col>
       <el-col :lg="6" :md="12">
-        <vp-mini-analysis-area></vp-mini-analysis-area>
+        <vp-mini-analysis-area/>
       </el-col>
       <el-col :lg="6" :md="12">
-        <vp-mini-analysis-bar></vp-mini-analysis-bar>
+        <vp-mini-analysis-bar/>
       </el-col>
     </el-row>
 
     <el-row :gutter="16">
       <el-col :lg="6">
-        <vp-user-preview :brief="dataUserPreview.brief" :property="dataUserPreview.property"></vp-user-preview>
+        <vp-user-preview :brief="dataUserPreview.brief" :property="dataUserPreview.property"/>
       </el-col>
       <el-col :lg="18">
-        <vp-progress title="工作进度" :data="dataProgress"></vp-progress>
+        <vp-progress title="工作进度" :data="dataProgress"/>
       </el-col>
     </el-row>
 
     <el-row :gutter="16">
       <el-col :lg="16">
-        <vp-timeline title="工作计划" :data="dataTimeline"></vp-timeline>
+        <vp-timeline title="工作计划" :data="dataTimeline"/>
       </el-col>
 
       <el-col :lg="8">

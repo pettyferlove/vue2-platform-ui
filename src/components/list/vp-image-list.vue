@@ -7,21 +7,21 @@
         </div>
         <el-row type="flex" align="middle" justify="space-between" class="panel-body">
           <div class="search-bar">
-            <el-input placeholder="Please enter ..." v-model="keyword" style="width: 300px"></el-input>
+            <el-input placeholder="Please enter ..." v-model="keyword" style="width: 300px"/>
             <el-button type="ghost" @click="search"><i class="fa fa-search"></i></el-button>
           </div>
           <el-row type="flex" align="middle" class="page">
             <span>Show</span>
-            <el-input :maxlength="40" :minlength="1" :number="true" v-model="showNum" class="input-number" @change="updateDataShow"></el-input>
+            <el-input :maxlength="40" :minlength="1" :number="true" v-model="showNum" class="input-number" @change="updateDataShow"/>
             <span class="margin-end">/ Page</span>
             <span class="total">Total {{ data.length }}</span>
-            <el-pagination :total="data.length" :current-page="currentPage" :page-size="showNum" @current-change="pageChange"></el-pagination>
+            <el-pagination :total="data.length" :current-page="currentPage" :page-size="showNum" @current-change="pageChange"/>
           </el-row>
         </el-row>
       </el-row>
       <el-row class="image-list" :gutter="16">
         <el-col :lg="6" :sm="12" class="vp-margin" v-for="item in dataShow" :key="item.id">
-          <vp-card :editable="true" :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl" :editUrl="item.editUrl" @delete-ok=" deleteOk(item) "></vp-card>
+          <vp-card :editable="true" :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl" :editUrl="item.editUrl" @delete-ok=" deleteOk(item) "/>
         </el-col>
       </el-row>
     </div>

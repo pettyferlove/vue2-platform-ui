@@ -26,12 +26,12 @@
     </el-row>
     <el-row :gutter="16">
       <el-col :lg="6" :md="12" v-for="item in dataCards1" :key="item.id">
-        <vp-card :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl"></vp-card>
+        <vp-card :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl"/>
       </el-col>
     </el-row>
     <el-row :gutter="16">
       <el-col :lg="12" v-for="item in dataCards2" :key="item.id">
-        <vp-card type="horizantal" :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl"></vp-card>
+        <vp-card type="horizantal" :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl"/>
       </el-col>
     </el-row>
   </div>

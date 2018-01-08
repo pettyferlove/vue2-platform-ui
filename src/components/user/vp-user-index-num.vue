@@ -1,6 +1,6 @@
 <template>
   <vp-panel title="个人指数" class="vp-user-index">
-    <vp-mini-radar></vp-mini-radar>
+    <vp-mini-radar/>
     <el-row>
       <el-col :span="8">
         <div class="legend">

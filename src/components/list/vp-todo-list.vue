@@ -7,7 +7,7 @@
             <i class="fa fa-ellipsis-v"></i>
             <i class="fa fa-ellipsis-v"></i>
           </span>
-          <el-checkbox  v-model="item.state" :checked="item.state"></el-checkbox>
+          <el-checkbox  v-model="item.state" :checked="item.state"/>
           <span class="text">{{item.name}}</span>
           <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
           <div class="tools">

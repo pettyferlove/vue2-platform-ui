@@ -1,6 +1,6 @@
 <template>
   <div class="basic-table vp-content">
-    <vp-table title="基础表格" :columns="dataColumns" :data="dataTable"></vp-table>
+    <vp-table title="基础表格" :columns="dataColumns" :data="dataTable"/>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <li v-show="show">
-    <slot></slot>
+    <slot/>
   </li>
 </template>
 

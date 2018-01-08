@@ -8,7 +8,7 @@
         </vp-panel>
       </el-col>
       <el-col>
-        <vp-editor @getContent="showContent"></vp-editor>
+        <vp-editor @getContent="showContent"/>
       </el-col>
     </el-row>
   </div>

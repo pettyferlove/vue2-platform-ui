@@ -1,6 +1,6 @@
 <template>
   <div class="vp-content">
-    <vp-image-list :data="dataImageList" @delete-ok="deletefn" class="vp-margin-top"></vp-image-list>
+    <vp-image-list :data="dataImageList" @delete-ok="deletefn" class="vp-margin-top"/>
   </div>
 </template>
 

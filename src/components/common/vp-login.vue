@@ -8,10 +8,10 @@
       <h3>登陆系统</h3>
       <el-form status-icon ref="loginForm" :model="loginForm" :rules="loginRules" class="login-body">
         <el-form-item prop="username">
-          <el-input size="medium" v-model="loginForm.username" type="text" placeholder="请输入用户名"></el-input>
+          <el-input size="medium" v-model="loginForm.username" type="text" placeholder="请输入用户名"/>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input size="medium" v-model="loginForm.password" type="password" placeholder="请输入密码"></el-input>
+          <el-input size="medium" v-model="loginForm.password" type="password" placeholder="请输入密码"/>
         </el-form-item>
         <el-button size="medium" @click="loginSubmit('loginForm')" type="primary" :loading="loading"
                    :disabled="loading">登陆

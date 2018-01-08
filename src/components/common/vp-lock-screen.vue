@@ -9,7 +9,7 @@
         <img src="../../assets/img/user-petty.jpg" height="100" alt="">
         <p class="name">Alex Pettyfer</p>
       </div>
-      <el-input size="small" v-model="password" placeholder="请输入密码" type="password" :style="{ width: 300 + 'px' }"></el-input>
+      <el-input size="small" v-model="password" placeholder="请输入密码" type="password" :style="{ width: 300 + 'px' }"/>
       <el-button size="small" type="primary">登陆</el-button>
     </div>
   </el-card>

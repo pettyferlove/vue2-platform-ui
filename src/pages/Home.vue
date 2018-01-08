@@ -2,13 +2,13 @@
   <div class="home vp-content">
     <el-row :gutter="16">
       <el-col :lg="24" :md="12">
-        <vp-user-welcome></vp-user-welcome>
+        <vp-user-welcome/>
       </el-col>
     </el-row>
 
     <el-row :gutter="16">
       <el-col :lg="10" :md="12">
-        <vp-user-to-do-list></vp-user-to-do-list>
+        <vp-user-to-do-list/>
       </el-col>
 
       <el-col :lg="14" :md="12">
@@ -18,10 +18,10 @@
 
     <el-row :gutter="16">
       <el-col :lg="16" :md="12">
-        <vp-user-dynamic></vp-user-dynamic>
+        <vp-user-dynamic/>
       </el-col>
       <el-col :lg="8" :md="12">
-        <vp-user-index-num></vp-user-index-num>
+        <vp-user-index-num/>
       </el-col>
     </el-row>
   </div>

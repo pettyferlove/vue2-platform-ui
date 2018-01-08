@@ -1,6 +1,6 @@
 <template>
   <vp-panel title="用户动态" class="vp-user-dynamic">
-    <vp-to-do-list></vp-to-do-list>
+    <vp-to-do-list/>
   </vp-panel>
 </template>
 

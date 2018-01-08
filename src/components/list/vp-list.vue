@@ -1,11 +1,11 @@
 <template>
   <div class="vp-list">
     <div class="vp-list-content">
-      <vp-item></vp-item>
-      <vp-item></vp-item>
-      <vp-item></vp-item>
-      <vp-item></vp-item>
-      <vp-item></vp-item>
+      <vp-item/>
+      <vp-item/>
+      <vp-item/>
+      <vp-item/>
+      <vp-item/>
     </div>
     <div class="vp-list-footer">
       <el-pagination

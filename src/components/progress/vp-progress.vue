@@ -24,7 +24,7 @@
           </td>
           <td style="width: 50%">
             <el-progress :percentage="item.value"
-                         :status="item.value>50?item.value===100?'success':'':'exception'"></el-progress>
+                         :status="item.value>50?item.value===100?'success':'':'exception'"/>
           </td>
         </tr>
         </tbody>
