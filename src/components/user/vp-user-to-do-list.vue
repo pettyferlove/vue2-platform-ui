@@ -3,8 +3,9 @@
     <div slot="other">
       <el-pagination
         background
+        :page-size="5"
         layout="prev, pager, next"
-        :total="20">
+        :total="20" @current-change="pageChange">
       </el-pagination>
     </div>
     <!--<petty-scroll>
@@ -37,12 +38,20 @@
       return {
         todoList: [
           // state待办事项当前处理状态 true已办 false为办
-          {id: 1, name: 'Design a nice theme', date: '2017-11-23 09:12:34', state: false},
-          {id: 2, name: 'Make the theme responsive', date: '2017-12-01 05:11:34', state: false},
-          {id: 3, name: 'Let theme shine like a star', date: '2017-8-01 14:12:38', state: false},
-          {id: 4, name: 'Check your messages and notifications', date: '2017-11-01 12:12:34', state: false},
-          {id: 5, name: 'Let theme shine like a star', date: '2017-11-08 18:08:34', state: false}
-        ]
+          {id: 1, name: '过程数据清洗', date: '2017-11-23 09:12:34', state: true},
+          {id: 2, name: '项目数据清洗', date: '2017-12-01 05:11:34', state: false},
+          {id: 3, name: '业务系统子账号系统', date: '2017-8-01 14:12:38', state: false},
+          {id: 4, name: '内部权限效验系统改造', date: '2017-11-01 12:12:34', state: false},
+          {id: 5, name: '微服务基础架构完善', date: '2017-11-08 18:08:34', state: false}
+        ],
+        // 需要显示的数据
+        showData: []
+      }
+    },
+    methods: {
+      pageChange: function (page) {
+        console.log(page)
+        return null
       }
     }
   }
