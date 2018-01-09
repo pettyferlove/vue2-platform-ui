@@ -12,7 +12,7 @@
       </el-col>
 
       <el-col :lg="14" :md="12">
-
+        <vp-progress title="工作进度" :data="dataProgress"/>
       </el-col>
     </el-row>
 
@@ -32,9 +32,11 @@
   import VpUserIndexNum from '../components/user/vp-user-index-num.vue'
   import VpUserDynamic from '../components/user/vp-user-dynamic.vue'
   import VpUserToDoList from '../components/user/vp-user-to-do-list.vue'
+  import VpProgress from '../components/progress/vp-progress'
 
   export default {
     components: {
+      VpProgress,
       VpUserToDoList,
       VpUserDynamic,
       VpUserIndexNum,
@@ -50,7 +52,34 @@
           humidity: '56%',
           percip: '1.50in',
           winds: '10mph'
-        }
+        },
+        dataProgress: [
+          {
+            name: '张三',
+            tags: ['cool', 'funy'],
+            value: 60
+          },
+          {
+            name: '李四',
+            tags: ['nice', 'sexy', 'literature'],
+            value: 30
+          },
+          {
+            name: '王玮',
+            tags: ['mould', 'shy'],
+            value: 80
+          },
+          {
+            name: '叶伟',
+            tags: ['funny', 'hardworking', 'learnd'],
+            value: 20
+          },
+          {
+            name: '叶修',
+            tags: ['nice', 'mould'],
+            value: 100
+          }
+        ]
       }
     }
   }
