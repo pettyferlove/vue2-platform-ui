@@ -15,6 +15,8 @@ import 'animate.css'
 import 'petty-scroll/dist/petty-scroll.min.css'
 import './my-theme/index.less'
 import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
 Vue.use(Vuex)
 Vue.use(ElementUI)
