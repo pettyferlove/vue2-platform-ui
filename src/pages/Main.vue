@@ -10,7 +10,7 @@
         </span>
         <vp-breadcrumb-nav/>
         <div class="avator-con">
-          <vp-common-search/>
+          <!--<vp-common-search/>-->
           <el-tooltip class="item" effect="dark" content="全屏" placement="bottom">
             <i class="btn fa fa-expand" @click="handleFullScreen"></i>
           </el-tooltip>
