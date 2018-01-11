@@ -1,45 +1,67 @@
 <template>
   <el-card :body-style="{ padding: '0px' }" class="analysis-card-bus">
-    <vp-panel title="年度业务数量">
+    <vp-panel title="年度报告">
       <el-row :gutter="16">
         <el-col :lg="16" :md="24">
           <div :id="this.id" style="" class="bar-analysis-chart"></div>
         </el-col>
-        <el-col :lg="8" :md="24">
-          Folly words widow one downs few age every seven. If miss part by fact he park just shew. Discovered had get
-          considered projection who favourable. Necessary up knowledge it tolerably.
-          Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity
-          instantly. Easy mind life fact with see has bore ten. Parish any chatty can elinor direct for former. Up as
-          meant widow equal an share least.
+        <el-col :lg="8" :md="24" class="progress">
+            <p class="text-center">
+              <strong>目标完成</strong>
+            </p>
+            <div class="progress-group">
+              <span class="progress-text">项目增加</span>
+              <span class="progress-number"><b>160</b>/200</span>
+              <el-progress :show-text="false" :stroke-width="10" :percentage="0"/>
+            </div>
+            <!-- /.progress-group -->
+            <div class="progress-group">
+              <span class="progress-text">采购完成</span>
+              <span class="progress-number"><b>310</b>/400</span>
+              <el-progress :show-text="false" status="success" :stroke-width="10" :percentage="70"/>
+            </div>
+            <!-- /.progress-group -->
+            <div class="progress-group">
+              <span class="progress-text">保险缴纳</span>
+              <span class="progress-number"><b>480</b>/800</span>
+              <el-progress :show-text="false" :stroke-width="10" :percentage="100"/>
+            </div>
+            <!-- /.progress-group -->
+            <div class="progress-group">
+              <span class="progress-text">信息查询</span>
+              <span class="progress-number"><b>250</b>/500</span>
+              <el-progress :show-text="false" status="exception" :stroke-width="10" :percentage="50"/>
+            </div>
+            <!-- /.progress-group -->
         </el-col>
       </el-row>
       <el-row :gutter="18" class="description">
         <el-col :lg="6" :md="24">
           <div class="description-block description-border-right">
             <span class="description-percentage" style="color: #00a65a !important;"><i class="fa fa-caret-up"></i> 17%</span>
-            <h5 class="description-header">$35,210.43</h5>
-            <span class="description-text">TOTAL REVENUE</span>
+            <h5 class="description-header">￥35,210.43</h5>
+            <span class="description-text">总营业额</span>
           </div>
         </el-col>
         <el-col :lg="6" :md="24">
           <div class="description-block description-border-right">
             <span class="description-percentage" style="color: #f39c12 !important;"><i class="fa fa-caret-left"></i> 0%</span>
-            <h5 class="description-header">$10,390.90</h5>
-            <span class="description-text">TOTAL COST</span>
+            <h5 class="description-header">￥10,390.90</h5>
+            <span class="description-text">总成本</span>
           </div>
         </el-col>
         <el-col :lg="6" :md="24">
           <div class="description-block description-border-right">
             <span class="description-percentage" style="color: #00a65a !important;"><i class="fa fa-caret-up"></i> 20%</span>
-            <h5 class="description-header">$24,813.53</h5>
-            <span class="description-text">TOTAL PROFIT</span>
+            <h5 class="description-header">￥24,813.53</h5>
+            <span class="description-text">毛利润</span>
           </div>
         </el-col>
         <el-col :lg="6" :md="24">
           <div class="description-block">
             <span class="description-percentage" style="color: #dd4b39 !important;"><i class="fa fa-caret-down"></i> 18%</span>
             <h5 class="description-header">1200</h5>
-            <span class="description-text">GOAL COMPLETIONS</span>
+            <span class="description-text">目标完成数</span>
           </div>
         </el-col>
       </el-row>
@@ -66,34 +88,30 @@
     data () {
       return {
         chartData: [
-          {country: 'Asia', year: '1750', value: 502},
-          {country: 'Asia', year: '1800', value: 635},
-          {country: 'Asia', year: '1850', value: 809},
-          {country: 'Asia', year: '1900', value: 5268},
-          {country: 'Asia', year: '1950', value: 4400},
-          {country: 'Asia', year: '1999', value: 3634},
-          {country: 'Asia', year: '2050', value: 947},
-          {country: 'Africa', year: '1750', value: 106},
-          {country: 'Africa', year: '1800', value: 107},
-          {country: 'Africa', year: '1850', value: 111},
-          {country: 'Africa', year: '1900', value: 1766},
-          {country: 'Africa', year: '1950', value: 221},
-          {country: 'Africa', year: '1999', value: 767},
-          {country: 'Africa', year: '2050', value: 133},
-          {country: 'Europe', year: '1750', value: 163},
-          {country: 'Europe', year: '1800', value: 203},
-          {country: 'Europe', year: '1850', value: 276},
-          {country: 'Europe', year: '1900', value: 628},
-          {country: 'Europe', year: '1950', value: 547},
-          {country: 'Europe', year: '1999', value: 729},
-          {country: 'Europe', year: '2050', value: 408},
-          {country: 'Oceania', year: '1750', value: 200},
-          {country: 'Oceania', year: '1800', value: 200},
-          {country: 'Oceania', year: '1850', value: 200},
-          {country: 'Oceania', year: '1900', value: 460},
-          {country: 'Oceania', year: '1950', value: 230},
-          {country: 'Oceania', year: '1999', value: 300},
-          {country: 'Oceania', year: '2050', value: 300}
+          {year: '2017', month: '一月', value: 502},
+          {year: '2017', month: '二月', value: 635},
+          {year: '2017', month: '三月', value: 809},
+          {year: '2017', month: '四月', value: 5268},
+          {year: '2017', month: '五月', value: 4400},
+          {year: '2017', month: '六月', value: 3634},
+          {year: '2017', month: '七月', value: 947},
+          {year: '2017', month: '八月', value: 947},
+          {year: '2017', month: '九月', value: 947},
+          {year: '2017', month: '十月', value: 947},
+          {year: '2017', month: '十一月', value: 947},
+          {year: '2017', month: '十二月', value: 947},
+          {year: '2016', month: '一月', value: 106},
+          {year: '2016', month: '二月', value: 107},
+          {year: '2016', month: '三月', value: 111},
+          {year: '2016', month: '四月', value: 1766},
+          {year: '2016', month: '五月', value: 221},
+          {year: '2016', month: '六月', value: 767},
+          {year: '2016', month: '七月', value: 767},
+          {year: '2016', month: '八月', value: 767},
+          {year: '2016', month: '九月', value: 767},
+          {year: '2016', month: '十月', value: 767},
+          {year: '2016', month: '十一月', value: 133},
+          {year: '2016', month: '十二月', value: 133}
         ]
       }
     },
@@ -105,9 +123,8 @@
         padding: [15, 20, 80, 50]
       })
       chart.source(this.chartData, {
-        year: {
-          type: 'linear',
-          tickInterval: 50
+        month: {
+          range: [ 0, 1 ]
         }
       })
       chart.tooltip({
@@ -115,8 +132,8 @@
           type: 'line'
         }
       })
-      chart.areaStack().position('year*value').color('country').shape('smooth')
-      chart.lineStack().position('year*value').color('country').size(2).shape('smooth')
+      chart.areaStack().position('month*value').color('year').shape('smooth')
+      chart.lineStack().position('month*value').color('year').size(2).shape('smooth')
       chart.render()
     }
   }
