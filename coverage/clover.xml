@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1515643483213" clover="3.2.0">
-  <project timestamp="1515643483213" name="All files">
-    <metrics statements="1404" coveredstatements="0" conditionals="806" coveredconditionals="0" methods="511" coveredmethods="0" elements="2721" coveredelements="0" complexity="0" loc="1404" ncloc="1404" packages="26" files="78" classes="78">
+<coverage generated="1515653190841" clover="3.2.0">
+  <project timestamp="1515653190841" name="All files">
+    <metrics statements="1417" coveredstatements="0" conditionals="816" coveredconditionals="0" methods="516" coveredmethods="0" elements="2749" coveredelements="0" complexity="0" loc="1417" ncloc="1417" packages="26" files="79" classes="79">
       <package name="src">
         <metrics statements="7" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="App.vue" path="C:\Users\Petty\WebstormProjects\vue2-platform-ui\src\App.vue">
@@ -85,7 +85,7 @@
         </file>
       </package>
       <package name="src.components.analysis">
-        <metrics statements="88" coveredstatements="0" conditionals="50" coveredconditionals="0" methods="28" coveredmethods="0"/>
+        <metrics statements="99" coveredstatements="0" conditionals="60" coveredconditionals="0" methods="33" coveredmethods="0"/>
         <file name="vp-analysis-bus.vue" path="C:\Users\Petty\WebstormProjects\vue2-platform-ui\src\components\analysis\vp-analysis-bus.vue">
           <metrics statements="21" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="7" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
@@ -109,6 +109,20 @@
           <line num="131" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="132" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="133" count="0" type="stmt"/>
+        </file>
+        <file name="vp-analysis-data-map.vue" path="C:\Users\Petty\WebstormProjects\vue2-platform-ui\src\components\analysis\vp-analysis-data-map.vue">
+          <metrics statements="11" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="12" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="37" count="0" type="stmt"/>
         </file>
         <file name="vp-mini-analysis-area.vue" path="C:\Users\Petty\WebstormProjects\vue2-platform-ui\src\components\analysis\vp-mini-analysis-area.vue">
           <metrics statements="19" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="6" coveredmethods="0"/>
@@ -1246,7 +1260,7 @@
         </file>
       </package>
       <package name="src.pages">
-        <metrics statements="285" coveredstatements="0" conditionals="196" coveredconditionals="0" methods="78" coveredmethods="0"/>
+        <metrics statements="287" coveredstatements="0" conditionals="196" coveredconditionals="0" methods="78" coveredmethods="0"/>
         <file name="BasicForm.vue" path="C:\Users\Petty\WebstormProjects\vue2-platform-ui\src\pages\BasicForm.vue">
           <metrics statements="7" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
@@ -1291,7 +1305,7 @@
           <line num="65" count="0" type="stmt"/>
         </file>
         <file name="DataAnalysis.vue" path="C:\Users\Petty\WebstormProjects\vue2-platform-ui\src\pages\DataAnalysis.vue">
-          <metrics statements="19" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <metrics statements="21" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
           <line num="1" count="0" type="stmt"/>
           <line num="4" count="0" type="stmt"/>
           <line num="8" count="0" type="stmt"/>
@@ -1304,13 +1318,15 @@
           <line num="22" count="0" type="stmt"/>
           <line num="24" count="0" type="stmt"/>
           <line num="26" count="0" type="stmt"/>
-          <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="28" count="0" type="stmt"/>
           <line num="30" count="0" type="stmt"/>
-          <line num="40" count="0" type="stmt"/>
-          <line num="69" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="71" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="72" count="0" type="stmt"/>
+          <line num="32" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="78" count="0" type="stmt"/>
+          <line num="82" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="83" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="84" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="85" count="0" type="stmt"/>
         </file>
         <file name="Echarts.vue" path="C:\Users\Petty\WebstormProjects\vue2-platform-ui\src\pages\Echarts.vue">
           <metrics statements="15" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
