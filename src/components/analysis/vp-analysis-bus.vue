@@ -3,12 +3,7 @@
     <vp-panel title="年度业务数量">
       <el-row :gutter="16">
         <el-col :lg="16" :md="24">
-          <el-row :gutter="24">
-            <div :id="this.id" style="height: 300px;width: 100%" class="chart-content"></div>
-          </el-row>
-          <el-row>
-            111
-          </el-row>
+          <div :id="this.id" style="" class="bar-analysis-chart"></div>
         </el-col>
         <el-col :lg="8" :md="24">
           Folly words widow one downs few age every seven. If miss part by fact he park just shew. Discovered had get
@@ -16,6 +11,36 @@
           Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity
           instantly. Easy mind life fact with see has bore ten. Parish any chatty can elinor direct for former. Up as
           meant widow equal an share least.
+        </el-col>
+      </el-row>
+      <el-row :gutter="18" class="description">
+        <el-col :lg="6" :md="24">
+          <div class="description-block description-border-right">
+            <span class="description-percentage" style="color: #00a65a !important;"><i class="fa fa-caret-up"></i> 17%</span>
+            <h5 class="description-header">$35,210.43</h5>
+            <span class="description-text">TOTAL REVENUE</span>
+          </div>
+        </el-col>
+        <el-col :lg="6" :md="24">
+          <div class="description-block description-border-right">
+            <span class="description-percentage" style="color: #f39c12 !important;"><i class="fa fa-caret-left"></i> 0%</span>
+            <h5 class="description-header">$10,390.90</h5>
+            <span class="description-text">TOTAL COST</span>
+          </div>
+        </el-col>
+        <el-col :lg="6" :md="24">
+          <div class="description-block description-border-right">
+            <span class="description-percentage" style="color: #00a65a !important;"><i class="fa fa-caret-up"></i> 20%</span>
+            <h5 class="description-header">$24,813.53</h5>
+            <span class="description-text">TOTAL PROFIT</span>
+          </div>
+        </el-col>
+        <el-col :lg="6" :md="24">
+          <div class="description-block">
+            <span class="description-percentage" style="color: #dd4b39 !important;"><i class="fa fa-caret-down"></i> 18%</span>
+            <h5 class="description-header">1200</h5>
+            <span class="description-text">GOAL COMPLETIONS</span>
+          </div>
         </el-col>
       </el-row>
     </vp-panel>
