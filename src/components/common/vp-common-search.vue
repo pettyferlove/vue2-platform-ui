@@ -1,13 +1,12 @@
 <template>
   <span class="vp-search">
     <i @click="activeSearch" class="fa fa-search"></i>
-    <div :class="['vp-search-content', searchActive?inputActive:'']">
+    <div class="vp-search-content input-active">
       <el-autocomplete
-        v-focus="this.searchActive"
         class="inline-input"
         v-model="state1"
         :fetch-suggestions="querySearch"
-        :trigger-on-focus="false"
+        :trigger-on-focus="true"
         placeholder="站内搜索"
         @select="handleSelect"
         @blur="blurSearch"
@@ -48,8 +47,8 @@
         this.searchActive = false
       },
       querySearch (queryString, cb) {
-        var restaurants = this.restaurants
-        var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants
+        let restaurants = this.restaurants
+        let results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants
         // 调用 callback 返回建议列表的数据
         cb(results)
       },
