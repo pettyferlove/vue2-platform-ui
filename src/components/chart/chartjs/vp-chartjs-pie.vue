@@ -15,7 +15,7 @@
   import Chart from 'chart.js'
 
   export default {
-    name: 'VpChartJsPie',
+    name: 'vp-chart-js-pie',
     data () {
       return {
         barData: {

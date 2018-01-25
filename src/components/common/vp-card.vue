@@ -36,7 +36,7 @@
 </template>
 <script>
   export default {
-    name: 'VpCard',
+    name: 'vp-card',
     props: {
       type: {
         type: String,

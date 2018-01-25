@@ -20,7 +20,7 @@
 <script>
   import SimpleMDE from 'SimpleMDE'
   export default {
-    name: 'VpSimplemde',
+    name: 'vp-simplemde',
     mounted () {
       this.$nextTick(() => {
         this.simplemde = new SimpleMDE({

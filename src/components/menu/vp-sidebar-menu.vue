@@ -41,7 +41,7 @@
 
 <script>
   export default {
-    name: 'VpSidebarMenu',
+    name: 'vp-sidebar-menu',
     props: {
       isCollapse: {
         type: Boolean,

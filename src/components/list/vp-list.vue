@@ -26,7 +26,7 @@
 
   export default {
     components: {VpItem},
-    name: 'VpList'
+    name: 'vp-list'
   }
 </script>
 

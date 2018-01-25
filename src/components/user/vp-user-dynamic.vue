@@ -16,7 +16,7 @@
     components: {
       VpToDoList,
       VpPanel},
-    name: 'VpUserDynamic'
+    name: 'vp-user-dynamic'
   }
 </script>
 

@@ -47,7 +47,7 @@
 
 <script>
   export default {
-    name: 'VpTimeline',
+    name: 'vp-timeline',
     props: {
       title: {
         type: String,

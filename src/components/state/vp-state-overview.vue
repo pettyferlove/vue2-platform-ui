@@ -17,7 +17,7 @@
 
   export default {
     components: {VpCountUp},
-    name: 'StateOverView',
+    name: 'state-over-view',
     props: {
       idName: {
         type: String,

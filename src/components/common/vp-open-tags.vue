@@ -36,7 +36,7 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    name: 'VpOpenTags',
+    name: 'vp-open-tags',
     data () {
       return {
         scrollLeft: 0,

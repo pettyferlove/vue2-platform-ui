@@ -24,7 +24,7 @@
   import Cookies from 'js-cookie'
 
   export default {
-    name: 'VpUserPanel',
+    name: 'vp-user-panel',
     props: {
       adminInfo: {
         type: Object,

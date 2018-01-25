@@ -12,7 +12,7 @@
 
 <script>
   export default {
-    name: 'VpLoadingBar',
+    name: 'vp-loading-bar',
     props: {
       color: {
         type: String,

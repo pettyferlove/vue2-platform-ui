@@ -25,7 +25,7 @@
 
 <script>
   export default {
-    name: 'VpEditor',
+    name: 'vp-editor',
     data () {
       return {
         content: null,

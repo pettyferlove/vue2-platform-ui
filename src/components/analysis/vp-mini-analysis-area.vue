@@ -35,7 +35,7 @@
 
   export default {
     components: {VpCountUp},
-    name: 'VpMiniAnalysisArea',
+    name: 'vp-mini-analysis-area',
     data () {
       return {
         areaData: [

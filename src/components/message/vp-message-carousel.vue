@@ -22,7 +22,7 @@
 </template>
 <script>
   export default {
-    name: 'VpMesageCarousel',
+    name: 'vp-message-carousel',
     props: {
       data: {
         type: Array,

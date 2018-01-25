@@ -17,7 +17,7 @@
 </template>
 <script>
   export default {
-    name: 'VpPanel',
+    name: 'vp-panel',
     props: {
       title: {
         type: String,

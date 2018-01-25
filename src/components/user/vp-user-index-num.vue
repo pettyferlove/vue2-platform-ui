@@ -43,7 +43,7 @@
       VpMiniRadar,
       VpPanel
     },
-    name: 'VpUserIndexNum'
+    name: 'vp-user-index-num'
   }
 </script>
 

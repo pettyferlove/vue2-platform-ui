@@ -30,7 +30,7 @@
 
 <script>
   export default {
-    name: 'VpWeather',
+    name: 'vp-weather',
     props: ['data']
   }
 </script>

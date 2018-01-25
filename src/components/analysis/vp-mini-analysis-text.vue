@@ -38,7 +38,7 @@
   import VpCountUp from '../common/vp-count-up.vue'
   export default {
     components: {VpCountUp},
-    name: 'VpMiniAnalysisText'
+    name: 'vp-mini-analysis-text'
   }
 </script>
 

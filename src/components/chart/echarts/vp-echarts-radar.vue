@@ -14,7 +14,7 @@
   require('echarts/lib/component/legend')
 
   export default {
-    name: 'VpEChartsRadar',
+    name: 'vp-e-charts-radar',
     props: {
       // 图表区域高度
       title: {

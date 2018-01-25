@@ -51,7 +51,7 @@
 
   export default {
     components: {ElRow},
-    name: 'VpUserWelcome'
+    name: 'vp-user-welcome'
   }
 </script>
 

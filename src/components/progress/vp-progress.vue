@@ -34,7 +34,7 @@
 </template>
 <script>
   export default {
-    name: 'VpProgress',
+    name: 'vp-progress',
     props: {
       title: {
         type: String,

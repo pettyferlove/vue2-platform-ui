@@ -34,6 +34,7 @@
     "moment": "^2.20.1",
     "petty-scroll": "^1.2.7",
     "simplemde": "^1.11.2",
+    "tinymce": "^4.7.5",
     "vue": "^2.5.13",
     "vue-quill-editor": "^3.0.4",
     "vue-router": "^3.0.1",

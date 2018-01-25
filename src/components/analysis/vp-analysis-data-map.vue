@@ -14,7 +14,7 @@
 
   export default {
     components: {VpPanel},
-    name: 'VpAnalysisDataMap',
+    name: 'vp-analysis-data-map',
     data () {
       return {
         activeName: 'first'

@@ -31,7 +31,7 @@
 <script>
   import VpCard from '../common/vp-card.vue'
   export default {
-    name: 'VpImageList',
+    name: 'vp-image-list',
     components: {
       VpCard
     },

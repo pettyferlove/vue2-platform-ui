@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'VpTabsItem',
+    name: 'vp-tabs-item',
     props: ['name', 'label'],
     data: function () {
       return {

@@ -33,7 +33,7 @@
       VpTodoList,
       PettyScroll,
       VpPanel},
-    name: 'VpUserToDoList',
+    name: 'vp-user-to-do-list',
     data () {
       return {
         todoList: [

@@ -28,7 +28,7 @@
   import Cookis from 'js-cookie'
 
   export default {
-    name: 'VpLogin',
+    name: 'vp-login',
     data () {
       var validateUsername = function (rule, value, callback) {
         if (value === '') {

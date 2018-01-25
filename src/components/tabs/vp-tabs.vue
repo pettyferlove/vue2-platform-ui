@@ -22,7 +22,7 @@
 </template>
 <script>
   export default {
-    name: 'VpTabs',
+    name: 'vp-tabs',
     props: ['icon', 'title', 'contentHeight'],
     data: function () {
       return {

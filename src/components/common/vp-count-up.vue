@@ -10,7 +10,7 @@
   import CountUp from 'countup'
 
   export default {
-    name: 'VpCountUp',
+    name: 'vp-count-up',
     data () {
       return {
         unit: ''

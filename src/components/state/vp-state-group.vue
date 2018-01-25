@@ -14,7 +14,7 @@
 </template>
 <script>
   export default {
-    name: 'VpStateGroup',
+    name: 'vp-state-group',
     props: {
       data: {
         type: Array,

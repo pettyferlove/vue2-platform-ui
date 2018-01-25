@@ -15,7 +15,7 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    name: 'VpBreadcrumbNav',
+    name: 'vp-breadcrumb-nav',
     computed: {
       ...mapGetters({
         breadcrumbList: 'getBreadcrumbList'

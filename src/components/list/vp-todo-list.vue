@@ -41,7 +41,7 @@
         default: []
       }
     },
-    name: 'VpTodoList'
+    name: 'vp-todo-list'
   }
 </script>
 

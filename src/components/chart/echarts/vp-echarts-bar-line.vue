@@ -16,7 +16,7 @@
   require('echarts/lib/component/legend')
 
   export default {
-    name: 'VpEChartsBarLine',
+    name: 'vp-e-charts-bar-line',
     props: {
       // 图表区域高度
       title: {

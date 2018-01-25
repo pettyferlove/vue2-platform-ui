@@ -26,7 +26,7 @@
 </template>
 <script>
   export default {
-    name: 'VpUserPreview',
+    name: 'vp-user-preview',
     props: {
       brief: {
         type: Object,

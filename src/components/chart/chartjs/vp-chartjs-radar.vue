@@ -16,7 +16,7 @@
   import Chart from 'chart.js'
 
   export default {
-    name: 'VpChartJsRadar',
+    name: 'vp-chart-js-radar',
     data () {
       return {
         radarData: {

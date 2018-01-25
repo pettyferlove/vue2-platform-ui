@@ -78,7 +78,7 @@
 
 <script>
   export default {
-    name: 'VpTable',
+    name: 'vp-table',
     props: {
       title: {
         type: String,

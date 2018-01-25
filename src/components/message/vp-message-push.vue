@@ -22,7 +22,7 @@
 
 <script>
   export default {
-    name: 'VpMsgPush',
+    name: 'vp-msg-push',
     props: {
       align: {
         type: String,

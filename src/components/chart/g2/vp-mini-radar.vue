@@ -11,7 +11,7 @@
   import { DataView } from '@antv/data-set'
 
   export default {
-    name: 'VpMiniRadar',
+    name: 'vp-mini-radar',
     data () {
       return {
         chartData: [

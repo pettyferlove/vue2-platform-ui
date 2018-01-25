@@ -23,7 +23,7 @@
   /* eslint-disable no-useless-computed-key */
 
   export default {
-    name: 'VpCommonSearch',
+    name: 'vp-common-search',
     directives: {
       focus: {
         update: function (el, {value}) {

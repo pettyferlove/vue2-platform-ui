@@ -16,7 +16,7 @@
 </template>
 <script>
   export default {
-    name: 'VpLockScreen',
+    name: 'vp-lock-screen',
     data: function () {
       return {
         password: ''

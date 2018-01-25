@@ -75,7 +75,7 @@
 
   export default {
     components: {VpPanel},
-    name: 'VpAnalysisBus',
+    name: 'vp-analysis-bus',
     computed: {
       // 随机数+时间戳防止ID重复
       id: function () {

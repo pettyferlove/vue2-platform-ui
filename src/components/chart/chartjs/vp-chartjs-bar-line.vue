@@ -16,7 +16,7 @@
   import Chart from 'chart.js'
 
   export default {
-    name: 'VpChartJsBarLine',
+    name: 'vp-chart-js-bar-line',
     data () {
       return {
         barData: {
