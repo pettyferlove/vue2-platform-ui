@@ -37,8 +37,8 @@
           <el-input size="small" type="textarea" v-model="form.desc"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">立即创建</el-button>
-          <el-button>取消</el-button>
+          <el-button size="small" type="primary" @click="onSubmit">立即创建</el-button>
+          <el-button size="small">取消</el-button>
         </el-form-item>
       </el-form>
     </vp-panel>
