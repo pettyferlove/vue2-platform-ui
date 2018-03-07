@@ -1,5 +1,6 @@
 @import '../my-theme/common-style.less';
 
+// Panel Start
 .vp-panel {
   background-color: white;
   text-align: left;
@@ -44,6 +45,7 @@
     font-size: 14px;
   }
 }
+// Panel End
 
 .vp-breadcrumb-nav {
   margin-left: 30px;
@@ -697,6 +699,12 @@
   }
 }
 
+// Login Form Start
+.vp-login:before{
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+}
 .vp-login {
   position: absolute;
   top: 0px;
@@ -705,33 +713,36 @@
   height: 100%;
   background-color: white;
   text-align: left;
-  & > div {
+  padding-bottom: 65px;
+  /*& > div {
     padding: 30px;
-  }
+  }*/
   .login-form {
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    display: inline-block;
+    max-width: 100%;
+    font-size: 14px;
+    vertical-align: middle;
     .login-header {
-      margin-top: 70%;
+      margin: 30px 30px 20px 30px;
       text-align: center;
       font-size: 16px;
       font-weight: bold;
-      margin-bottom: 20px;
       span {
         color: @primary-color;
       }
     }
     .login-body {
+      margin: 0 30px ;
       input {
         width: 100%;
       }
       button {
-        margin-top: 20px;
         width: 100%;
       }
     }
     .login-footer {
-      margin-top: 10px;
+      margin: 10px 30px 30px 30px;
       span.forget {
         float: right;
       }
@@ -750,6 +761,13 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .vp-login {
+    width: 100%;
+  }
+}
+// Login Form End
 
 .vp-lock-screen {
   width: 600px;
