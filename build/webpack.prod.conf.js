@@ -37,9 +37,11 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
-      },
+      }
+      //禁用SourceMap，开启后导致生产环境项目过大
+      /*,
       sourceMap: config.build.productionSourceMap,
-      parallel: true
+      parallel: true*/
     }),
     // extract css into its own file
     new ExtractTextPlugin({
