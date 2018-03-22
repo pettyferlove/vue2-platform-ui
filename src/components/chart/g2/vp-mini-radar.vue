@@ -7,9 +7,6 @@
 </style>
 
 <script>
-  import G2 from '@antv/g2'
-  import { DataView } from '@antv/data-set'
-
   export default {
     name: 'vp-mini-radar',
     data () {
@@ -31,7 +28,7 @@
       }
     },
     mounted () {
-      const dv = new DataView().source(this.chartData)
+      const dv = new DataSet.View().source(this.chartData)
       dv.transform({
         type: 'fold',
         fields: ['a', 'b'], // 展开字段集

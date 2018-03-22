@@ -71,7 +71,6 @@
 
 <script>
   import VpPanel from '../common/vp-panel'
-  import G2 from '@antv/g2'
 
   export default {
     components: {VpPanel},

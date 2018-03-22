@@ -8,12 +8,6 @@
 </template>
 <script>
   import chartTheme from '@/my-theme/chartTheme.js'
-  var echarts = require('echarts/lib/echarts')
-  require('echarts/lib/chart/bar')
-  require('echarts/lib/chart/line')
-  require('echarts/lib/component/tooltip')
-  require('echarts/lib/component/title')
-  require('echarts/lib/component/legend')
 
   export default {
     name: 'vp-e-charts-bar-line',

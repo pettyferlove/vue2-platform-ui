@@ -18,7 +18,6 @@
 </style>
 
 <script>
-  import SimpleMDE from 'SimpleMDE'
   export default {
     name: 'vp-simplemde',
     mounted () {

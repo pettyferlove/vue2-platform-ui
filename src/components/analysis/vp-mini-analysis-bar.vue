@@ -31,7 +31,6 @@
 
 <script>
   import VpCountUp from '../common/vp-count-up.vue'
-  import G2 from '@antv/g2'
 
   export default {
     components: {VpCountUp},

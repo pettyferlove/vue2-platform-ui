@@ -12,7 +12,6 @@
 
 <script>
   /* eslint-disable no-unused-vars */
-  import Chart from 'chart.js'
 
   export default {
     name: 'vp-chart-js-polar',

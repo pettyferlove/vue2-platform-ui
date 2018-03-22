@@ -1,18 +1,15 @@
-import Vue from 'vue'
 import LoadingBar from '../components/progress/vp-loading-bar'
-import Router from 'vue-router'
 import Cookies from 'js-cookie'
 import { routers } from './router'
 
-Vue.use(Router)
 Vue.use(LoadingBar)
 Vue.prototype.$LoadingBar = LoadingBar
 
-const VueRouter = new Router({
+const Router = new VueRouter({
   routes: routers
 })
 
-VueRouter.beforeEach((to, from, next) => {
+Router.beforeEach((to, from, next) => {
   window.document.title = to.meta.title || '主页'
   LoadingBar.config({
     color: '#409EFF',
@@ -36,7 +33,7 @@ VueRouter.beforeEach((to, from, next) => {
   }
 })
 
-VueRouter.afterEach((to, from, next) => {
+Router.afterEach((to, from, next) => {
   LoadingBar.finish()
   /* var content = document.getElementById('main-content')
   if (content != null) {
@@ -44,4 +41,4 @@ VueRouter.afterEach((to, from, next) => {
   } */
 })
 
-export default VueRouter
+export default Router
