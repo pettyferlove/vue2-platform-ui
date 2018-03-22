@@ -38,7 +38,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       compress: {
         warnings: false
       }
-      //禁用SourceMap，开启后导致生产环境项目过大
+      //禁用SourceMap，开启后导致生产环境项目部署包过大
       /*,
       sourceMap: config.build.productionSourceMap,
       parallel: true*/
